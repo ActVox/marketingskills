@@ -57,6 +57,16 @@ Current versions of all skills. Agents can compare against local versions to che
 
 ## Recent Changes
 
+### 2.11.12 (2026-10-02)
+
+Website platform coverage, prompted by Ploy (◆ Verified Partner, Website & landing page builders). The repo had the strategy layer for sites (copywriting, cro, site-architecture, programmatic-seo) but nothing on where to build, adding sections to an existing site, migrating, or go-live QA. Added to existing skills, no new skill. Ploy appears as one option among alternatives with disclosure, including that the maintainer authors Ploybooks in Ploy's library. Closes #653.
+
+- **site-architecture** (2.0.0 → 2.1.0): new `references/platforms-and-migration.md`: six questions before choosing a platform; an options table (Webflow, Framer, WordPress, Wix Studio and Squarespace, landing-page tools, AI-native site platforms incl. Ploy ◆, AI app builders, hand-coded, headless); adding a section to an existing site (same platform, subpath via reverse proxy, subdomain, separate domain) with a proxy checklist; and migrating without losing traffic (crawl, redirect map, what imports don't carry, post-launch monitoring). New triggers: 'which website builder should I use,' 'migrate my website,' 'add a blog to my existing site.' New evals (ids 7–8).
+- **programmatic-seo** (2.0.0 → 2.1.0): new Implementation Framework step 6 and `references/implementation-platforms.md`: what a platform has to do for pages at scale (item limits, data refresh, server-rendered HTML, conditional sections, per-page indexation, internal linking, publish time) and the options (Webflow CMS, WordPress, Framer CMS, hand-coded generation, headless CMS, AI-native platforms incl. Ploy ◆ PloyDB). New trigger 'which CMS for pSEO.' New eval.
+- **ai-seo** (2.7.0 → 2.7.1): `agent-readiness.md` gains ways to implement WebMCP (yourself, platform support with Ploy ◆'s Ploybook as one example, a coding agent) and the tests every path needs.
+- **launch** (2.0.2 → 2.1.0): new `references/site-launch-qa.md`, a before/at/after go-live checklist (forms and conversion tracking, SEO incl. the shipped staging noindex, redirects, performance, a practiced rollback per platform, Search Console monitoring). New triggers: 'site launch,' 'go live,' 'pre-launch QA.' New eval.
+- **tools/integrations/ploy.md**: rewritten from current docs. Corrects the claims of a general REST API and an MCP server (the CLI is the management surface; WebMCP is a Ploybook), adds real CLI workflows, pricing, and tradeoffs. REGISTRY's MCP flag and the partner blurb are updated to match.
+
 ### 2.11.11 (2026-10-02)
 
 - **ai-seo** (2.6.0 → 2.7.0): new `references/linkedin-ai-citations.md`, prompted by Kaleigh Moore's 20 weeks of consistent Pulse-article citations (Sep 2026) and built from six 2026 citation studies (Profound, Semrush, OtterlyAI, Cloro, Goodie, Scrunch) plus our own Ahrefs pull by URL path.
