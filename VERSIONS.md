@@ -41,7 +41,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.1 | 2026-08-23 |
 | product-marketing | 2.1.0 | 2026-07-16 |
-| programmatic-seo | 2.0.0 | 2026-05-05 |
+| programmatic-seo | 2.1.0 | 2026-10-02 |
 | prospecting | 1.1.0 | 2026-07-13 |
 | public-relations | 1.1.1 | 2026-08-23 |
 | referrals | 2.0.1 | 2026-08-23 |
