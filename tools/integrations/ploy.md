@@ -60,7 +60,7 @@ ploy workspace use --id <workspace-id>
 ploy site use --id <site-id>
 ```
 
-**Publish and verify.** There's no staging target: publishing always goes to production. Roll back from the Deploys screen in the UI (no CLI command).
+**Publish and verify.** The CLI has no staging target: `ploy site publish` always goes to production (preview-only publishing exists in the app). Roll back from the Deploys screen in the UI (no CLI command).
 
 ```bash
 ploy --dry-run site publish
@@ -74,6 +74,8 @@ If `--wait` gives up on a rate limit, the publish keeps running; check `publish-
 
 ```bash
 ploy domain add www.example.com          # prints the DNS records to add
+# add the records at your DNS provider, wait for propagation, then:
+ploy domain add www.example.com          # rerun to connect
 ploy domain status www.example.com --json   # dns_pending → provisioning → connected
 ```
 

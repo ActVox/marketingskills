@@ -12,7 +12,7 @@ Check these before picking anything. Most failed programmatic launches hit one o
 | **Data refresh** | Stale data makes pages wrong and thin | How rows get updated (CSV re-import, API, sync tool, webhook) and whether pages update without a full rebuild |
 | **Server-rendered HTML** | Crawlers and AI engines need the content in the initial HTML | Pages render on the server or at build time, not only in client-side JavaScript |
 | **Conditional sections** | Unique value per page depends on showing or hiding sections by data | The template can branch on field values, not just print them |
-| **Per-page indexation control** | You'll noindex thin variations and split sitemaps | Per-item `noindex`, canonical overrides, and sitemaps that split by page type (50,000 URLs per sitemap file is the limit) |
+| **Per-page indexation control** | You'll noindex thin variations and split sitemaps | Per-item `noindex`, canonical overrides, and sitemaps that split by page type (50,000 URLs or 50 MB uncompressed per sitemap file) |
 | **Internal linking** | Hubs, spokes, and related-page links drive discovery | Templates can query related items (same category, nearby location) |
 | **Build and publish time** | Thousands of pages can make every publish slow | Whether publishing regenerates everything or only changed pages |
 
@@ -24,7 +24,7 @@ As of 2026-10; item limits and pricing change, so confirm on the vendor's curren
 |---|---|---|---|
 | **Webflow CMS** | One collection template; each item becomes a page. Data via CSV import, the CMS API, or a sync tool (Whalesync, for example, from Airtable or Sheets) | Designer-owned sites up to the plan's item limit; a few hundred to a few thousand pages | Item limits by plan; complex conditional logic is limited; bulk updates need the API or a sync tool |
 | **WordPress** | Custom post types plus custom fields (ACF or similar), bulk-loaded with an import plugin or the REST API | Large page counts on hosting you control; teams already on WordPress | Plugin and hosting performance at scale; database size; theme quality |
-| **Framer CMS** | CMS collection template | Smaller programmatic sets on design-led sites | Lower item limits and fewer data-sync options than older platforms |
+| **Framer CMS** | CMS collection template; data via CSV, the CMS API, or a sync plugin | Programmatic sets on design-led sites, up to the plan's item limit (higher tiers reach tens of thousands) | Compare item limits and sync options on actual plans; conditional logic is limited |
 | **Hand-coded static or hybrid generation** (Next.js, Astro, and similar) | Templates read from JSON, a database, or an API at build time, or on demand with incremental regeneration | Tens of thousands of pages, complex logic, full control | Engineers own everything; very large sites need incremental builds to keep publishes fast |
 | **Headless CMS + framework** (Sanity, Contentful, Storyblok) | Structured content in the CMS, templates in code | Editorial teams that also need programmatic sets | Two systems; schema changes need engineering |
 | **AI-native site platforms** (Ploy ◆ PloyDB, and similar) | A database table backs a dynamic template; rows become pages | Teams already building on the platform who want data-driven pages without managing a separate CMS | Young products; hosting tied to the vendor; check export limits |
@@ -36,6 +36,6 @@ As of 2026-10; item limits and pricing change, so confirm on the vendor's curren
 ## Choosing
 
 1. **Start with the site you already have.** If its CMS can hold the page count and supports the template logic, build there. The pages inherit the domain's authority and internal links.
-2. **If it can't, keep the domain.** Build the set elsewhere and serve it on a subpath through a reverse proxy, rather than a subdomain or new domain. The `site-architecture` skill's platforms reference has the proxy checklist.
+2. **If it can't, decide subpath or subdomain on effort.** Google doesn't rank one above the other. A reverse-proxied subpath keeps the set inside the main site's structure and links but adds proxy setup; a subdomain is simpler but needs its own internal links and sitemap. The `site-architecture` skill's platforms reference has the proxy checklist.
 3. **Size for the next year.** Pick the option whose item limits and publish times work at the page count you'll reach, with headroom for the variations you'll add.
 4. **Prove it on a small batch.** Launch the 20–50 strongest pages first, check they index and rank, then scale (see Quality Checks in SKILL.md).

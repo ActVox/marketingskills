@@ -24,7 +24,7 @@ Run it in three passes: before the switch, at the switch, and in the first two w
 - [ ] Canonical tags point to the production domain, not staging
 - [ ] Staging is `noindex` or password-protected, and production is **not** (the most common launch-day SEO failure is shipping the staging `noindex`)
 - [ ] `robots.txt` allows the pages you want indexed; the XML sitemap lists production URLs
-- [ ] Structured data validates (Rich Results Test)
+- [ ] Structured data validates (Rich Results Test for Google features, Schema Markup Validator for everything else)
 - [ ] For a migration: the redirect map is loaded and tested on a sample of old URLs (see the `site-architecture` skill's platforms and migration reference)
 
 **Performance and access**

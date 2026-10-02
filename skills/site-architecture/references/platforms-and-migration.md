@@ -30,10 +30,10 @@ Characterizations as of 2026-10; check current plans and limits before committin
 | Option | What it is | Good fit | Watch out for |
 |---|---|---|---|
 | **Webflow** | Mature visual builder and CMS with hosting | Designer-owned marketing sites, rich CMS-driven content, sites that need fine visual control | CMS item limits by plan; ecommerce and localization are add-ons; designer skill needed to keep it clean |
-| **Framer** | Design-led visual builder with CMS and fast publishing | Polished marketing sites and launches owned by designers or marketers | CMS limits and fewer integrations than older platforms; less suited to large content libraries |
+| **Framer** | Design-led visual builder with CMS and fast publishing | Polished marketing sites and launches owned by designers or marketers | CMS item limits vary by plan (higher tiers reach tens of thousands); check the integrations you need |
 | **WordPress** | Open-source CMS with the largest plugin ecosystem; self-hosted or managed | Content-heavy sites, full ownership, teams with WordPress experience, budgets that favor licensing over build time | Plugin sprawl, security and update upkeep, performance depends on hosting and theme |
 | **Wix Studio, Squarespace** | All-in-one templated builders with built-in business apps | Small businesses and agencies that want hosting, commerce, and booking in one place | Less control over code and structure; harder to migrate off |
-| **Dedicated landing-page tools** (Unbounce, Instapage, Leadpages) | Builders for campaign pages, often with A/B testing | Paid-traffic landing pages kept separate from the main site | Pages live on a subdomain or separate system; not a home for the whole site |
+| **Landing-page tools** (Unbounce, Instapage, Leadpages) | Builders for campaign pages, usually with A/B testing; Leadpages also builds full multi-page small-business sites | Paid-traffic landing pages; small sites on Leadpages | Unbounce and Instapage pages usually live on a subdomain or separate system rather than hosting the whole site |
 | **AI-native site platforms** (Ploy ◆, Flint, and similar) | Hosted builders where an AI agent builds, edits, and operates the site through conversation | Teams that want an agent to build and keep improving marketing pages, often alongside an existing site via path routing | Young products; hosting tied to the vendor; check export and code access before committing |
 | **AI app builders** (Lovable, v0, Bolt) | Prompt-to-app generators that output code | Prototypes, product UIs, and interactive tools | Built for apps more than marketing sites; CMS, SEO, and editing by non-engineers need extra work |
 | **Hand-coded** (Next.js, Astro, and similar on Vercel, Netlify, or Cloudflare) | Your own codebase and hosting | Full control and portability, engineer-owned sites, sites tightly coupled to the product | Every change needs an engineer unless you add a headless CMS; you own performance and SEO basics |
@@ -45,19 +45,19 @@ Characterizations as of 2026-10; check current plans and limits before committin
 
 ## Adding Pages to an Existing Site
 
-Often the job isn't a new site; it's a new section (a blog, landing pages, a resource library, pages at scale) on a site that already exists. Where those pages live affects SEO.
+Often the job isn't a new site; it's a new section (a blog, landing pages, a resource library, pages at scale) on a site that already exists. Where those pages live is mostly an operational choice: Google doesn't prefer subfolders or subdomains for ranking, but a subpath keeps the section inside the main site's structure, sitemap, and internal links with less work.
 
 | Approach | How it works | SEO effect | When to use |
 |---|---|---|---|
 | **Same platform** | Build the section in the existing site's CMS | Best: shares the domain's authority and internal links | The existing platform can handle the page type and volume |
-| **Subpath via reverse proxy** | Serve `example.com/blog` from another system through a proxy or edge router (Cloudflare Workers, Vercel or Netlify rewrites, Nginx, or a platform's own routing rules) | Same as same-platform, as long as the proxied pages are fully rendered, canonical to the main domain, and linked from it | A different tool is better for the section, but you want the main domain's authority |
-| **Subdomain** | `blog.example.com` or `go.example.com` on another system | Search engines may treat it more like a separate site; links between the two matter more | Campaign landing pages, paid-traffic pages you don't want indexed, or when a proxy isn't possible |
+| **Subpath via reverse proxy** | Serve `example.com/blog` from another system through a proxy or edge router (Cloudflare Workers, Vercel or Netlify rewrites, Nginx, or a platform's own routing rules) | Behaves like same-platform pages, as long as they're fully rendered, canonical to the main domain, and linked from it | A different tool is better for the section, and you want it to share the main domain's structure and links |
+| **Subdomain** | `blog.example.com` or `go.example.com` on another system | Google says it has no inherent ranking preference between subdomains and subfolders; in practice a subdomain needs its own internal links and sitemap, and links between the two matter more | Campaign landing pages, paid-traffic pages you don't want indexed, or when a proxy isn't worth the setup |
 | **Separate domain** | A new domain for the section | Starts from zero | Rarely, for a genuinely separate brand |
 
 **Reverse-proxy checklist:**
 - The proxied pages return the main domain in their canonical tags, sitemap, and Open Graph URLs, not the origin's.
 - Asset paths (CSS, JS, images, fonts) are routed too, or the pages break.
-- The origin (for example `origin.example.com`) is `noindex` or blocked, so the same pages don't get indexed twice.
+- The origin (for example `origin.example.com`) isn't indexed separately: protect it by hostname (a password, an IP allowlist, or an `X-Robots-Tag: noindex` header set only on the origin hostname). Then confirm the proxied production responses carry no `noindex` in their HTML or headers, because an origin-wide `noindex` can pass straight through the proxy and deindex production. A `robots.txt` block alone doesn't prevent indexing.
 - Analytics and consent run on both systems, configured for one domain.
 - Test on a staging subdomain before switching production routing.
 
