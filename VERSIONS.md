@@ -42,7 +42,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | pricing | 2.1.1 | 2026-08-23 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.1.0 | 2026-10-02 |
-| prospecting | 1.1.0 | 2026-07-13 |
+| prospecting | 1.1.1 | 2026-10-02 |
 | public-relations | 1.1.1 | 2026-08-23 |
 | referrals | 2.0.1 | 2026-08-23 |
 | revops | 2.0.0 | 2026-05-05 |
@@ -65,6 +65,8 @@ Website platform coverage, prompted by Ploy (◆ Verified Partner, Website & lan
 - **programmatic-seo** (2.0.0 → 2.1.0): new Implementation Framework step 6 and `references/implementation-platforms.md`: what a platform has to do for pages at scale (item limits, data refresh, server-rendered HTML, conditional sections, per-page indexation, internal linking, publish time) and the options (Webflow CMS, WordPress, Framer CMS, hand-coded generation, headless CMS, AI-native platforms incl. Ploy ◆ PloyDB). New trigger 'which CMS for pSEO.' New eval.
 - **ai-seo** (2.7.0 → 2.7.1): `agent-readiness.md` gains ways to implement WebMCP (yourself, platform support with Ploy ◆'s Ploybook as one example, a coding agent) and the tests every path needs.
 - **launch** (2.0.2 → 2.1.0): new `references/site-launch-qa.md`, a before/at/after go-live checklist (forms and conversion tracking, SEO incl. the shipped staging noindex, redirects, performance, a practiced rollback per platform, Search Console monitoring). New triggers: 'site launch,' 'go live,' 'pre-launch QA.' New eval.
+- **prospecting** (1.1.0 → 1.1.1): `references/data-sources.md` and the tool table add Ploy ◆ as a visitor-identification option for Ploy-hosted sites, alongside RB2B and Clearbit Reveal, with its limits (hosting requirement, metering, consent caveat).
+- **ads** (2.4.1 → 2.4.2): `references/abm-playbook.md` gains account pages for 1:1 and 1:few ABM (personalization layer, CMS fed from a list, hand-coded route, or an AI site platform such as Ploy ◆), with guardrails (noindex, only public or first-party facts, human review).
 - **tools/integrations/ploy.md**: rewritten from current docs. Corrects the claims of a general REST API and an MCP server (the CLI is the management surface; WebMCP is a Ploybook), adds real CLI workflows, pricing, and tradeoffs. REGISTRY's MCP flag and the partner blurb are updated to match.
 
 ### 2.11.11 (2026-10-02)
