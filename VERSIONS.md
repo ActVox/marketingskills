@@ -50,7 +50,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | schema | 2.0.0 | 2026-05-05 |
 | seo-audit | 2.0.1 | 2026-08-19 |
 | signup | 2.0.0 | 2026-05-05 |
-| site-architecture | 2.0.0 | 2026-05-05 |
+| site-architecture | 2.1.0 | 2026-10-02 |
 | sms | 1.0.0 | 2026-05-21 |
 | social | 2.3.0 | 2026-10-02 |
 | video | 2.1.0 | 2026-07-14 |
