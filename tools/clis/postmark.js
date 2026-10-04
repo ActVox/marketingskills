@@ -151,6 +151,9 @@ async function main() {
             Tag: args.tag || undefined,
           }))
           result = await api('POST', '/email/batch', messages)
+          if (Array.isArray(result) && result.some(message => typeof message?.ErrorCode === 'number' && message.ErrorCode !== 0)) {
+            process.exitCode = 1
+          }
           break
         }
         default:
