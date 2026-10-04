@@ -28,9 +28,12 @@ async function ingestApi(method, path, body) {
     headers,
     body: body ? JSON.stringify(body) : undefined,
   })
+  if (!res.ok) process.exitCode = 1
   const text = await res.text()
   try {
-    return JSON.parse(text)
+    const payload = JSON.parse(text)
+    if (payload === 0) process.exitCode = 1
+    return payload
   } catch {
     return { status: res.status, body: text }
   }
