@@ -37,3 +37,20 @@ test('quoted descriptions are still unquoted after CRLF normalization', () => {
 test('body fields outside frontmatter do not become skill descriptions', () => {
   assert.doesNotMatch(sync('No frontmatter\r\ndescription: Body-only value\r\n'), /Body-only value/)
 })
+
+for (const ending of ['\n', '\r\n']) {
+  test(`the skill validator accepts valid ${ending === '\n' ? 'LF' : 'CRLF'} frontmatter`, () => {
+    const root = mkdtempSync(path.join(tmpdir(), 'marketing-validate-frontmatter-'))
+    try {
+      mkdirSync(path.join(root, 'example'))
+      writeFileSync(path.join(root, 'example/SKILL.md'), frontmatter.replace(/\n/g, ending))
+      const result = spawnSync('bash', [path.resolve(__dirname, '../../validate-skills.sh')], {
+        encoding: 'utf8', timeout: 10000, env: { ...process.env, SKILLS_DIR: root },
+      })
+      assert.equal(result.status, 0, result.stdout + result.stderr)
+      assert.match(result.stdout, /All skills are valid/)
+    } finally {
+      rmSync(root, { recursive: true, force: true })
+    }
+  })
+}

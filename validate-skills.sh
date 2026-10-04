@@ -42,7 +42,7 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     fi
 
     # Extract frontmatter (between the first two `---` markers, exclusive)
-    frontmatter=$(awk '/^---$/{count++; next} count==1' "$skill_file")
+    frontmatter=$(awk '{sub(/\r$/, "")} /^---$/{count++; next} count==1' "$skill_file")
 
     # Validate frontmatter exists
     if [[ -z "$frontmatter" ]]; then
