@@ -69,13 +69,13 @@ async function main() {
           params.set('limit', String(limit))
           if (args.after) params.set('after', args.after)
           if (args.before) params.set('before', args.before)
-          result = await api('GET', `/scheduling-links?${params}`)
+          result = await api('GET', `/links?${params}`)
           break
         }
         case 'get': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('GET', `/scheduling-links/${id}`)
+          result = await api('GET', `/links/${id}`)
           break
         }
         case 'create': {
@@ -84,7 +84,7 @@ async function main() {
           const body = { name }
           if (args.slug) body.slug = args.slug
           if (args.duration) body.duration_minutes = Number(args.duration)
-          result = await api('POST', '/scheduling-links', body)
+          result = await api('POST', '/links', body)
           break
         }
         case 'update': {
@@ -94,25 +94,25 @@ async function main() {
           if (args.name) body.name = args.name
           if (args.slug) body.slug = args.slug
           if (args.duration) body.duration_minutes = Number(args.duration)
-          result = await api('PATCH', `/scheduling-links/${id}`, body)
+          result = await api('PATCH', `/links/${id}`, body)
           break
         }
         case 'delete': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('DELETE', `/scheduling-links/${id}`)
+          result = await api('DELETE', `/links/${id}`)
           break
         }
         case 'duplicate': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('POST', `/scheduling-links/${id}/duplicate`)
+          result = await api('POST', `/links/${id}/duplicate`)
           break
         }
         case 'toggle': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('POST', `/scheduling-links/${id}/toggle`)
+          result = await api('POST', `/links/${id}/toggle`)
           break
         }
         case 'slots': {
@@ -122,7 +122,7 @@ async function main() {
           if (args['start-time']) params.set('start_time', args['start-time'])
           if (args['end-time']) params.set('end_time', args['end-time'])
           const qs = params.toString()
-          result = await api('GET', `/scheduling-links/${id}/slots${qs ? '?' + qs : ''}`)
+          result = await api('GET', `/links/${id}/slots${qs ? '?' + qs : ''}`)
           break
         }
         default:

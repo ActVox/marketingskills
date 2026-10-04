@@ -28,31 +28,31 @@ GET https://api.savvycal.com/v1/me
 ### List scheduling links
 
 ```bash
-GET https://api.savvycal.com/v1/scheduling-links
+GET https://api.savvycal.com/v1/links
 ```
 
 ### Get a scheduling link
 
 ```bash
-GET https://api.savvycal.com/v1/scheduling-links/{id}
+GET https://api.savvycal.com/v1/links/{id}
 ```
 
 ### Create a scheduling link
 
 ```bash
-POST https://api.savvycal.com/v1/scheduling-links
+POST https://api.savvycal.com/v1/links
 
 {
-  "name": "30 Minute Meeting",
-  "slug": "30min",
-  "duration_minutes": 30
+  "name": "Introductory Meeting"
 }
 ```
+
+The personal-link endpoint creates a link for the current authenticated user. These examples use the documented `name` field; configure meeting duration and URL details in SavvyCal rather than assuming undocumented request fields take effect.
 
 ### Update a scheduling link
 
 ```bash
-PATCH https://api.savvycal.com/v1/scheduling-links/{id}
+PATCH https://api.savvycal.com/v1/links/{id}
 
 {
   "name": "Updated Meeting Name"
@@ -62,25 +62,25 @@ PATCH https://api.savvycal.com/v1/scheduling-links/{id}
 ### Delete a scheduling link
 
 ```bash
-DELETE https://api.savvycal.com/v1/scheduling-links/{id}
+DELETE https://api.savvycal.com/v1/links/{id}
 ```
 
 ### Duplicate a scheduling link
 
 ```bash
-POST https://api.savvycal.com/v1/scheduling-links/{id}/duplicate
+POST https://api.savvycal.com/v1/links/{id}/duplicate
 ```
 
 ### Toggle link state (active/disabled)
 
 ```bash
-POST https://api.savvycal.com/v1/scheduling-links/{id}/toggle
+POST https://api.savvycal.com/v1/links/{id}/toggle
 ```
 
 ### Get available time slots
 
 ```bash
-GET https://api.savvycal.com/v1/scheduling-links/{id}/slots
+GET https://api.savvycal.com/v1/links/{id}/slots
 ```
 
 ### List events
@@ -179,3 +179,9 @@ POST https://api.savvycal.com/v1/webhooks
 - sales-automation
 - appointment-scheduling
 - customer-onboarding
+
+## API References
+
+- [Scheduling-link endpoints](https://developers.savvycal.com/api/scheduling-links)
+- [Create-link request fields](https://developers.savvycal.com/api/schemas/createlinkrequest)
+- [Update-link request fields](https://developers.savvycal.com/api/schemas/updatelinkrequest)
