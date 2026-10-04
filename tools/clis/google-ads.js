@@ -7,20 +7,20 @@ const CUSTOMER_ID = process.env.GOOGLE_ADS_CUSTOMER_ID
 const LOGIN_CUSTOMER_ID = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID?.replace(/-/g, '')
 const BASE_URL = 'https://googleads.googleapis.com/v24'
 
-if ((!TOKEN || !DEV_TOKEN || !CUSTOMER_ID) && rawArgs.length > 0) {
-  console.error(JSON.stringify({ error: 'GOOGLE_ADS_TOKEN, GOOGLE_ADS_DEVELOPER_TOKEN, and GOOGLE_ADS_CUSTOMER_ID environment variables required' }))
+if ((!TOKEN || !CUSTOMER_ID) && rawArgs.length > 0) {
+  console.error(JSON.stringify({ error: 'GOOGLE_ADS_TOKEN and GOOGLE_ADS_CUSTOMER_ID environment variables required' }))
   process.exit(1)
 }
 
 async function api(method, path, body) {
   const headers = {
     'Authorization': `Bearer ${TOKEN}`,
-    'developer-token': DEV_TOKEN,
     'Content-Type': 'application/json',
   }
+  if (DEV_TOKEN) headers['developer-token'] = DEV_TOKEN
   if (LOGIN_CUSTOMER_ID) headers['login-customer-id'] = LOGIN_CUSTOMER_ID
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { ...headers, Authorization: '***', 'developer-token': '***' }, body: body || undefined }
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { ...headers, Authorization: '***', ...(DEV_TOKEN ? { 'developer-token': '***' } : {}) }, body: body || undefined }
   }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
