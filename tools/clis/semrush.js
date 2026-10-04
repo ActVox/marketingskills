@@ -57,9 +57,12 @@ async function api(params, baseUrl = BASE_URL) {
   const res = await fetch(`${baseUrl}?${params}`)
   const text = await res.text()
   if (!res.ok) {
+    process.exitCode = 1
     return { error: text.trim(), status: res.status }
   }
   if (text.startsWith('ERROR')) {
+    // ERROR 50 describes an empty result, rather than a rejected request.
+    if (!/^ERROR\s+50\s*::/.test(text)) process.exitCode = 1
     return { error: text.trim() }
   }
   return parseCSV(text)
