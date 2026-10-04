@@ -44,7 +44,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | programmatic-seo | 2.0.0 | 2026-05-05 |
 | prospecting | 1.1.2 | 2026-10-02 |
 | public-relations | 1.2.0 | 2026-10-02 |
-| referrals | 2.0.2 | 2026-10-02 |
+| referrals | 2.1.0 | 2026-10-04 |
 | revops | 2.0.1 | 2026-10-02 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-04)
+
+- **referrals** (2.0.2 → 2.1.0): expands the affiliate branch requested in #476 with cohort economics, partner activation, attribution/eligibility/payout decisions, commission reconciliation and incrementality measurement. Preserves tracking rails and influencer handoffs; credits the #417 foundation.
 
 ### 2.11.17 (2026-10-02)
 
