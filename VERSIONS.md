@@ -45,6 +45,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | prospecting | 1.1.2 | 2026-10-02 |
 | public-relations | 1.2.0 | 2026-10-02 |
 | referrals | 2.0.2 | 2026-10-02 |
+| review-management | 1.0.0 | 2026-10-04 |
 | revops | 2.0.1 | 2026-10-02 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
@@ -56,6 +57,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.12.0 (2026-10-04)
+
+- Added **review-management** (1.0.0), the standalone follow-up requested in #475 from @Adi29102000-s's #417 foundation. Covers neutral invitation cohorts, platform-specific incentives, evidence-based responses, moderation, and permissioned quote reuse, with two conditional references and six evaluation cases. Total skills: 51.
 
 ### 2.11.17 (2026-10-02)
 
