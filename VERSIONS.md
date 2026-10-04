@@ -19,7 +19,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | content-strategy | 2.1.2 | 2026-10-02 |
 | copy-editing | 2.1.0 | 2026-10-02 |
 | copywriting | 2.1.0 | 2026-10-02 |
-| cro | 2.0.0 | 2026-05-05 |
+| cro | 2.0.1 | 2026-10-04 |
 | customer-research | 2.0.4 | 2026-10-02 |
 | directory-submissions | 2.1.0 | 2026-10-02 |
 | emails | 2.1.1 | 2026-10-02 |
@@ -42,20 +42,24 @@ Current versions of all skills. Agents can compare against local versions to che
 | pricing | 2.1.2 | 2026-10-02 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.0.0 | 2026-05-05 |
-| prospecting | 1.1.2 | 2026-10-02 |
+| prospecting | 1.2.0 | 2026-10-04 |
 | public-relations | 1.2.0 | 2026-10-02 |
 | referrals | 2.0.2 | 2026-10-02 |
-| revops | 2.0.1 | 2026-10-02 |
+| revops | 2.1.0 | 2026-10-04 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
 | seo-audit | 2.0.1 | 2026-08-19 |
-| signup | 2.0.0 | 2026-05-05 |
+| signup | 2.0.1 | 2026-10-04 |
 | site-architecture | 2.0.0 | 2026-05-05 |
 | sms | 1.1.0 | 2026-10-02 |
 | social | 2.3.2 | 2026-10-02 |
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-04)
+
+- **prospecting** (1.1.2 → 1.2.0) and **revops** (2.0.1 → 2.1.0): add the waterfall/cache and reactive form-routing techniques requested in #498. Includes accepted-result rules, exact account-scoped cache keys, provider-error handling, duplicate submissions, bounded waits, and late-result ownership. **cro** and **signup** (2.0.0 → 2.0.1) link the routing playbook. Rowbound integration remains separate.
 
 ### 2.11.17 (2026-10-02)
 
