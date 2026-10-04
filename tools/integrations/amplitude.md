@@ -54,8 +54,15 @@ POST https://api2.amplitude.com/batch
 
 ### Get user activity
 
+The activity endpoint requires an internal Amplitude ID, distinct from the
+external `user_id` used to track events. The CLI resolves `users activity
+--user-id <external-user-id>` through User Search and selects an exact user ID
+match before requesting activity. Use `--amplitude-id <internal-id>` for a
+direct lookup. A dry run with `--user-id` previews the initial search request;
+it cannot determine an internal ID without contacting the API.
+
 ```bash
-GET https://amplitude.com/api/2/useractivity?user={user_id}
+GET https://amplitude.com/api/2/useractivity?user={amplitude_id}
 
 Authorization: Basic {base64(api_key:secret_key)}
 ```
