@@ -6,7 +6,7 @@ Current versions of all skills. Agents can compare against local versions to che
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
 | ad-creative | 2.9.3 | 2026-10-02 |
-| ai-seo | 2.7.2 | 2026-10-02 |
+| ai-seo | 2.7.3 | 2026-10-04 |
 | analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
 | attribution | 1.1.2 | 2026-10-02 |
@@ -16,6 +16,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | community-marketing | 2.0.1 | 2026-08-23 |
 | competitor-profiling | 2.1.2 | 2026-10-02 |
 | competitors | 2.3.0 | 2026-10-01 |
+| content-to-skill | 1.0.0 | 2026-10-04 |
 | content-strategy | 2.1.2 | 2026-10-02 |
 | copy-editing | 2.1.0 | 2026-10-02 |
 | copywriting | 2.1.0 | 2026-10-02 |
@@ -28,7 +29,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | image | 2.0.2 | 2026-10-02 |
 | influencer-marketing | 1.1.2 | 2026-10-02 |
 | launch | 2.0.3 | 2026-10-02 |
-| lead-magnets | 2.0.0 | 2026-05-05 |
+| lead-magnets | 2.0.1 | 2026-10-04 |
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
 | marketing-loops | 1.2.1 | 2026-10-02 |
@@ -56,6 +57,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.12.0 (2026-10-04)
+
+- **content-to-skill** (1.0.0): add the archive-to-agent-corpus capability requested in #432, with two-layer extraction, question routing, attributed/date-scoped claims, source and permission inventory, context budgeting, evidence tests, and target-specific packaging status. **ai-seo** and **lead-magnets** add scope pointers.
 
 ### 2.11.17 (2026-10-02)
 
