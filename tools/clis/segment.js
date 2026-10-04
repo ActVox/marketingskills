@@ -81,6 +81,14 @@ function parseArgs(args) {
 const args = parseArgs(rawArgs)
 const [cmd, sub, ...rest] = args._
 
+function eventIdentity() {
+  const identity = {}
+  if (typeof args['user-id'] === 'string' && args['user-id']) identity.userId = args['user-id']
+  if (typeof args['anonymous-id'] === 'string' && args['anonymous-id']) identity.anonymousId = args['anonymous-id']
+  if (!Object.keys(identity).length) throw new Error('--user-id or --anonymous-id required')
+  return identity
+}
+
 async function main() {
   let result
 
@@ -88,10 +96,9 @@ async function main() {
     case 'track':
       switch (sub) {
         case 'event': {
-          if (!args['user-id']) { result = { error: '--user-id required' }; break }
           if (!args.event) { result = { error: '--event required' }; break }
           const body = {
-            userId: args['user-id'],
+            ...eventIdentity(),
             event: args.event,
           }
           if (args.properties) {
@@ -108,8 +115,7 @@ async function main() {
     case 'identify':
       switch (sub) {
         case 'user': {
-          if (!args['user-id']) { result = { error: '--user-id required' }; break }
-          const body = { userId: args['user-id'] }
+          const body = eventIdentity()
           if (args.traits) {
             try { body.traits = JSON.parse(args.traits) } catch { result = { error: 'Invalid JSON in --traits' }; break }
           }
@@ -124,8 +130,7 @@ async function main() {
     case 'page':
       switch (sub) {
         case 'view': {
-          if (!args['user-id']) { result = { error: '--user-id required' }; break }
-          const body = { userId: args['user-id'] }
+          const body = eventIdentity()
           if (args.name) body.name = args.name
           if (args.properties) {
             try { body.properties = JSON.parse(args.properties) } catch { result = { error: 'Invalid JSON in --properties' }; break }
@@ -175,9 +180,9 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
-          track: 'track event --user-id <id> --event <name> [--properties <json>]',
-          identify: 'identify user --user-id <id> [--traits <json>]',
-          page: 'page view --user-id <id> [--name <name>] [--properties <json>]',
+          track: 'track event [--user-id <id>] [--anonymous-id <id>] --event <name> [--properties <json>]',
+          identify: 'identify user [--user-id <id>] [--anonymous-id <id>] [--traits <json>]',
+          page: 'page view [--user-id <id>] [--anonymous-id <id>] [--name <name>] [--properties <json>]',
           batch: 'batch send --events <json_array>',
           profiles: 'profiles [traits|events] --space-id <id> --user-id <id>',
         }
