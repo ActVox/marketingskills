@@ -57,6 +57,11 @@ Current versions of all skills. Agents can compare against local versions to che
 
 ## Recent Changes
 
+### 2.11.18 (2026-10-04)
+
+- Add deterministic per-skill source and Claude web-target ZIP release assets with explicit reviewed short descriptions, source integrity manifests, and visible web-catalog omissions.
+- Document the non-terminal Claude installation path and add native archive validation to CI.
+
 ### 2.11.17 (2026-10-02)
 
 - **video** (2.2.0 → 2.2.1) and the **Hyperframes integration guide** (reported in #600 by @pjthegiant): the old example called a `render({ frames })` API that the `hyperframes` package doesn't export. Both now lead with the CLI (`npx hyperframes init`, `preview`, `render -o output.mp4`) and explain the composition format: a root with `data-composition-id`, `class="clip"` elements with timing attributes, and a paused GSAP timeline. Rendering from code goes through `@hyperframes/producer` (`createRenderJob` + `executeRenderJob`). Checked against v0.8.114.

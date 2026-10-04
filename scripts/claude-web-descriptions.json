@@ -1,0 +1,202 @@
+{
+  "ab-testing": {
+    "source_description_sha256": "863dfe543c5dc0e3ba0feb6661131f8cd631efe34bbe48ec3fd074b027575000",
+    "description": "Plan A/B tests and growth experiments: hypotheses, variants, measurement, sample size, duration, and an experiment backlog."
+  },
+  "ad-creative": {
+    "source_description_sha256": "2c7bec0e5a8bc2a502c97fa65b59882221b56e3b1f27514ddffd87dc9df25404",
+    "description": "Create and iterate paid ad copy, hooks, headlines, and visual or video concepts; prepare creative tests and approval-ready variations."
+  },
+  "ads": {
+    "source_description_sha256": "86c17fc25d15c40557bfb6a5b5479c18e2c6641caad108d84e1212b9b5100b01",
+    "description": "Plan and optimize paid campaigns: audiences, budgets, bidding, PPC, retargeting, ROAS, CPA, and lead quality across ad platforms."
+  },
+  "ai-seo": {
+    "source_description_sha256": "fe0e0f43de0d37634ec768d9eb300e9bf25638df1c42bf7e06c56bf56be67406",
+    "description": "Improve AI search visibility, LLM citations, AEO/GEO, AI Overviews, and agent-readable site content; audit why AI answers overlook your brand."
+  },
+  "analytics": {
+    "source_description_sha256": "9e250e350c76e7b65b357cd879bb9f1f49523d890ff15bad21faae9942e9e5e7",
+    "description": "Set up or audit GA4, conversion events, UTMs, tag managers, and tracking plans; diagnose missing events and measure marketing results."
+  },
+  "aso": {
+    "source_description_sha256": "3e5d0a3c81b0b2b73d05dbef76c8bc33079b540ca9c5027c1328d7b0610cdf7c",
+    "description": "Audit and optimize App Store or Google Play listings, app keywords, visibility, rankings, and listing conversion."
+  },
+  "attribution": {
+    "source_description_sha256": "01fdc33a6297f1e4606a52eec48c00ece9cc43db22ef2519ff90eed0785e81bb",
+    "description": "Choose attribution models, reconcile revenue dashboards, and investigate channel impact using multi-touch, MMM, incrementality, and first-party attribution."
+  },
+  "churn-prevention": {
+    "source_description_sha256": "f3b841fef14a812bbf6181d7d3f42c08a9e7a264e9716a4bec0fdebd7b683673",
+    "description": "Reduce subscriber churn with cancellation flows, save offers, retention, failed-payment recovery, dunning, pauses, and win-back strategies."
+  },
+  "co-marketing": {
+    "source_description_sha256": "b97864599b16f5e5f25ba171eed4ec315a7b3c23f694c6c0282af77eddf9ef60",
+    "description": "Find co-marketing partners and plan joint campaigns, integration marketing, co-branded content, and cross-promotions."
+  },
+  "cold-email": {
+    "source_description_sha256": "6b7866f8f969e33fad95b10f31981c4b2dfe55cf18860e39533527d00cd00c81",
+    "description": "Write B2B cold outreach emails and follow-up sequences: subject lines, personalization, opening lines, sales copy, and clear CTAs."
+  },
+  "community-marketing": {
+    "source_description_sha256": "6d83f61c0f3a28fc31e483380d6abc6303847e65d44cf3185759f646e251fadb",
+    "description": "Plan or grow a user community, forum, Discord, or Slack group; develop engagement, advocates, ambassadors, and community-led growth."
+  },
+  "competitor-profiling": {
+    "source_description_sha256": "595b6fa65e9518e7af8b6ca4f436199e71341d40ad1fa49d9ba80152be1a8f8d",
+    "description": "Research competitors from URLs and create structured profiles, competitive intelligence, landscape analyses, and competitor dossiers."
+  },
+  "competitors": {
+    "source_description_sha256": "ca613cf0b9b7296079ff8832a34e22625f115d4748c46da6b88da3ce27c21b5e",
+    "description": "Create or audit buyer-facing competitor comparison, versus, and alternative pages; verify existing positioning claims and competitive assets."
+  },
+  "content-strategy": {
+    "source_description_sha256": "602ac5599f4e6e51643d9caa4ccd3cb5429751987750b15cc39e9cba002a85e6",
+    "description": "Plan content topics, pillars, clusters, editorial calendars, blog strategy, and content roadmaps before writing individual pieces."
+  },
+  "copy-editing": {
+    "source_description_sha256": "728676d47b83c05e644fe912d8ff281a31a9f60b10a068905d67abb2c434d3ba",
+    "description": "Review, polish, tighten, or refresh existing marketing copy; remove awkward wording, stale content, and AI writing patterns."
+  },
+  "copywriting": {
+    "source_description_sha256": "06ba577db7b71de51b580bea992d10c319c3e76e9f2014bb63ee9c7faacd28c3",
+    "description": "Write or rewrite website marketing copy: homepages, landing pages, product pages, headlines, CTAs, and value propositions."
+  },
+  "cro": {
+    "source_description_sha256": "3e28de53a48fe9dbacc1437567c19ce5185b5f175e7b0141eb2117c83f4366e2",
+    "description": "Audit marketing pages and lead-capture forms to improve conversions; diagnose landing-page friction, form abandonment, and weak conversion rates."
+  },
+  "customer-research": {
+    "source_description_sha256": "1fa6285752c5a17a5dfff90989e9c0ffef29fca5a5302b6aa88dae86d66626b4",
+    "description": "Plan or analyze customer interviews, surveys, support tickets, reviews, and online research; identify ICP, jobs to be done, and voice of customer."
+  },
+  "directory-submissions": {
+    "source_description_sha256": "ad3b6925d997e245898b2f58d1879c2350f610db78753d89844b3b55d8f54221",
+    "description": "Plan and track product submissions to startup, SaaS, AI, agent, MCP, and review directories for discovery and backlinks."
+  },
+  "emails": {
+    "source_description_sha256": "153a188955ee65f24fdd800478a82cbfcb186fe1bff0bd7827bc46dfbc0b1529",
+    "description": "Create or optimize lifecycle email programs: welcome, onboarding, nurture, drip, re-engagement, and automated multi-email sequences."
+  },
+  "events": {
+    "source_description_sha256": "9ef860366af94429d31d812359bf175bc45f4563764085bc28cfc7838caf4c90",
+    "description": "Plan webinars, conferences, trade shows, meetups, dinners, and speaking; evaluate sponsorships, event ROI, attendance, and follow-up."
+  },
+  "free-tools": {
+    "source_description_sha256": "3daf1be2d7f875e213cebbc3ac0f6b794ce5d62fbd5be9d061525b1a1fe9a861",
+    "description": "Plan, evaluate, or build free calculators, generators, graders, and interactive tools for lead generation, SEO, or brand awareness."
+  },
+  "image": {
+    "source_description_sha256": "e2db953d7acfe34818fa421ea69f3a3e70210be1b2e42fa9c4541fc4c274ac0b",
+    "description": "Create or optimize marketing images: blog heroes, product mockups, social graphics, banners, listing visuals, and brand assets."
+  },
+  "influencer-marketing": {
+    "source_description_sha256": "dd23e66e3271ae2ee37065ef4a684cfb75e56037e05122db97f97b638b2988d3",
+    "description": "Find and vet creators, influencers, and ambassadors; plan sponsorship deals, briefs, disclosure, UGC partnerships, and ROI measurement."
+  },
+  "launch": {
+    "source_description_sha256": "c1659a25d7b1f0b6ce063bc484287ea35fbc14b595997f166f0f68581517eabf",
+    "description": "Plan product launches, feature announcements, beta releases, waitlists, early access, Product Hunt campaigns, and go-to-market moments."
+  },
+  "lead-magnets": {
+    "source_description_sha256": "c4f0069d4b7269e84958dc7b3f710a82173e376c8b5f92a1ca0915ee40a45890",
+    "description": "Plan and distribute lead magnets for email capture: ebooks, checklists, downloadable templates, resource libraries, and gated content."
+  },
+  "marketing-council": {
+    "source_description_sha256": "103f655a5584cfab3521597f218b44e4bf20181ca2231bf68e67da7c9481f101",
+    "description": "Explore a marketing question through multiple documented expert frameworks; compare simulated advisor perspectives and synthesize their disagreements."
+  },
+  "marketing-ideas": {
+    "source_description_sha256": "577dbfad438174bed549ee3eaed53ce4b1ae1c71c7687b6b4ce734c4e44012dc",
+    "description": "Brainstorm marketing tactics, growth ideas, and channel strategies for a SaaS or software product when deciding what to try next."
+  },
+  "marketing-loops": {
+    "source_description_sha256": "744653132e42ba7ac274b9b76ec4c856e73bb586879f139b462d5b873fa5133e",
+    "description": "Design recurring marketing workflows: weekly reviews, ad-fatigue checks, content refreshes, churn monitoring, and scheduled agent loops."
+  },
+  "marketing-plan": {
+    "source_description_sha256": "412a11758429c9585f932bab6606346e74fa278da3e0f113cde5c5b9f59a258d",
+    "description": "Create a comprehensive AARRR marketing plan, current-state audit, market sizing, budget, operating stack, and growth roadmap."
+  },
+  "marketing-psychology": {
+    "source_description_sha256": "ca1d0c40229c0533bcb2b9746355b2b4bdc8582b5bfcdf9ba6203856609192b4",
+    "description": "Apply behavioral science, persuasion, mental models, cognitive biases, framing, social proof, and decision-making principles to marketing."
+  },
+  "offers": {
+    "source_description_sha256": "6b4901f895a5ee7ef1a1db9bfe9b6486a2ee9bc4afe107ba7a5e26496c54b18b",
+    "description": "Design service, agency, course, or high-ticket offers: value framing, bonuses, guarantees, naming, scarcity, and payment structure."
+  },
+  "onboarding": {
+    "source_description_sha256": "1470e74405509c4f4fc862bfe4e9a08691697040f44de2d0469459fa8812d3da",
+    "description": "Optimize post-signup activation, setup, first-run experience, empty states, aha moments, and time to value."
+  },
+  "paywalls": {
+    "source_description_sha256": "142a11cbc3835effdb8406e978efb631136365e57c8d9288adf2e7068f33631d",
+    "description": "Improve in-app paywalls, upgrade prompts, feature gates, trial-expiry screens, and freemium-to-paid conversion."
+  },
+  "popups": {
+    "source_description_sha256": "71756773110b7bccc866f3e802ce94862787bc06d66f8f3884a1b4ee2f210968",
+    "description": "Optimize lead-capture popups, exit-intent overlays, modals, announcement banners, sticky bars, and interrupt-style conversion elements."
+  },
+  "pricing": {
+    "source_description_sha256": "7d00b3aa8d32404fa1502699f79cf3374fd18f070b360dd2bb320a7236aac57d",
+    "description": "Choose pricing, tiers, value metrics, freemium, trials, and packaging; audit pricing pages for buyers and AI readability."
+  },
+  "product-marketing": {
+    "source_description_sha256": "f43b89c43d215c35cc750379b109b7a3ea6584b99890c2725b7e770fa1579f2c",
+    "description": "Create or update product marketing context, positioning, audience, ICP, and foundational information shared across marketing tasks."
+  },
+  "programmatic-seo": {
+    "source_description_sha256": "f007ff34fc7e7a276efcacbca4ee21da872a1b61c0e5119010fbc5297393edea",
+    "description": "Plan or build keyword-targeted SEO pages at scale: templates, directories, locations, comparisons, integrations, and data-driven landing pages."
+  },
+  "prospecting": {
+    "source_description_sha256": "1e4297893134834f80eff25de1da4a40033ffa6458626b6b88a750c40dc32bfb",
+    "description": "Build and qualify prospect or target-account lists for B2B, SaaS, or local businesses; find ICP-fit leads, early customers, and design partners."
+  },
+  "public-relations": {
+    "source_description_sha256": "f61b65fb0370119ece6b4a3a2405a2c78ad3b801a0914e65867926e0d9eb86cd",
+    "description": "Plan earned media, journalist pitches, press materials, podcast appearances, thought leadership, and crisis communications."
+  },
+  "referrals": {
+    "source_description_sha256": "b7faa6189feafa9f5ef2cada842aa949d77b98891704f14b3573d096fbf15830",
+    "description": "Design, improve, or analyze customer referral, affiliate, ambassador, partner, incentive, and word-of-mouth programs."
+  },
+  "revops": {
+    "source_description_sha256": "7b90eb35a3cab25f88973ac84f3076125df05fa778d6658713ab830096bb7919",
+    "description": "Improve lead scoring, qualification, routing, CRM hygiene, pipeline stages, deal processes, and marketing-to-sales handoffs."
+  },
+  "sales-enablement": {
+    "source_description_sha256": "9c8063d0fbfd56dcbc830cf05edea6e885fdaa95bb2944cb86f8baba653e594e",
+    "description": "Create sales decks, proposals, one-pagers, battle cards, demo scripts, objection handling, and deal-specific ROI or win-loss analysis."
+  },
+  "schema": {
+    "source_description_sha256": "237783da0df287fe700906fe90552c24940c6d2708efa8c885d6e11561f59b39",
+    "description": "Implement or fix schema.org JSON-LD and structured data for products, reviews, breadcrumbs, FAQs, and eligible search enhancements."
+  },
+  "seo-audit": {
+    "source_description_sha256": "0acc442c6357614786b078536826bdd2f0e24c93c18bb0d73bebc5d9ef9e5e0d",
+    "description": "Audit technical and on-page SEO, indexing, crawling, rankings, meta tags, traffic drops, page speed, and Core Web Vitals."
+  },
+  "signup": {
+    "source_description_sha256": "a0e5c4774241ad4b106493155ad30dc2a4300e88cfcefa68c8a5f7af3ef234f9",
+    "description": "Optimize registration, account creation, free-trial signup, signup forms, friction, abandonment, and completion rates."
+  },
+  "site-architecture": {
+    "source_description_sha256": "1a084e1885dae04cf203fec85070e100b383cdfce8a5176562198cb9bd802392",
+    "description": "Plan website hierarchy, navigation, URL structure, visual sitemaps, breadcrumbs, and internal linking."
+  },
+  "sms": {
+    "source_description_sha256": "c44427260cf2174a6625f20d05eefd9875f3ef96fa558bb0fc441dddc04278dd",
+    "description": "Plan SMS, MMS, and WhatsApp campaigns, lifecycle texts, transactional messages, opt-ins, templates, and messaging compliance."
+  },
+  "social": {
+    "source_description_sha256": "6bac38d2ff4a230a5816022615a0a0860f0a25a03fa1e5cb089367da2bb6fea2",
+    "description": "Create, repurpose, or schedule social posts, carousels, and short-video scripts; plan social strategy, listening, and engagement triage."
+  },
+  "video": {
+    "source_description_sha256": "659fa809bd3a18b34120b85bce6ea358883484a12c7fe700fe3e2f0295b97257",
+    "description": "Plan and produce AI or programmatic marketing videos, avatars, explainers, product demos, templates, and reference-style edits."
+  }
+}
