@@ -5,7 +5,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.9.3 | 2026-10-02 |
+| ad-creative | 2.10.0 | 2026-10-04 |
 | ai-seo | 2.7.2 | 2026-10-02 |
 | analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
@@ -56,6 +56,9 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-04)
+- Expand **ad-creative** to 2.10.0 with awareness-stage headline treatments, evidence checks, and mobile-readable static visual direction (owner issue #404).
 
 ### 2.11.17 (2026-10-02)
 
