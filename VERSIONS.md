@@ -29,6 +29,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | influencer-marketing | 1.1.2 | 2026-10-02 |
 | launch | 2.0.3 | 2026-10-02 |
 | lead-magnets | 2.0.0 | 2026-05-05 |
+| local-seo | 1.0.0 | 2026-10-04 |
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
 | marketing-loops | 1.2.1 | 2026-10-02 |
@@ -56,6 +57,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.12.0 (2026-10-04)
+
+- **local-seo** (1.0.0): new skill for Google Business Profile, local citations, honest customer reviews, location/service-area pages, and local search measurement. Fulfills #486 with current platform guidance, including retired Q&A APIs, hidden-address businesses, and schema eligibility. Routes technical SEO, structured-data implementation, and scaled pages to the existing skills.
 
 ### 2.11.17 (2026-10-02)
 
