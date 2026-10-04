@@ -114,7 +114,7 @@ async function main() {
         case 'get': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('GET', `/visitor/${id}`)
+          result = await api('GET', `/visitor/${encodeURIComponent(id)}`)
           break
         }
         case 'search': {
@@ -135,7 +135,7 @@ async function main() {
         case 'get': {
           const id = args.id
           if (!id) { result = { error: '--id required' }; break }
-          result = await api('GET', `/account/${id}`)
+          result = await api('GET', `/account/${encodeURIComponent(id)}`)
           break
         }
         case 'search': {
