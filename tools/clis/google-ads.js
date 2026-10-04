@@ -82,6 +82,12 @@ async function main() {
   let result
 
   switch (cmd) {
+    case 'query':
+      if (sub !== 'run') throw new Error('Unknown query subcommand. Use: run')
+      if (typeof args.query !== 'string' || !args.query.trim()) throw new Error('--query requires a non-empty GAQL query')
+      result = await gaql(args.query)
+      break
+
     case 'account':
       switch (sub) {
         case 'info':
@@ -182,6 +188,7 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
+          query: 'query run --query <GAQL> [--dry-run]',
           account: 'account [info]',
           campaigns: 'campaigns [list|performance|pause|enable] [--days 30] [--id <id>]',
           adgroups: 'adgroups [performance] [--days 30] [--limit <n>]',

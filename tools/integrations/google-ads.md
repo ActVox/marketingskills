@@ -252,3 +252,28 @@ and sends `login-customer-id` on both report and mutation requests. Keep
 `GOOGLE_ADS_CUSTOMER_ID` set to the target client account. Direct client access
 does not require the manager variable. See
 [Google Ads REST authorization](https://developers.google.com/google-ads/api/rest/auth).
+
+### Run custom reports with the CLI
+
+The built-in report commands cover common summaries. Use `query run` for the
+[analysis recipes above](#analysis-recipes), additional dimensions, and conversion
+actions without writing another client:
+
+```bash
+node tools/clis/google-ads.js query run --query \
+  "SELECT campaign.id, segments.date, metrics.clicks FROM campaign WHERE segments.date BETWEEN '2026-01-01' AND '2026-01-03' ORDER BY segments.date LIMIT 100"
+```
+
+The command forwards the supplied GAQL unchanged to the same authenticated
+`googleAds:searchStream` endpoint. Google validates resource and field
+compatibility; it does not call a mutation endpoint. `--dry-run` previews the
+request with credentials masked. Empty queries and unknown subcommands fail
+locally before transport.
+
+Select the fields you need, bound the result with `LIMIT`, and use explicit dates
+for reproducible reporting. Adding a segment changes the row grain: campaign
+plus date rows are not campaign totals. JSON output preserves every returned
+stream chunk and provider integer strings; do not coerce large IDs into JavaScript
+numbers. Cost fields in micros still require division by one million.
+
+See [Google's GAQL overview](https://developers.google.com/google-ads/api/docs/query/overview).
