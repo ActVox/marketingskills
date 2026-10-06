@@ -32,7 +32,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
 | marketing-loops | 1.2.1 | 2026-10-02 |
-| marketing-plan | 1.2.0 | 2026-10-02 |
+| marketing-plan | 1.2.1 | 2026-10-06 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.1 | 2026-08-23 |
 | onboarding | 2.0.1 | 2026-08-23 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **marketing-plan** (1.2.0 → 1.2.1): include retained starting-base ARR in acquisition budget planning; reconcile worked examples and distinguish existing-base from new-cohort revenue retention. Adds a year-end ARR bridge evaluation.
 
 ### 2.11.17 (2026-10-02)
 
