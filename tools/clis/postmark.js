@@ -120,6 +120,13 @@ async function main() {
           } else {
             body.TemplateAlias = template
           }
+          if (args['model-json'] !== undefined) {
+            if (args.model !== undefined) throw new Error('Use --model or --model-json, not both')
+            let model
+            try { model = JSON.parse(args['model-json']) } catch { throw new Error('--model-json must be a valid JSON object') }
+            if (model === null || typeof model !== 'object' || Array.isArray(model)) throw new Error('--model-json must be a JSON object')
+            body.TemplateModel = model
+          }
           if (args.model) {
             const pairs = args.model.split(',')
             for (const pair of pairs) {
@@ -364,7 +371,7 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
-          email: 'email [send --from <from> --to <to> --subject <subj> | send-template --from <from> --to <to> --template <id> | send-batch --from <from> --to <to1,to2> --subject <subj>]',
+          email: 'email [send --from <from> --to <to> --subject <subj> | send-template --from <from> --to <to> --template <id> [--model <pairs> | --model-json <object>] | send-batch --from <from> --to <to1,to2> --subject <subj>]',
           templates: 'templates [list | get --id <id> | create --name <name> [--type Standard|Layout] [--subject <subject> (Standard only)] | delete --id <id>]',
           bounces: 'bounces [list | get --id <id> | stats | activate --id <id>]',
           messages: 'messages [outbound | inbound | get --id <id>]',
