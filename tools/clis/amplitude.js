@@ -94,10 +94,14 @@ async function main() {
     case 'track':
       switch (sub) {
         case 'event': {
-          if (!args['user-id']) { result = { error: '--user-id required' }; break }
+          for (const key of ['user-id', 'device-id']) {
+            if (args[key] !== undefined && (typeof args[key] !== 'string' || args[key].trim().length === 0)) throw new Error(`--${key} requires a non-empty string`)
+          }
+          if (!args['user-id'] && !args['device-id']) { result = { error: '--user-id or --device-id required' }; break }
           if (!args['event-type']) { result = { error: '--event-type required' }; break }
           const event = {
-            user_id: args['user-id'],
+            ...(args['user-id'] !== undefined ? { user_id: args['user-id'] } : {}),
+            ...(args['device-id'] !== undefined ? { device_id: args['device-id'] } : {}),
             event_type: args['event-type'],
           }
           if (args.properties) {
@@ -176,7 +180,7 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
-          track: 'track [event --user-id <id> --event-type <type> [--properties <json>] | batch --events <json>]',
+          track: 'track [event [--user-id <id>] [--device-id <id>] --event-type <type> [--properties <json>] | batch --events <json>]',
           users: 'users activity --user-id <id>',
           export: "export events --start <YYYYMMDDThh> --end <YYYYMMDDThh> (ZIP in base64 body; decode with Buffer.from(result.body, 'base64'))",
           retention: 'retention get --start <YYYYMMDD> --end <YYYYMMDD> [--event <type>]',
