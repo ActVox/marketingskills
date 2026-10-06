@@ -123,7 +123,7 @@ function updateReadme(skills) {
     return false;
   }
 
-  const newContent = content.replace(tableRegex, `$1${newTable}$2`);
+  const newContent = content.replace(tableRegex, (_match, start, end) => start + newTable + end);
 
   if (newContent === content) {
     return false;
