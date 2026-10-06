@@ -145,3 +145,17 @@ Rewardful automatically:
 
 - referrals
 - pricing
+
+### Listing all collection pages with the CLI
+
+Rewardful returns paginated affiliate, referral and commission collections. Pass `--page` and `--limit` (provider maximum 100) to advance while preserving the selected filters:
+
+```bash
+node tools/clis/rewardful.js referrals list --affiliate-id aff_123 --page 3 --limit 50
+node tools/clis/rewardful.js commissions list --affiliate-id aff_123 --page 2 --limit 50
+node tools/clis/rewardful.js affiliates list --page 2 --limit 50
+```
+
+Read the response's pagination metadata before requesting another page. No flags retain the provider's default page and size; the CLI does not automatically fetch every page.
+
+Sources: [referrals](https://developers.rewardful.com/rest-api/referrals/list), [commissions](https://developers.rewardful.com/rest-api/commissions/list), [affiliates](https://developers.rewardful.com/rest-api/affiliates/list).
