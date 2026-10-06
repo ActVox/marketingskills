@@ -39,7 +39,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ads | 2.4.3 | 2026-10-02 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
-| pricing | 2.1.2 | 2026-10-02 |
+| pricing | 2.1.3 | 2026-10-06 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.0.0 | 2026-05-05 |
 | prospecting | 1.1.2 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **pricing** (2.1.2 → 2.1.3): distinguish Van Westendorp price perception from purchase behavior; remove the unsupported demand-impact promise and treat intersection prices as test candidates. Adds a pricing evidence evaluation scenario.
 
 ### 2.11.17 (2026-10-02)
 
