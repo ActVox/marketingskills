@@ -4,7 +4,7 @@ Current versions of all skills. Agents can compare against local versions to che
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
-| ab-testing | 2.0.0 | 2026-05-05 |
+| ab-testing | 2.0.1 | 2026-10-06 |
 | ad-creative | 2.9.3 | 2026-10-02 |
 | ai-seo | 2.7.2 | 2026-10-02 |
 | analytics | 2.0.2 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **ab-testing** (2.0.0 → 2.0.1): correct p-value and confidence-interval interpretation, distinguish uncertainty from practical impact, and keep completed fixed-horizon tests from being extended until significant. Strengthens the result-analysis eval, adds an interpretation scenario, and links ASA guidance.
 
 ### 2.11.17 (2026-10-02)
 
