@@ -9,7 +9,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ai-seo | 2.7.2 | 2026-10-02 |
 | analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
-| attribution | 1.1.2 | 2026-10-02 |
+| attribution | 1.1.3 | 2026-10-06 |
 | churn-prevention | 2.0.1 | 2026-10-02 |
 | co-marketing | 2.0.2 | 2026-10-02 |
 | cold-email | 2.1.0 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **attribution** (1.1.2 → 1.1.3): keep webhook analytics timeout/network failures non-fatal and report rejected HTTP ingestion without logging identity data. Add a matching diagnostic eval.
 
 ### 2.11.17 (2026-10-02)
 
