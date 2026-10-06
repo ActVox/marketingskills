@@ -210,3 +210,13 @@ await resend.emails.send({
 
 - emails
 - onboarding
+
+## Paging bundled CLI collections
+
+The `emails list`, `domains list`, `broadcasts list`, `segments list`, `api-keys list` and `templates list` commands accept `--limit <1-100>` and either `--after <id>` or `--before <id>`. Inspect the provider's `has_more` and returned object IDs, then request the next page manually. The CLI preserves raw responses and does not silently aggregate or issue more calls.
+
+```bash
+node tools/clis/resend.js emails list --limit 100 --after <last_email_id> --dry-run
+```
+
+No flags retains provider defaults, including unpaginated legacy lists where the provider returns all items unless a limit is supplied. Supplying both directions, an empty cursor or an invalid limit fails before fetch. See [Resend pagination](https://resend.com/docs/api-reference/pagination); fixtures verify request construction without live account calls.
