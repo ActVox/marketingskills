@@ -183,7 +183,13 @@ async function main() {
           const email = args.email
           if (!metric) { result = { error: '--metric required (metric name)' }; break }
           if (!email) { result = { error: '--email required' }; break }
-          const properties = {}
+          let properties = {}
+          if (args.properties !== undefined) {
+            if (args.property !== undefined) throw new Error('Use --property or --properties, not both')
+            if (typeof args.properties !== 'string') throw new Error('--properties must be a JSON object')
+            try { properties = JSON.parse(args.properties) } catch { throw new Error('--properties must be valid JSON object') }
+            if (properties === null || typeof properties !== 'object' || Array.isArray(properties)) throw new Error('--properties must be a JSON object')
+          }
           let value
           if (args.value !== undefined) {
             if (typeof args.value !== 'string' || !args.value.trim() || !Number.isFinite(Number(args.value))) {
@@ -337,7 +343,7 @@ async function main() {
         usage: {
           profiles: 'profiles [list | get --id <id> | create --email <email> | update --id <id>]',
           lists: 'lists [list | get --id <id> | create --name <name> | delete --id <id> | add-profiles --id <list-id> --profiles <id1,id2> | remove-profiles --id <list-id> --profiles <id1,id2>]',
-          events: 'events [list | get --id <id> | create --metric <name> --email <email>]',
+          events: 'events [list | get --id <id> | create --metric <name> --email <email> [--property <pairs> | --properties <json_object>]]',
           campaigns: 'campaigns [list | get --id <id>]',
           flows: 'flows [list | get --id <id> | update --id <id> --status <status>]',
           metrics: 'metrics [list | get --id <id>]',
