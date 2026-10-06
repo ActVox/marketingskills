@@ -7,7 +7,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ab-testing | 2.0.0 | 2026-05-05 |
 | ad-creative | 2.9.3 | 2026-10-02 |
 | ai-seo | 2.7.2 | 2026-10-02 |
-| analytics | 2.0.2 | 2026-10-02 |
+| analytics | 2.0.3 | 2026-10-06 |
 | aso | 2.0.1 | 2026-08-19 |
 | attribution | 1.1.2 | 2026-10-02 |
 | churn-prevention | 2.0.1 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **analytics** (2.0.2 → 2.0.3): use GA4 enhanced-measurement event names in filters instead of option labels; distinguish video starts, progress and completions, and add a provider-name report scenario.
 
 ### 2.11.17 (2026-10-02)
 

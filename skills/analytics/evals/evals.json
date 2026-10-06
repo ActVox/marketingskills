@@ -85,6 +85,20 @@
         "Does not attempt to design the full experiment"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "GA4 enhanced measurement is enabled. I filtered outbound_click, site_search and video_engagement and got zero, but DebugView shows 12 click events with outbound=true, 7 view_search_results, 6 video_start, 4 video_progress and 2 video_complete. Which reports should I build? Do I need to add custom events?",
+      "expected_output": "Identify the mismatched option labels/event names. Use click with outbound=true for the 12 outbound clicks, view_search_results for the 7 searches, and separate video_start/video_progress/video_complete reports for 6/4/2. Do not add custom duplicate events to fix a filter mismatch or sum all video events as unique views. Check enabled options, configured search query parameters, YouTube JS API support and DebugView; cross-domain measurement destinations do not produce outbound clicks.",
+      "assertions": [
+        "Uses actual enhanced-measurement event names instead of option labels",
+        "Filters click by outbound=true and reports 12 outbound clicks",
+        "Uses view_search_results and reports 7 searches",
+        "Separates 6 video starts, 4 progress events and 2 completions",
+        "Does not count all video events as unique views or create duplicate custom events",
+        "Mentions relevant enhanced-measurement configuration and DebugView checks"
+      ],
+      "files": []
     }
   ]
 }
