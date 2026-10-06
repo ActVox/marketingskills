@@ -47,7 +47,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | referrals | 2.0.2 | 2026-10-02 |
 | revops | 2.0.1 | 2026-10-02 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
-| schema | 2.0.0 | 2026-05-05 |
+| schema | 2.0.1 | 2026-10-06 |
 | seo-audit | 2.0.1 | 2026-08-19 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.0.0 | 2026-05-05 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **schema** (2.0.0 → 2.0.1): distinguish Schema.org vocabulary from currently supported Google search appearances. Correct retired FAQ, HowTo and sitelinks search box advice, preserve site-name markup, and align evaluation expectations and validation guidance.
 
 ### 2.11.17 (2026-10-02)
 
