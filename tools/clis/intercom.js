@@ -356,7 +356,7 @@ async function main() {
             created_at: args['created-at'] ? Number(args['created-at']) : Math.floor(Date.now() / 1000),
           }
           if (args.metadata) {
-            try { body.metadata = JSON.parse(args.metadata) } catch { body.metadata = {} }
+            try { body.metadata = JSON.parse(args.metadata) } catch { throw new Error('Invalid JSON in --metadata') }
           }
           result = await api('POST', '/events', body)
           break
