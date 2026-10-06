@@ -27,7 +27,8 @@ Facts below were checked against [docs.ploy.ai](https://docs.ploy.ai) and [ploy.
 - **Analytics and visitors.** Built-in cookie-free analytics with an AI-referrer channel (ChatGPT, Perplexity, Claude, Gemini, Copilot), plus visitor identification (person, company, title) and contact enrichment, metered by plan. Ploy says visitor identification needs no consent banner; whether that holds for your audience and jurisdiction is a legal question for you, not something the vendor can settle.
 - **Forms.** Native form submissions with email notifications.
 - **Integrations.** Figma, GA4, Search Console, HubSpot (two-way), Salesforce (Enterprise), Attio, Semrush, PostHog, Slack, Notion, the Google, Meta, LinkedIn, and Reddit ad platforms (reporting), and more. Write access is off by default per connection.
-- **Coming soon (waitlist, as of 2026-10):** PloyGrow (outreach) and PloyAds (managed paid campaigns), and SSO.
+- **SSO.** OIDC single sign-on is live on the Enterprise plan.
+- **Coming soon (waitlist, as of 2026-10):** PloyGrow (outreach) and PloyAds (managed paid campaigns).
 
 ## Pricing (as of 2026-10-02)
 
@@ -110,7 +111,7 @@ Then have the agent (or a Ploybook) build one dynamic template route over the ta
 - **Hosting is Ploy-only**, and routing means Ploy's edge sits in front of your whole domain. Source access is via Code Sync on paid plans only, in Ploy's Astro shape; there's no documented self-hosting path.
 - **Export is limited.** PloyDB CSV export caps at 10,000 rows, and Ploy itself calls it not a lossless backup.
 - **Marketing sites, not apps or stores.** Carts, checkout, and authenticated apps stay elsewhere and get proxied.
-- **Young product.** GA in June 2026, CLI at 0.12.x; some marketed features (localization, AEO citation tracking, A/B testing) aren't in the docs yet. Ploy's own comparison page suggests Webflow when heavy programmatic SEO or ecommerce is the core motion.
+- **Young product.** GA in June 2026, CLI at 0.16.x; some marketed features (localization, AEO citation tracking, A/B testing) aren't in the docs yet. Ploy's own comparison page suggests Webflow when heavy programmatic SEO or ecommerce is the core motion.
 - **Credit costs** depend on agent usage and scheduled work, so estimate from a trial before committing.
 
 ## How it fits the skills
