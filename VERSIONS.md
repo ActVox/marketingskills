@@ -21,7 +21,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | copywriting | 2.1.0 | 2026-10-02 |
 | cro | 2.0.0 | 2026-05-05 |
 | customer-research | 2.0.4 | 2026-10-02 |
-| directory-submissions | 2.1.0 | 2026-10-02 |
+| directory-submissions | 2.1.1 | 2026-10-06 |
 | emails | 2.1.1 | 2026-10-02 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.1 | 2026-08-23 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **directory-submissions** (2.1.0 → 2.1.1): inspect the actual destination anchor and link qualifiers instead of treating an empty HTTP-header grep as a verified backlink. Distinguish missing, unverified and observed unqualified links, record evidence, and update the evaluation scenarios.
 
 ### 2.11.17 (2026-10-02)
 
