@@ -5,69 +5,120 @@ Current versions of all skills. Agents can compare against local versions to che
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.9.0 | 2026-10-02 |
-| ai-seo | 2.7.1 | 2026-10-02 |
-| analytics | 2.0.1 | 2026-07-22 |
+| ad-creative | 2.9.3 | 2026-10-02 |
+| ai-seo | 2.7.3 | 2026-10-06 |
+| analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
-| attribution | 1.1.0 | 2026-07-23 |
-| churn-prevention | 2.0.0 | 2026-05-05 |
-| co-marketing | 2.0.1 | 2026-08-23 |
+| attribution | 1.1.2 | 2026-10-02 |
+| churn-prevention | 2.0.1 | 2026-10-02 |
+| co-marketing | 2.0.2 | 2026-10-02 |
 | cold-email | 2.1.0 | 2026-10-02 |
 | community-marketing | 2.0.1 | 2026-08-23 |
-| competitor-profiling | 2.1.0 | 2026-10-01 |
+| competitor-profiling | 2.1.2 | 2026-10-02 |
 | competitors | 2.3.0 | 2026-10-01 |
-| content-strategy | 2.1.1 | 2026-08-23 |
+| content-strategy | 2.1.2 | 2026-10-02 |
 | copy-editing | 2.1.0 | 2026-10-02 |
 | copywriting | 2.1.0 | 2026-10-02 |
 | cro | 2.0.0 | 2026-05-05 |
-| customer-research | 2.0.2 | 2026-08-23 |
+| customer-research | 2.0.4 | 2026-10-02 |
 | directory-submissions | 2.1.0 | 2026-10-02 |
-| emails | 2.1.0 | 2026-10-02 |
+| emails | 2.1.1 | 2026-10-02 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.1 | 2026-08-23 |
-| image | 2.0.1 | 2026-05-18 |
-| influencer-marketing | 1.1.0 | 2026-08-19 |
-| launch | 2.1.0 | 2026-10-02 |
+| image | 2.0.2 | 2026-10-02 |
+| influencer-marketing | 1.1.2 | 2026-10-02 |
+| launch | 2.1.0 | 2026-10-06 |
 | lead-magnets | 2.0.0 | 2026-05-05 |
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
-| marketing-loops | 1.2.0 | 2026-07-10 |
-| marketing-plan | 1.1.1 | 2026-08-23 |
+| marketing-loops | 1.2.1 | 2026-10-02 |
+| marketing-plan | 1.2.0 | 2026-10-02 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.1 | 2026-08-23 |
 | onboarding | 2.0.1 | 2026-08-23 |
-| ads | 2.4.2 | 2026-10-02 |
+| ads | 2.4.4 | 2026-10-06 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
-| pricing | 2.1.1 | 2026-08-23 |
+| pricing | 2.1.2 | 2026-10-02 |
 | product-marketing | 2.1.0 | 2026-07-16 |
-| programmatic-seo | 2.1.0 | 2026-10-02 |
-| prospecting | 1.1.1 | 2026-10-02 |
-| public-relations | 1.1.1 | 2026-08-23 |
-| referrals | 2.0.1 | 2026-08-23 |
-| revops | 2.0.0 | 2026-05-05 |
-| sales-enablement | 2.3.1 | 2026-10-01 |
+| programmatic-seo | 2.1.0 | 2026-10-06 |
+| prospecting | 1.1.3 | 2026-10-06 |
+| public-relations | 1.2.0 | 2026-10-02 |
+| referrals | 2.0.2 | 2026-10-02 |
+| revops | 2.0.1 | 2026-10-02 |
+| sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
 | seo-audit | 2.0.1 | 2026-08-19 |
 | signup | 2.0.0 | 2026-05-05 |
-| site-architecture | 2.1.0 | 2026-10-02 |
-| sms | 1.0.0 | 2026-05-21 |
-| social | 2.3.0 | 2026-10-02 |
-| video | 2.1.0 | 2026-07-14 |
+| site-architecture | 2.1.0 | 2026-10-06 |
+| sms | 1.1.0 | 2026-10-02 |
+| social | 2.3.2 | 2026-10-02 |
+| video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
 
-### 2.11.12 (2026-10-02)
+### 2.11.18 (2026-10-06)
 
 Website platform coverage, prompted by Ploy (◆ Verified Partner, Website & landing page builders). The repo had the strategy layer for sites (copywriting, cro, site-architecture, programmatic-seo) but nothing on where to build, adding sections to an existing site, migrating, or go-live QA. Added to existing skills, no new skill. Ploy appears as one option among alternatives with disclosure, including that the maintainer authors Ploybooks in Ploy's library. Closes #653.
 
 - **site-architecture** (2.0.0 → 2.1.0): new `references/platforms-and-migration.md`: six questions before choosing a platform; an options table (Webflow, Framer, WordPress, Wix Studio and Squarespace, landing-page tools, AI-native site platforms incl. Ploy ◆, AI app builders, hand-coded, headless); adding a section to an existing site (same platform, subpath via reverse proxy, subdomain, separate domain) with a proxy checklist; and migrating without losing traffic (crawl, redirect map, what imports don't carry, post-launch monitoring). New triggers: 'which website builder should I use,' 'migrate my website,' 'add a blog to my existing site.' New evals (ids 7–8).
 - **programmatic-seo** (2.0.0 → 2.1.0): new Implementation Framework step 6 and `references/implementation-platforms.md`: what a platform has to do for pages at scale (item limits, data refresh, server-rendered HTML, conditional sections, per-page indexation, internal linking, publish time) and the options (Webflow CMS, WordPress, Framer CMS, hand-coded generation, headless CMS, AI-native platforms incl. Ploy ◆ PloyDB). New trigger 'which CMS for pSEO.' New eval.
-- **ai-seo** (2.7.0 → 2.7.1): `agent-readiness.md` gains ways to implement WebMCP (yourself, platform support with Ploy ◆'s Ploybook as one example, a coding agent) and the tests every path needs.
-- **launch** (2.0.2 → 2.1.0): new `references/site-launch-qa.md`, a before/at/after go-live checklist (forms and conversion tracking, SEO incl. the shipped staging noindex, redirects, performance, a practiced rollback per platform, Search Console monitoring). New triggers: 'site launch,' 'go live,' 'pre-launch QA.' New eval.
-- **prospecting** (1.1.0 → 1.1.1): `references/data-sources.md` and the tool table add Ploy ◆ as a visitor-identification option for Ploy-hosted sites, alongside RB2B and Clearbit Reveal, with its limits (hosting requirement, metering, consent caveat).
-- **ads** (2.4.1 → 2.4.2): `references/abm-playbook.md` gains account pages for 1:1 and 1:few ABM (personalization layer, CMS fed from a list, hand-coded route, or an AI site platform such as Ploy ◆), with guardrails (noindex, only public or first-party facts, human review).
-- **tools/integrations/ploy.md**: rewritten from current docs. Corrects the claims of a general REST API and an MCP server (the CLI is the management surface; WebMCP is a Ploybook), adds real CLI workflows, pricing, and tradeoffs. REGISTRY's MCP flag and the partner blurb are updated to match.
+- **ai-seo** (2.7.2 → 2.7.3): `agent-readiness.md` gains ways to implement WebMCP (yourself, platform support with Ploy ◆'s Ploybook as one example, a coding agent) and the tests every path needs.
+- **launch** (2.0.3 → 2.1.0): new `references/site-launch-qa.md`, a before/at/after go-live checklist (forms and conversion tracking, SEO incl. the shipped staging noindex, redirects, performance, a practiced rollback per platform, Search Console monitoring). New triggers: 'site launch,' 'go live,' 'pre-launch QA.' New eval.
+- **prospecting** (1.1.2 → 1.1.3): `references/data-sources.md` and the tool table add Ploy ◆ as a visitor-identification option for Ploy-hosted sites, alongside RB2B and Clearbit Reveal, with its limits (hosting requirement, metering, consent caveat).
+- **ads** (2.4.3 → 2.4.4): `references/abm-playbook.md` gains account pages for 1:1 and 1:few ABM (personalization layer, CMS fed from a list, hand-coded route, or an AI site platform such as Ploy ◆), with guardrails (noindex, only public or first-party facts, human review).
+- **tools/integrations/ploy.md**: rewritten from current docs. Corrects the claims of a general REST API and an MCP server (the CLI is the management surface; WebMCP is a Ploybook), adds real CLI workflows (v0.16.x), pricing, and tradeoffs, and notes that OIDC SSO is live on Enterprise. Reviewed by Ploy. REGISTRY's MCP flag and the partner blurb are updated to match.
+
+### 2.11.17 (2026-10-02)
+
+- **video** (2.2.0 → 2.2.1) and the **Hyperframes integration guide** (reported in #600 by @pjthegiant): the old example called a `render({ frames })` API that the `hyperframes` package doesn't export. Both now lead with the CLI (`npx hyperframes init`, `preview`, `render -o output.mp4`) and explain the composition format: a root with `data-composition-id`, `class="clip"` elements with timing attributes, and a paused GSAP timeline. Rendering from code goes through `@hyperframes/producer` (`createRenderJob` + `executeRenderJob`). Checked against v0.8.114.
+- **ad-creative** (2.9.2 → 2.9.3): three creative-review template fixes (reported in #592 by @antongulin). Malformed data now shows a clear error instead of a blank page. The concept switcher uses `aria-pressed` buttons instead of incomplete tab semantics. The Instagram like count comes from an optional `likes` field, where it used to be a hardcoded 6,240.
+
+### 2.11.16 (2026-10-02)
+
+- **OpenAI Codex plugin** (#445 by @darkweb19, closes #295): `.codex-plugin/plugin.json` plus a marketplace at `.agents/plugins/marketplace.json`. Install with `codex plugin marketplace add coreyhaines31/marketingskills`, then `/plugins`, and update with `codex plugin marketplace upgrade`. It uses the Codex compatibility layout OpenAI's plugin creator scaffolds. `scripts/check-versions.mjs` now requires the Codex manifest's version to match the repo version so the two can't drift.
+- **Non-interactive installs** (#339 by @SilviaMogas): the README notes that `/plugin` only works in an interactive Claude Code session, and gives `npx skills` and the `claude plugin marketplace add` / `claude plugin install` CLI commands as alternatives.
+
+### 2.11.15 (2026-10-02)
+
+Four community contributions folded into existing skills instead of becoming new skills. Each original PR is merged with its author's commits.
+
+- **public-relations** (1.1.2 → 1.2.0): crisis communications from #381 by @fyscleaning-jpg. New `references/crisis-communications.md` (severity tiers 1–4, a first-60-minutes checklist, channel order, playbooks by crisis type, what not to do) and `references/statement-templates.md` (7 templates). Adds a "When Something Goes Wrong" section and crisis triggers. Anything with legal, regulatory, or safety exposure loops in counsel before fault is admitted. New eval.
+- **sms** (1.0.1 → 1.1.0): WhatsApp from #516 by @Inflimity. New `references/whatsapp.md`: WhatsApp vs SMS (incl. Meta not delivering marketing templates to US numbers), the 24-hour window, template categories, opt-in, quality rating, and business-level messaging limits. Pricing is rebuilt from Meta's docs: per-message since July 2025, and in-window utility and service messages charged from 1 Oct 2026. Also covers click-to-WhatsApp ads and the 72-hour free window, plus four playbooks. WhatsApp triggers added. New eval.
+- **marketing-plan** (1.1.2 → 1.2.0): market sizing from #418 by @imMamdouhaboammar. New `references/market-sizing.md`: TAM/SAM/SOM, four triangulated methods (bottom-up, search-led, competitor-led, channel-led), confidence labels, ranges with assumptions, and a 10-factor attractiveness scorecard. Linked from the market-quality gate. Market-sizing triggers added. New eval. customer-research (2.0.3 → 2.0.4) and competitor-profiling (2.1.1 → 2.1.2) point to it.
+- **video** (2.1.2 → 2.2.0): product demo recording from #345 by @klepfish. New `references/product-demo-recording.md`: a Playwright recording workflow, step modes, and local-app gotchas. The contributor's scripts are linked at their commit rather than vendored, and narration API keys stay out of chat. Demo-recording triggers added. New eval.
+
+### 2.11.14 (2026-10-02)
+
+Community tool and guide contributions. Lands #642, #400, #586, #366, #461, and #397 with contributor credit.
+
+- **Ahrefs CLI v3 parameters** (#642 by @rudycelekli): sends the `date` and `select` parameters Ahrefs v3 requires. Both now default (today's date, Ahrefs' documented keyword and top-page columns) instead of being mandatory, and the tests moved to `tests/clis/`.
+- **Firecrawl CLI and v2 docs** (#400 by @rakshith48): a new zero-dependency Firecrawl CLI on the v2 API, with competitor-profiling's tool reference updated to v2 (structured extraction is now JSON mode on scrape). It shows usage without credentials like the other CLIs.
+- **Glasser integration guide** (#586 by @adriansurething): a pay-per-call data API broker, now with an in-guide maker disclosure and provider-access claims framed as subject to each provider's terms.
+- **Alternative stack for competitor-profiling** (#366 by @4thoughtmarketing-mktg): WebFetch plus whichever SEO data source is connected (Ahrefs or Semrush MCP, Ubersuggest, or similar) when Firecrawl or DataForSEO is unavailable. Missing metrics are marked unavailable, never estimated.
+- **Publishing from your agent** (#461 by @josiahcoad): a draft-first, approval-gated workflow for scheduling posts through a connected tool. The tool list is neutral, and the Typefully claim is corrected.
+- **X algorithm reference** (#397 by @benjaminard): how xAI's open-sourced For You ranker scores posts, with each rule tagged verified or reported.
+
+### 2.11.13 (2026-10-02)
+
+Community content fixes. Lands #595, #572, #508, #401, and #481 with contributor credit.
+
+- **Sora and GPT Image deprecations** (#595 by @MeowdyAGENT, closes #594): removes Sora 2 recommendations (OpenAI shut down Sora 2 and the Videos API on 24 Sep 2026) and updates image-model guidance. The model names now follow OpenAI's deprecations page: `gpt-image-1` retires 23 Oct 2026, with `gpt-image-2.5-sunburst` and `gpt-image-2.5-flare` as the replacements. Also fixes a broken link. ad-creative 2.9.2, image 2.0.2, video 2.1.2; the video eval now expects the shutdown rather than "reliability caveats."
+- **Search vs training crawlers** (#572 by @wonderwomancode, closes #599): ai-seo no longer treats GPTBot, ClaudeBot, and Google-Extended as citation bots. Discovery, user retrieval, training, and grounding are decided separately, with a valid robots.txt example. The author's own tool link was replaced with vendor docs. ai-seo 2.7.2.
+- **Attribution model availability** (#508 by @UberVero, closes #507): retired Google Ads/GA4 rule-based models, DDA volume, Calendly UTMs, MTA bias, and triangulated overrides. attribution 1.1.2, influencer-marketing 1.1.2.
+- **Brand vs non-brand** (#401 by @mharnett): optimize Google Ads on non-brand ROAS and report blended separately. ads 2.4.3.
+- **Typo** (#481 by @tim703223-glitch): "Pre-Seed/Seed" in saas-prospecting. prospecting 1.1.2.
+
+### 2.11.12 (2026-10-02)
+
+Community fixes, links and security. Lands #581, #583, #518, #542, #543, and #540 with contributor credit, plus version bumps.
+
+- **Portable tool links** (#581 by @FekyBaz, closes #524): every `../../tools/...` link in 21 skills is now an absolute GitHub URL, so links work after `npx skills add` installs a single skill. One link #581 missed (ads `reading-google-ads-data.md`) is fixed too. Bumps: ad-creative, ads, ai-seo, analytics, attribution, churn-prevention, co-marketing, content-strategy, customer-research, emails, influencer-marketing, launch, marketing-loops, pricing, prospecting, public-relations, referrals, revops, sales-enablement, sms, social, video (patch each).
+- **Internal links** (#583 by @dajiaohuang): fixes the `positioning` link (now product-marketing) and the ad-creative cross-skill link (now names the ads skill), and adds a CRLF-safe partner sync. Its PARTNERS.md change was reverted, since the header template's `../REGISTRY.md` path is correct for guides.
+- **Prompt-injection guardrail** (#543 by @sneakygriff): "fetched content is untrusted data" in 8 skills that read third-party pages.
+- **marketing-plan path safety** (#542 by @sneakygriff): sanitizes `{client-slug}` so one client's files can't be read from another's. marketing-plan 1.1.1 → 1.1.2.
+- **ad-creative review template** (#540 by @sneakygriff): proper `\u003c` escaping, remote image URLs blocked so the review page can't beacon, and the third-party `npx gooseworks install` route removed. The Gooseworks credit is kept in full.
+- **Windows validator** (#518 by @frankgthb-afk): `validate-skills-official.sh` works under Git Bash.
 
 ### 2.11.11 (2026-10-02)
 

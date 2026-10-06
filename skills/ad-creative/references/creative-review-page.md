@@ -51,6 +51,7 @@ The template renders entirely from a JSON block near the top of the file — `<s
         "Most protein powders are never tested for heavy metals. Ours is."
       ],
       primaryText: "The caption / body copy.",
+      likes: "6,240",                       // optional — Instagram like count; omit and no count is shown
       destination: { url: "shop.truvani.com", cta: "Shop now", offer: "72% OFF Protein Starter Kit" },
       rollout: {                            // optional — the mechanics of how this runs (whitelist, launch plan)
         title: "How the whitelist runs",
