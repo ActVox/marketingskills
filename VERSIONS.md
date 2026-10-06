@@ -36,7 +36,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.1 | 2026-08-23 |
 | onboarding | 2.0.1 | 2026-08-23 |
-| ads | 2.4.3 | 2026-10-02 |
+| ads | 2.4.4 | 2026-10-06 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.2 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18 (2026-10-06)
+
+- **ads** (2.4.3 → 2.4.4): distinguish revenue-only ratios from gross-margin payback, replace the annual-retention shortcut with explicit cohort recovery, and remove automatic scale verdicts unsupported by margin/cash timing. Updates result evaluation and adds a churn-timing scenario.
 
 ### 2.11.17 (2026-10-02)
 
