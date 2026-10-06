@@ -81,6 +81,26 @@ function parseArgs(args) {
 const args = parseArgs(rawArgs)
 const [cmd, sub, ...rest] = args._
 
+function withDeliveryMetadata(body) {
+  if (args.timestamp !== undefined) {
+    const value = args.timestamp
+    const parts = typeof value === 'string' ? /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.exec(value) : null
+    const [year, month, day, hour, minute, second] = parts ? parts.slice(1).map(Number) : []
+    const leap = year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)
+    const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if (!parts || month < 1 || month > 12 || day < 1 || day > days[month - 1] || hour > 23 || minute > 59 || second > 59 || !Number.isFinite(Date.parse(value))) {
+      throw new Error('--timestamp must be a valid ISO-8601 datetime with a timezone')
+    }
+    body.timestamp = value
+  }
+  if (args['message-id'] !== undefined) {
+    const value = args['message-id']
+    if (typeof value !== 'string' || value.length < 1 || value.length > 100) throw new Error('--message-id must contain 1 to 100 characters')
+    body.messageId = value
+  }
+  return body
+}
+
 async function main() {
   let result
 
@@ -97,7 +117,7 @@ async function main() {
           if (args.properties) {
             try { body.properties = JSON.parse(args.properties) } catch { result = { error: 'Invalid JSON in --properties' }; break }
           }
-          result = await trackApi('POST', '/track', body)
+          result = await trackApi('POST', '/track', withDeliveryMetadata(body))
           break
         }
         default:
@@ -113,7 +133,7 @@ async function main() {
           if (args.traits) {
             try { body.traits = JSON.parse(args.traits) } catch { result = { error: 'Invalid JSON in --traits' }; break }
           }
-          result = await trackApi('POST', '/identify', body)
+          result = await trackApi('POST', '/identify', withDeliveryMetadata(body))
           break
         }
         default:
@@ -130,7 +150,7 @@ async function main() {
           if (args.properties) {
             try { body.properties = JSON.parse(args.properties) } catch { result = { error: 'Invalid JSON in --properties' }; break }
           }
-          result = await trackApi('POST', '/page', body)
+          result = await trackApi('POST', '/page', withDeliveryMetadata(body))
           break
         }
         default:
@@ -179,6 +199,7 @@ async function main() {
           identify: 'identify user --user-id <id> [--traits <json>]',
           page: 'page view --user-id <id> [--name <name>] [--properties <json>]',
           batch: 'batch send --events <json_array>',
+          metadata: 'Single track/identify/page calls: [--timestamp <ISO_datetime>] [--message-id <1_to_100_characters>]',
           profiles: 'profiles [traits|events] --space-id <id> --user-id <id>',
         }
       }
