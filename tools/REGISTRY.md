@@ -56,6 +56,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | zoominfo | Data Enrichment | ✓ | ✓ | [✓](clis/zoominfo.js) | - | [zoominfo.md](integrations/zoominfo.md) |
 | clay | Data Enrichment | ✓ | ✓ | [✓](clis/clay.js) | - | [clay.md](integrations/clay.md) |
 | fullenrich | Data Enrichment | ✓ | ✓ | - | - | [fullenrich.md](integrations/fullenrich.md) |
+| leadmagic | Data Enrichment | ✓ | ✓ | ✓ | - | [leadmagic.md](integrations/leadmagic.md) |
 | supermetrics | Data Aggregation | ✓ | ✓ | [✓](clis/supermetrics.js) | - | [supermetrics.md](integrations/supermetrics.md) |
 | coupler | Data Aggregation | ✓ | ✓ | [✓](clis/coupler.js) | - | [coupler.md](integrations/coupler.md) |
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
@@ -344,6 +345,7 @@ Company and person data enrichment for sales and marketing.
 | **zoominfo** | B2B contacts, intent data | Enterprise-grade |
 | **clay** | Waterfall enrichment, outbound | 75+ data providers |
 | **fullenrich** | Waterfall email + mobile finding | Many providers per lookup; charges only on a hit; verify its catch-all results |
+| **leadmagic** | Email finding, job changes, technographics, lookalikes | Credit-based API; charges only on a hit |
 
 **Agent recommendation**: Clearbit for enrichment. Apollo for prospecting and outbound. ZoomInfo for enterprise B2B data with intent signals. Clay for waterfall enrichment across multiple providers.
 
