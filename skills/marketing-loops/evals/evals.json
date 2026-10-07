@@ -96,6 +96,22 @@
         "References the ab-testing skill as the owner of execution"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "I want an agent to just run our SEO. It has access to our Next.js marketing site repo and Search Console. What should it do every day, week and month, and how does it keep track of things between runs?",
+      "expected_output": "Should load the SEO operator reference. Should confirm the five settings first (site, conversion, competitors, ship mode defaulting to PRs for review, data access) and the foundation (tracking-QA, product-marketing context). Should describe shared state in .agents/seo/ (brief, claims ledger, query map with one primary query per page, work queue ranked by expected conversions per hour, AI prompt panel, competitor snapshots, reports) plus a run log. Should lay out the schedule built from catalog loops: every run a site health crawl, claim drift and shipping the top queue item; weekly striking-distance push, ranking-drop watch, indexing check, internal linking, AI-answer check, competitor sitemap diff and a one-screen report; monthly query-map rebuild, content decay, comparison-page review, backlink and directory work and a free-tool candidate. Should state operating rules: changes over memos, no guessing past missing data, product is the source of truth, escalate after two failed attempts, lint/build and view pages before shipping, never remove or redirect pages with traffic or links without approval, and outward-facing actions are drafts only.",
+      "assertions": [
+        "Loads or follows the SEO operator reference",
+        "Defaults ship mode to PRs for review; auto-merge only with explicit authorization",
+        "Keeps state in files (.agents/seo/ and a run log), not memory",
+        "Composes existing catalog loops on daily/weekly/monthly cadences",
+        "Includes claim drift (product changes making marketing claims false)",
+        "Requires an information-gain check before writing new pages",
+        "Keeps outreach, listings and social posts as drafts for the owner",
+        "Does not promise rankings or use 'set it and forget it' framing"
+      ],
+      "files": []
     }
   ]
 }
