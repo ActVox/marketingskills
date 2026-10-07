@@ -108,7 +108,7 @@ Stricter than CAN-SPAM. Cold B2B outreach requires:
 - The Places API is the compliant way to pull business data programmatically, within its terms
 - Use Maps to **find** local businesses, then cross-source from the business's own site for the data you retain
 
-### Apollo / ZoomInfo / Clearbit
+### Apollo / ZoomInfo / other licensed data providers
 
 - All have their own ToS limiting reselling, downstream sharing, and use cases
 - Read your contract — typically you can use the data for your own outreach but not productize it

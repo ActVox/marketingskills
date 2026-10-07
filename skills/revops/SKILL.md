@@ -256,7 +256,7 @@ Document every exception. Track which non-standard terms get requested most — 
 
 | Tool | Strength |
 |------|----------|
-| Clearbit | Real-time enrichment, good for tech companies |
+| Clay | Waterfall enrichment across many providers |
 | Apollo | Contact data + sequences, strong for prospecting |
 | ZoomInfo | Enterprise-grade, largest B2B database |
 
@@ -328,7 +328,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 | **Salesforce** | Enterprise CRM, pipeline management, reporting | [salesforce.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/salesforce.md) |
 | **Calendly** | Meeting scheduling, round-robin routing | [calendly.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/calendly.md) |
 | **SavvyCal** | Scheduling with priority-based availability | [savvycal.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/savvycal.md) |
-| **Clearbit** | Real-time lead enrichment and scoring | [clearbit.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/clearbit.md) |
+| **Attio** | CRM with a hosted MCP for agents | [attio.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/attio.md) |
 | **Apollo** | Contact data, enrichment, and outbound sequences | [apollo.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/apollo.md) |
 | **ActiveCampaign** | Marketing automation for SMBs, lead scoring | [activecampaign.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/activecampaign.md) |
 | **Zapier** | Cross-tool automation and workflow glue | [zapier.md](https://github.com/coreyhaines31/marketingskills/blob/main/tools/integrations/zapier.md) |

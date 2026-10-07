@@ -102,8 +102,8 @@ Decide these before launch and enforce them automatically where your tool allows
 | Job | Options |
 |-----|---------|
 | Sending and mailbox rotation | Instantly, Smartlead, lemlist, EmailBison, Salesforge |
-| Domain and mailbox provisioning | Mailforge, Inframail, Maildoso, Zapmail, or Google Workspace and Microsoft 365 directly |
-| Placement testing | MailReach, GlockApps |
+| Domain and mailbox provisioning | Inframail, Maildoso, Mailforge, Truelist Outbound (managed domains, mailboxes, and a dedicated IP with an enforced ramp), Zapmail, or Google Workspace and Microsoft 365 directly |
+| Placement testing | GlockApps, MailReach, or your sending tool's built-in test (Instantly has one) |
 | Reputation | Google Postmaster Tools, Microsoft SNDS |
 | DMARC monitoring | EasyDMARC, dmarcian, Valimail |
 | List verification | Bouncer, MillionVerifier, NeverBounce, Truelist, ZeroBounce, and others |
