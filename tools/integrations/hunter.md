@@ -7,7 +7,7 @@ Email finding and verification platform for outreach and link building.
 | Integration | Available | Notes |
 |-------------|-----------|-------|
 | API | ✓ | REST API for domain search, email finder, verification |
-| MCP | - | Not available |
+| MCP | ✓ | Official server at `https://mcp.hunter.io/mcp`: API key in `X-API-Key`, or OAuth where the client supports it; all plans ([hunter.io/mcp](https://hunter.io/mcp)) |
 | CLI | [✓](../clis/hunter.js) | Zero-dependency Node.js CLI |
 | SDK | - | API-only |
 

@@ -7,7 +7,7 @@ Cold email outreach platform with personalization and campaign management.
 | Integration | Available | Notes |
 |-------------|-----------|-------|
 | API | ✓ | REST API for campaigns, leads, activities, webhooks |
-| MCP | - | Not available |
+| MCP | ✓ | Official hosted server at `https://app.lemlist.com/mcp`: OAuth, or an API key in `X-API-Key` ([setup](https://developer.lemlist.com/mcp/setup)) |
 | CLI | [✓](../clis/lemlist.js) | Zero-dependency Node.js CLI |
 | SDK | - | API-only |
 

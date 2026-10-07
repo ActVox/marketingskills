@@ -52,16 +52,16 @@ Anyone — including tool makers and partners — may contribute content that na
 | keywords-everywhere | SEO | ✓ | - | [✓](clis/keywords-everywhere.js) | - | [keywords-everywhere.md](integrations/keywords-everywhere.md) |
 | rankparse | SEO | ✓ | ✓ | [✓](clis/rankparse.js) | - | [rankparse.md](integrations/rankparse.md) |
 | clearbit | Data Enrichment | ✓ | - | [✓](clis/clearbit.js) | ✓ | [clearbit.md](integrations/clearbit.md) |
-| apollo | Data Enrichment | ✓ | - | [✓](clis/apollo.js) | - | [apollo.md](integrations/apollo.md) |
+| apollo | Data Enrichment | ✓ | ✓ | [✓](clis/apollo.js) | - | [apollo.md](integrations/apollo.md) |
 | zoominfo | Data Enrichment | ✓ | ✓ | [✓](clis/zoominfo.js) | - | [zoominfo.md](integrations/zoominfo.md) |
 | clay | Data Enrichment | ✓ | ✓ | [✓](clis/clay.js) | - | [clay.md](integrations/clay.md) |
 | fullenrich | Data Enrichment | ✓ | ✓ | - | - | [fullenrich.md](integrations/fullenrich.md) |
 | leadmagic | Data Enrichment | ✓ | ✓ | ✓ | - | [leadmagic.md](integrations/leadmagic.md) |
 | supermetrics | Data Aggregation | ✓ | ✓ | [✓](clis/supermetrics.js) | - | [supermetrics.md](integrations/supermetrics.md) |
 | coupler | Data Aggregation | ✓ | ✓ | [✓](clis/coupler.js) | - | [coupler.md](integrations/coupler.md) |
-| hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
+| hubspot | CRM | ✓ | ✓ | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
-| close | CRM | ✓ | - | [✓](clis/close.js) | - | [close.md](integrations/close.md) |
+| close | CRM | ✓ | ✓ | [✓](clis/close.js) | - | [close.md](integrations/close.md) |
 | attio | CRM | ✓ | ✓ | - | ✓ | [attio.md](integrations/attio.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
 | paddle | Payments | ✓ | - | [✓](clis/paddle.js) | ✓ | [paddle.md](integrations/paddle.md) |
@@ -87,15 +87,15 @@ Anyone — including tool makers and partners — may contribute content that na
 | postscript | SMS | ✓ | - | - | - | [postscript.md](integrations/postscript.md) |
 | attentive | SMS | ✓ | - | - | - | [attentive.md](integrations/attentive.md) |
 | audiencetap | SMS/Email | ✓ | - | - | - | [audiencetap.md](integrations/audiencetap.md) |
-| hunter | Email Outreach | ✓ | - | [✓](clis/hunter.js) | - | [hunter.md](integrations/hunter.md) |
+| hunter | Email Outreach | ✓ | ✓ | [✓](clis/hunter.js) | - | [hunter.md](integrations/hunter.md) |
 | snov | Email Outreach | ✓ | - | [✓](clis/snov.js) | - | [snov.md](integrations/snov.md) |
 | truelist | Email Verification | ✓ | ✓ | [✓](clis/truelist.js) | ✓ | [truelist.md](integrations/truelist.md) |
 | github | Developer Intent | ✓ | - | [✓](clis/github-prospects.js) | ✓ | [github.md](integrations/github.md) |
 | firecrawl | Site Scraping & AI Search | ✓ | ✓ | [✓](clis/firecrawl.js) | ✓ | [firecrawl.md](integrations/firecrawl.md) |
 | browserbase | Site Scraping | ✓ | ✓ | - | ✓ | [browserbase.md](integrations/browserbase.md) |
 | apify | Site Scraping | ✓ | ✓ | ✓ | ✓ | [apify.md](integrations/apify.md) |
-| lemlist | Email Outreach | ✓ | - | [✓](clis/lemlist.js) | - | [lemlist.md](integrations/lemlist.md) |
-| instantly | Email Outreach | ✓ | - | [✓](clis/instantly.js) | - | [instantly.md](integrations/instantly.md) |
+| lemlist | Email Outreach | ✓ | ✓ | [✓](clis/lemlist.js) | - | [lemlist.md](integrations/lemlist.md) |
+| instantly | Email Outreach | ✓ | ✓ | [✓](clis/instantly.js) | - | [instantly.md](integrations/instantly.md) |
 | google-ads | Ads | ✓ | ✓ | [✓](clis/google-ads.js) | ✓ | [google-ads.md](integrations/google-ads.md) |
 | meta-ads | Ads | ✓ | - | [✓](clis/meta-ads.js) | ✓ | [meta-ads.md](integrations/meta-ads.md) |
 | linkedin-ads | Ads | ✓ | - | [✓](clis/linkedin-ads.js) | - | [linkedin-ads.md](integrations/linkedin-ads.md) |
@@ -103,7 +103,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | zapier | Automation | ✓ | ✓ | [✓](clis/zapier.js) | ✓ | [zapier.md](integrations/zapier.md) |
 | hotjar | CRO | ✓ | - | [✓](clis/hotjar.js) | - | [hotjar.md](integrations/hotjar.md) |
 | optimizely | A/B Testing | ✓ | - | [✓](clis/optimizely.js) | ✓ | [optimizely.md](integrations/optimizely.md) |
-| calendly | Scheduling | ✓ | - | [✓](clis/calendly.js) | - | [calendly.md](integrations/calendly.md) |
+| calendly | Scheduling | ✓ | ✓ | [✓](clis/calendly.js) | - | [calendly.md](integrations/calendly.md) |
 | savvycal | Scheduling | ✓ | - | [✓](clis/savvycal.js) | - | [savvycal.md](integrations/savvycal.md) |
 | typeform | Forms | ✓ | - | [✓](clis/typeform.js) | ✓ | [typeform.md](integrations/typeform.md) |
 | intercom | Messaging | ✓ | - | [✓](clis/intercom.js) | ✓ | [intercom.md](integrations/intercom.md) |
@@ -598,12 +598,28 @@ These tools have Model Context Protocol servers available, enabling direct agent
 - **crossbeam** - Partner ecosystem data
 - **introw** - Partner relationship management
 - **exa** - AI-powered web search for LLMs and agents
+- **apollo** - B2B prospecting, enrichment, and sequences
+- **hubspot** - CRM read and write
+- **attio** - CRM read and write (writes need confirmation)
+- **close** - CRM and inside sales
+- **instantly** - Cold email campaigns, leads, replies, and warmup
+- **lemlist** - Email + LinkedIn sequences
+- **heyreach** - LinkedIn outreach (per-workspace MCP key)
+- **hunter** - Email finding and verification
+- **truelist** - Email verification and batches
+- **fullenrich** - Waterfall email and mobile enrichment
+- **leadmagic** - Enrichment, job changes, technographics
+- **theirstack** - Hiring and technographic signals
+- **apify** - Ready-made scrapers (Actors)
+- **firecrawl** - Page scraping and crawling
+- **browserbase** - Cloud browser automation
+- **calendly** - Availability and booking links
 
-To use MCP tools, ensure the appropriate MCP server is configured in your environment.
+To use MCP tools, ensure the appropriate MCP server is configured in your environment. Most hosted servers sign in with per-user OAuth, which suits interactive sessions; for scheduled or unattended agent runs, use the tool's API key (with the CLI or API, or an MCP that accepts a key header). MCP status checked 2026-10-07.
 
 ### Composio Integration
 
-[Composio](integrations/composio.md) provides managed OAuth and pre-built connectors for 500+ tools via a single MCP server. It adds MCP access to tools that don't have native MCP servers, including HubSpot, Salesforce, Meta Ads, LinkedIn Ads, Google Sheets, Slack, Notion, and more.
+[Composio](integrations/composio.md) provides managed OAuth and pre-built connectors for 500+ tools via a single MCP server. It adds MCP access to tools that don't have native MCP servers, including Salesforce, Meta Ads, LinkedIn Ads, Google Sheets, Slack, Notion, and more. (HubSpot now has its own official MCP server.)
 
 - **Setup**: `npx @composio/mcp@latest setup`
 - **Quick start**: See [tools/composio/README.md](composio/README.md)
