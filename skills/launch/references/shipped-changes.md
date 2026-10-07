@@ -79,6 +79,6 @@ Use Keep a Changelog headings (Added, Changed, Deprecated, Removed, Fixed, Secur
 - **Changelog:** one line per change, written for a customer and in past or present tense. Link docs for anything non-obvious.
 - **Blog post (major only):** the problem the customer had, what changed, how to use it (with screenshots), and who it's for. The `copywriting` skill covers structure; its AI-tell rules apply.
 - **Email:** lead with the change for that segment; one call to action that takes them to the feature. See `emails`.
-- **Social:** one concrete detail per post, shown, not described. A screenshot or 10-second clip of the feature beats adjectives. See `social`.
+- **Social:** one concrete detail per post, with a screenshot or 10-second clip of the feature doing it. See `social`.
 
 Drafts are staged for a human to review and send. Nothing in this workflow publishes on its own.

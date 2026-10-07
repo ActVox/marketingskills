@@ -21,7 +21,7 @@ Copy editing isn't just for new content. Existing pages and posts decay over tim
 
 ## Before You Edit: Find the Gap
 
-A refresh aimed at a ranking page should start from the results page, not the post. The question isn't "what's out of date?" but "why are the pages above us winning?"
+A refresh aimed at a ranking page should start from the results page. The first question to answer is why the pages above yours are winning.
 
 1. **Read the results page for the post's main query.** Note the dominant format (list, guide, tool, comparison), the featured snippet and how it's formatted, People Also Ask questions, and related searches.
 2. **Pick five competitors**: the top three results, plus any direct competitor or recently updated page ranking near you.
@@ -38,7 +38,7 @@ A refresh aimed at a ranking page should start from the results page, not the po
    - **Common** (2–3): add it if it serves your reader.
    - **Distinctive** (1): add it only if it's genuinely useful, not to copy one page.
    - **Uncovered** (0): the angle nobody has. Your best chance to be the result worth citing.
-5. **Match coverage, not length.** Competitors' word counts are a symptom, not a target. Close the gaps that matter, and stop when the reader's question is answered.
+5. **Match coverage.** Ignore competitors' word counts. Close the gaps that matter, and stop when the reader's question is answered.
 
 Present the gap grid and a proposed outline before rewriting. Mark each section **Keep**, **Revise**, or **New**, propose 2–3 title options (see the `seo-audit` skill's title-tags reference), and wait for approval. Don't promise a ranking or traffic outcome.
 
