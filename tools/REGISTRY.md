@@ -51,7 +51,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | dataforseo | SEO | ✓ | - | [✓](clis/dataforseo.js) | ✓ | [dataforseo.md](integrations/dataforseo.md) |
 | keywords-everywhere | SEO | ✓ | - | [✓](clis/keywords-everywhere.js) | - | [keywords-everywhere.md](integrations/keywords-everywhere.md) |
 | rankparse | SEO | ✓ | ✓ | [✓](clis/rankparse.js) | - | [rankparse.md](integrations/rankparse.md) |
-| clearbit | Data Enrichment | ✓ | - | [✓](clis/clearbit.js) | ✓ | [clearbit.md](integrations/clearbit.md) |
+| clearbit | Data Enrichment (legacy) | ✓ | - | [✓](clis/clearbit.js) | ✓ | [clearbit.md](integrations/clearbit.md) |
 | apollo | Data Enrichment | ✓ | ✓ | [✓](clis/apollo.js) | - | [apollo.md](integrations/apollo.md) |
 | zoominfo | Data Enrichment | ✓ | ✓ | [✓](clis/zoominfo.js) | - | [zoominfo.md](integrations/zoominfo.md) |
 | clay | Data Enrichment | ✓ | ✓ | [✓](clis/clay.js) | - | [clay.md](integrations/clay.md) |
@@ -342,14 +342,14 @@ Company and person data enrichment for sales and marketing.
 
 | Tool | Best For | Notes |
 |------|----------|-------|
-| **clearbit** | Company/person enrichment | Now HubSpot Breeze |
+| **clearbit** | Company/person enrichment (existing API keys only) | Now HubSpot Breeze Intelligence; no new standalone API keys; Logo API ended 2025-12-08 |
 | **apollo** | B2B prospecting, email finding | Large database |
 | **zoominfo** | B2B contacts, intent data | Enterprise-grade |
 | **clay** | Waterfall enrichment, outbound | 75+ data providers |
 | **fullenrich** | Waterfall email + mobile finding | Many providers per lookup; charges only on a hit; verify its catch-all results |
 | **leadmagic** | Email finding, job changes, technographics, lookalikes | Credit-based API; charges only on a hit |
 
-**Agent recommendation**: Clearbit for enrichment. Apollo for prospecting and outbound. ZoomInfo for enterprise B2B data with intent signals. Clay for waterfall enrichment across multiple providers.
+**Agent recommendation**: Apollo for prospecting and outbound. Clearbit only if you already hold a legacy API key (otherwise Breeze Intelligence inside HubSpot). ZoomInfo for enterprise B2B data with intent signals. Clay for waterfall enrichment across multiple providers.
 
 ### Email Verification
 
