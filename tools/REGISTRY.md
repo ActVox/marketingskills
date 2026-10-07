@@ -663,6 +663,30 @@ Use Glasser for occasional lookups across several paid vendors when no accounts 
 1. Read [customer-io.md](integrations/customer-io.md) for behavior-based automation
 2. Read [resend.md](integrations/resend.md) for transactional email
 
+### Running sales outbound (list → signals → enrich → verify → send → LinkedIn → CRM)
+
+Strategy, copy, cadence, and compliance live in the `prospecting` and `cold-email` skills; this is the tool chain. Pick one tool per job; alternatives are listed so no single vendor is required.
+
+| Step | Job | Tools (alternatives) | Claude Code (CLI/API) | Hosted agent (MCP) |
+|------|-----|----------------------|:---------------------:|:------------------:|
+| 1 | Build the account list | [apollo](integrations/apollo.md), [zoominfo](integrations/zoominfo.md), [clay](integrations/clay.md), [exa](integrations/exa.md) (lookalikes), [leadmagic](integrations/leadmagic.md) (lookalikes), [apify](integrations/apify.md) (public directories) | ✓ | ✓ |
+| 2 | Add buying signals | [theirstack](integrations/theirstack.md) (hiring, tech), [leadmagic](integrations/leadmagic.md) (job changes), [rb2b](integrations/rb2b.md) (site visitors), [github](integrations/github.md) (dev intent) | ✓ | ✓ (rb2b via Zapier) |
+| 3 | Find contacts and emails | [apollo](integrations/apollo.md), [fullenrich](integrations/fullenrich.md) (waterfall), [leadmagic](integrations/leadmagic.md), [hunter](integrations/hunter.md), [clay](integrations/clay.md) | ✓ | ✓ |
+| 4 | Verify before sending | [truelist](integrations/truelist.md) (catch-all resolution) | ✓ | ✓ |
+| 5 | Send email sequences | [instantly](integrations/instantly.md), [lemlist](integrations/lemlist.md), [outreach](integrations/outreach.md) (enterprise) | ✓ | ✓ |
+| 6 | LinkedIn steps | [heyreach](integrations/heyreach.md), [lemlist](integrations/lemlist.md) (email + LinkedIn) | API | ✓ |
+| 7 | Book meetings | [calendly](integrations/calendly.md), [savvycal](integrations/savvycal.md) | ✓ | ✓ (calendly) |
+| 8 | Log in the CRM | [hubspot](integrations/hubspot.md), [attio](integrations/attio.md), [close](integrations/close.md), [salesforce](integrations/salesforce.md) | ✓ | ✓ (salesforce via [composio](integrations/composio.md)) |
+| 9 | Retarget target accounts | [linkedin-ads](integrations/linkedin-ads.md) (Matched Audiences) | ✓ | via composio |
+
+**Rules that apply to every run:**
+- **Verify every list before it reaches a sender** (step 4), and re-verify anything older than 30–60 days. Keep hard bounces under 2%.
+- **One suppression list across tools**: customers, open deals, opt-outs from any channel, and past bounces, synced to every sender's blocklist.
+- **A reply on any channel stops every channel** (email, LinkedIn, calls) for that person.
+- **No LinkedIn scraping** with logged-in accounts, cookies, or fake profiles, and no Google Maps scrapers.
+- **Hosted MCPs mostly sign in with per-user OAuth**, which suits interactive sessions with a human approving writes. Scheduled or unattended runs (a nightly signal sweep, reply triage) should use API keys through the CLIs or APIs, or MCPs that accept a key header (Instantly, Apollo, lemlist, Hunter, TheirStack, Firecrawl).
+- **Stage outward-facing actions for approval** until the workflow has a track record: new campaigns, first sends to a segment, and CRM writes.
+
 ### Running email outreach for backlinks
 1. Read [hunter.md](integrations/hunter.md) for finding emails
 2. Read [lemlist.md](integrations/lemlist.md) or [instantly.md](integrations/instantly.md) for sending campaigns
