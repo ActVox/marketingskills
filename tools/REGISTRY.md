@@ -86,7 +86,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | audiencetap | SMS/Email | ✓ | - | - | - | [audiencetap.md](integrations/audiencetap.md) |
 | hunter | Email Outreach | ✓ | - | [✓](clis/hunter.js) | - | [hunter.md](integrations/hunter.md) |
 | snov | Email Outreach | ✓ | - | [✓](clis/snov.js) | - | [snov.md](integrations/snov.md) |
-| truelist | Email Verification | ✓ | ✓ | - | ✓ | [truelist.md](integrations/truelist.md) |
+| truelist | Email Verification | ✓ | ✓ | [✓](clis/truelist.js) | ✓ | [truelist.md](integrations/truelist.md) |
 | github | Developer Intent | ✓ | - | [✓](clis/github-prospects.js) | ✓ | [github.md](integrations/github.md) |
 | firecrawl | Site Scraping & AI Search | ✓ | ✓ | [✓](clis/firecrawl.js) | ✓ | [firecrawl.md](integrations/firecrawl.md) |
 | browserbase | Site Scraping | ✓ | ✓ | - | ✓ | [browserbase.md](integrations/browserbase.md) |
@@ -348,7 +348,7 @@ Pre-outreach email deliverability validation.
 
 | Tool | Best For | Notes |
 |------|----------|-------|
-| **truelist** | Bulk + single email deliverability validation | Returns `email_state` (ok / email_invalid / risky / unknown / accept_all) + `email_sub_state`. MCP server + 7-language SDKs available. |
+| **truelist** | Bulk + single email verification, catch-all resolution | Returns `email_state` (ok / email_invalid / accept_all / risky / unknown) + `email_sub_state`. Batches with webhook + CSV results, `enhanced` strategy for catch-alls. Hosted OAuth MCP, CLI, 7-language SDKs. |
 
 **Agent recommendation**: Truelist for any prospect list before outreach — Apollo/ZoomInfo/Hunter data accuracy is typically 60–80%, validation is non-negotiable to keep sender reputation healthy.
 
