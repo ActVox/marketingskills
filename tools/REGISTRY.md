@@ -60,6 +60,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | hubspot | CRM | ✓ | - | ✓ | ✓ | [hubspot.md](integrations/hubspot.md) |
 | salesforce | CRM | ✓ | - | ✓ | ✓ | [salesforce.md](integrations/salesforce.md) |
 | close | CRM | ✓ | - | [✓](clis/close.js) | - | [close.md](integrations/close.md) |
+| attio | CRM | ✓ | ✓ | - | ✓ | [attio.md](integrations/attio.md) |
 | stripe | Payments | ✓ | ✓ | ✓ | ✓ | [stripe.md](integrations/stripe.md) |
 | paddle | Payments | ✓ | - | [✓](clis/paddle.js) | ✓ | [paddle.md](integrations/paddle.md) |
 | rewardful | Referral | ✓ | - | [✓](clis/rewardful.js) | - | [rewardful.md](integrations/rewardful.md) |
@@ -177,8 +178,9 @@ Customer relationship management and sales tools.
 | **hubspot** | SMB, marketing + sales alignment | ✓ |
 | **salesforce** | Enterprise, complex sales processes | ✓ |
 | **close** | SMB, high-velocity sales | [✓](clis/close.js) |
+| **attio** | Startups and agencies, flexible objects and lists | API + hosted MCP |
 
-**Agent recommendation**: HubSpot for startups/SMBs. Close for high-velocity inside sales. Salesforce for enterprise.
+**Agent recommendation**: HubSpot for startups/SMBs. Attio for startups and agencies that want a flexible CRM an agent can read and write. Close for high-velocity inside sales. Salesforce for enterprise.
 
 ### Payments
 
