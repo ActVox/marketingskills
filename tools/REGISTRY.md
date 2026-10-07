@@ -93,6 +93,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | github | Developer Intent | ✓ | - | [✓](clis/github-prospects.js) | ✓ | [github.md](integrations/github.md) |
 | firecrawl | Site Scraping & AI Search | ✓ | ✓ | [✓](clis/firecrawl.js) | ✓ | [firecrawl.md](integrations/firecrawl.md) |
 | browserbase | Site Scraping | ✓ | ✓ | - | ✓ | [browserbase.md](integrations/browserbase.md) |
+| apify | Site Scraping | ✓ | ✓ | ✓ | ✓ | [apify.md](integrations/apify.md) |
 | lemlist | Email Outreach | ✓ | - | [✓](clis/lemlist.js) | - | [lemlist.md](integrations/lemlist.md) |
 | instantly | Email Outreach | ✓ | - | [✓](clis/instantly.js) | - | [instantly.md](integrations/instantly.md) |
 | google-ads | Ads | ✓ | ✓ | [✓](clis/google-ads.js) | ✓ | [google-ads.md](integrations/google-ads.md) |
@@ -378,6 +379,7 @@ Programmatic page extraction for **individual public business sites** — not fo
 |------|----------|-------|
 | **firecrawl** | Page → clean markdown / structured extraction | API + MCP; lower overhead for "just give me the content" |
 | **browserbase** | Real Chromium when rendering, interaction, or session state is required | API + MCP (Stagehand); use when Firecrawl can't handle the page |
+| **apify** | Ready-made scrapers for public directories, marketplaces, job boards, and site crawls | API + hosted MCP; per-Actor pricing; never LinkedIn or Google Maps scrapers |
 
 **Agent recommendation**: Default to Firecrawl for static-ish pages and structured extraction. Use Browserbase when the site requires JS rendering, form interaction, cookie consent, or auth — and when you want session recordings for debugging. **For both: discovery happens on platforms (manual browser); extraction happens on the prospect's own website URL.** Don't point either tool at LinkedIn, Google Maps, Yelp, or similar.
 
