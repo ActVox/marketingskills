@@ -45,6 +45,35 @@ Loops are grouped by function. Naming follows the "The X loop" convention.
 - **Stop / bail-out**: No material drop → log "stable." Escalate suspected algo hits to a human rather than mass-editing.
 - **Output**: A regression report with a recommended fix.
 
+### The striking-distance push loop
+- **Check cadence**: Weekly
+- **Acts when**: An existing page ranks in positions 8–20 for a query with meaningful impressions, or ranks in the top 5 with a click-through rate well below its neighbors.
+- **Purpose**: Move pages that Google already half-trusts onto page one, the cheapest ranking gains available.
+- **Skills used**: `seo-audit`, `copywriting`, `site-architecture`
+- **Loop body**:
+  1. Pull query + page pairs from Search Console for the trailing 28 days; keep positions 8–20 above an impression floor, plus top-5 positions with weak click-through.
+  2. For each candidate, read the top three results and name the specific reason each one outranks the page (intent match, a missing section, fresher facts, stronger internal links).
+  3. Draft the smallest change that closes that gap: answer the query in the opening lines, add the missing section, add internal links from strong related pages. For the weak-CTR cases, change only the title and meta description.
+  4. Stage the edits and record the starting position and CTR.
+- **Self-check**: Is the page the right one for the query, or is another page on the site competing for it (cannibalization)? Fix the conflict first. Is the impression count big enough for the position to mean anything?
+- **State / idempotency**: Track each page's last edit date and starting metrics; give an edited page 3–4 weeks before touching it again, so results are attributable.
+- **Stop / bail-out**: No candidates above the impression floor → log "no action." Two pushes on the same page with no movement → stop and escalate; the problem is probably authority or intent, not on-page.
+- **Output**: Staged page edits, each with the query, the reason, the change, and its baseline. Method in `seo-audit`'s [rankings push reference](https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/references/rankings-push.md).
+
+### The AI-answer check loop
+- **Check cadence**: Weekly (AI answers vary run to run; daily checks mostly measure noise)
+- **Acts when**: A tracked prompt's answer omits the brand, misstates a fact about it, or cites a new source in the category.
+- **Purpose**: Keep the brand present and described accurately in AI assistants' answers to the questions buyers actually ask.
+- **Skills used**: `ai-seo`, `product-marketing`, `public-relations`, `directory-submissions`
+- **Loop body**:
+  1. Run the prompt panel (20–30 prompts spread across awareness stages) on each assistant you track, several runs per prompt.
+  2. Record per prompt: mentioned or not, how the brand is described, which sources were cited.
+  3. Turn findings into work: a wrong or vague fact means the page that should state it doesn't state it plainly, so fix that page. Absence means the cited sources are the target list for PR, directories, and review sites.
+- **Self-check**: Is the change consistent across runs, or one sample? Treat a single-run difference as noise.
+- **State / idempotency**: Keep each run's results per prompt so changes are diffs, not re-reports; don't re-file a fix that's already open.
+- **Stop / bail-out**: No material change since last run → log "stable." Never contact a cited source automatically; outreach is staged for approval.
+- **Output**: A short visibility diff, page fixes for misstated facts, and a source target list.
+
 ### The content-decay loop
 - **Check cadence**: Monthly
 - **Acts when**: A page's traffic/rankings declined materially over the trailing 90 days.
@@ -667,6 +696,21 @@ Loops are grouped by function. Naming follows the "The X loop" convention.
 - **State / idempotency**: Track open tracking issues; update rather than re-file.
 - **Stop / bail-out**: All tracking healthy → log "clean." **Escalate a broken revenue/conversion event immediately** — every downstream loop is blind until it's fixed.
 - **Output**: A tracking-QA report with prioritized fixes.
+
+### The claim-drift loop
+- **Check cadence**: On every deploy or merge to the product, or daily
+- **Acts when**: A product change (price, plan limit, feature, integration, supported platform) makes a statement on a marketing surface false.
+- **Purpose**: Stop the site, docs, comparison pages, and ads from describing a product that no longer exists.
+- **Skills used**: `product-marketing`, `copy-editing`, `competitors`, `pricing`
+- **Loop body**:
+  1. Read the product changes since the last run: merged PRs, commits, release notes, pricing config.
+  2. Pick out the ones that change a customer-facing fact.
+  3. Search every marketing surface for the old fact (pages, docs, comparison tables, FAQ, structured data, ad copy, email templates) and stage corrections.
+  4. For new capabilities, add a backlog item: which queries or comparisons can the product now win?
+- **Self-check**: Has the change shipped to customers, or is it behind a flag or still in beta? Only correct facts that are live.
+- **State / idempotency**: Keep a claims ledger (each claim, its source of truth, and the pages that state it) plus the last processed commit or release as the watermark.
+- **Stop / bail-out**: No customer-facing changes → log "no action." Pricing and legal claims always go to a human before publishing.
+- **Output**: Staged corrections listed by page, and backlog items for newly winnable queries.
 
 ### The campaign-postmortem loop
 - **Check cadence**: On campaign end (event-based)
