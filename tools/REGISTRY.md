@@ -538,7 +538,7 @@ Cold email outreach and email finding tools for link building and sales prospect
 | **lemlist** | Cold email campaigns | Personalization features |
 | **instantly** | Cold email at scale | Email warmup built-in |
 
-**Agent recommendation**: Hunter for finding emails. Lemlist or Instantly for sending cold email campaigns. Snov for combined finding + outreach.
+**Agent recommendation**: Hunter for finding emails. Instantly for email-only cold campaigns at volume; lemlist when the sequence mixes email and LinkedIn. Snov for combined finding + outreach. Verify every list (Truelist) before upload, and send from secondary domains.
 
 ### Data Aggregation
 
