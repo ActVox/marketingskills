@@ -1,8 +1,8 @@
 ---
 name: prospecting
-description: When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions "prospecting," "build a prospect list," "find prospects," "find leads," "lead gen list," "find SaaS companies that," "find B2B companies," "find local businesses," "ICP-fit accounts," "who should we go after," "outbound list," "target account list," "find clients near me," "businesses without websites," "prospect research," "qualified leads," "find my first customers," "early adopters," "design partners," "beta users," or "who has this problem." Use this for the list-building and qualification phase. For writing the outbound copy after the list is built, see cold-email. For deep competitive research on specific accounts, see competitor-profiling.
+description: When the user wants to find, qualify, and build a list of prospects to reach out to, across B2B SaaS, general B2B, or local small businesses. Also use when the user mentions "prospecting," "build a prospect list," "find leads," "lead list," "outbound list," "target account list," "ICP-fit accounts," "find local businesses," "find my first customers," "design partners," "signal-based outbound," "buying signals," "intent data," "job change alerts," "waterfall enrichment," "Clay table," "lookalike accounts," "catch-all emails," "account tiering," or "research this account before I reach out." Always verify emails before they reach a sequence, and never scrape LinkedIn: define audiences in Sales Navigator and pull contacts from licensed data. Covers list building, signals, enrichment, verification, and account research. For the outreach itself (copy, sending setup, LinkedIn, cadences, replies), see cold-email. For researching competitors, see competitor-profiling.
 metadata:
-  version: 1.1.3
+  version: 1.2.0
 ---
 
 # Prospecting
@@ -60,6 +60,8 @@ Source 2–3× more candidates than the user wants in the final list — qualifi
 
 If the user's list quality bar is high, smaller is better. 25 verified leads beats 250 mostly-junk ones.
 
+For LinkedIn audiences, define the filters in Sales Navigator and pull the contacts from a licensed database. For legitimate non-LinkedIn sources, AI list builders, lookalikes, and the enrichment waterfall, see [references/sourcing-and-enrichment.md](references/sourcing-and-enrichment.md). To find accounts by what just happened to them (hiring, job changes, product usage, funding), see [references/signal-plays.md](references/signal-plays.md).
+
 ### Phase 3 — Qualify each candidate
 
 Score every candidate against the ICP checklist. Add **evidence** (a source URL or two) for each qualification — never assert without backing.
@@ -69,7 +71,7 @@ Score every candidate against the ICP checklist. Add **evidence** (a source URL 
 - **Medium**: one credible source plus consistent search evidence
 - **Low**: incomplete or ambiguous evidence — flag what remains uncertain
 
-For email contacts (B2B / SaaS branches), **always verify deliverability before adding to the final list** — see Truelist integration in [references/data-sources.md](references/data-sources.md). Don't ship leads with invalid or risky emails.
+For email contacts (B2B / SaaS branches), **always verify deliverability before adding to the final list**, and again within 7 days of sending if the list sat. Catch-all domains need a policy, not a guess. See [references/sourcing-and-enrichment.md](references/sourcing-and-enrichment.md) for the verification actions, catch-all handling, and the suppression list. Don't ship leads with invalid or risky emails.
 
 ### Phase 4 — Score and prioritize
 
@@ -83,6 +85,8 @@ Apply this rubric for the **SaaS, B2B, and Local SMB** branches. The **Demand-si
 | **Skip** | Disqualifier hit (out of ICP, closed business, duplicate, irrelevant, low confidence) |
 
 Branch-specific signals refine the scoring — see each reference file. Default ratio target: ~20% Hot, ~30% Warm, rest Cold/Skip.
+
+Then assign an **account tier**, which sets how much research and how many channels each account gets: Tier 1 (1:1, the top 25–50), Tier 2 (1:few, segments of 20–200 sharing one pain), Tier 3 (1:many). Tier 1 accounts get a sourced research brief before any outreach. See [references/signal-plays.md](references/signal-plays.md) for tiers and [references/account-research.md](references/account-research.md) for the brief and the rules for agent research.
 
 ### Phase 5 — Output the lead sheet
 
@@ -256,7 +260,7 @@ For implementation, see the [tools registry](https://github.com/coreyhaines31/ma
 
 - **cold-email**: For writing outbound sequences against the qualified list (the natural next step after prospecting)
 - **customer-research**: For understanding why current customers buy — informs the ICP definition
-- **competitor-profiling**: For deeper research on individual accounts (different from list-building qualification)
+- **competitor-profiling**: For researching competitors. Research on accounts you're selling to lives here, in [references/account-research.md](references/account-research.md)
 - **revops**: For lead routing, lifecycle, and CRM handoff after prospecting
 - **sales-enablement**: For battle cards and one-pagers used in the outreach
 - **directory-submissions**: For inbound discovery surfaces (the prospects might find you back)
