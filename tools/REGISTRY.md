@@ -116,6 +116,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | firehose | Competitive Intelligence | ✓ | - | - | - | [firehose.md](integrations/firehose.md) |
 | sparktoro | Audience Research | - | - | - | - | [sparktoro.md](integrations/sparktoro.md) |
 | rb2b | Visitor Identification | ✓ | - | - | - | [rb2b.md](integrations/rb2b.md) |
+| theirstack | Hiring & Tech Signals | ✓ | ✓ | - | - | [theirstack.md](integrations/theirstack.md) |
 | gong | Revenue Intelligence | ✓ | - | - | - | [gong.md](integrations/gong.md) |
 | airops | AI Content | ✓ | - | [✓](clis/airops.js) | - | [airops.md](integrations/airops.md) |
 | buffer | Social | ✓ | - | [✓](clis/buffer.js) | - | [buffer.md](integrations/buffer.md) |
@@ -471,6 +472,17 @@ Website visitor de-anonymization for B2B sales and marketing.
 | **rb2b** | Person-level visitor ID, intent signals | LinkedIn profiles, emails, page-level data |
 
 **Agent recommendation**: RB2B for identifying anonymous B2B website visitors and routing high-intent visitors to outreach tools. Pairs well with Clay for enrichment and Instantly/Lemlist for cold email.
+
+### Hiring & Tech Signals
+
+Buying signals from job postings and technology adoption: who is hiring for a role you serve, and who uses (or just adopted) a relevant tool.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **theirstack** | Companies hiring for a role; tech stack inferred from job postings | API + hosted MCP (OAuth or API key); webhooks for new postings |
+| **leadmagic** | Job-change checks for past champions; per-company technographics and funding | Credit-based API + MCP |
+
+**Agent recommendation**: Use hiring and tech signals to time and justify outreach, not as the whole list. Combine 2–3 signals with ICP fit, and act within days of a fresh signal.
 
 ### Revenue Intelligence
 
