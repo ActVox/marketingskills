@@ -342,6 +342,69 @@ Loops are grouped by function. Naming follows the "The X loop" convention.
 
 ---
 
+## Outbound
+
+### The signal-sweep loop
+- **Check cadence**: Daily (product-usage signals: on trigger, within minutes)
+- **Acts when**: A new signal fires on an ICP-fit account that isn't already in a sequence, a customer, or suppressed.
+- **Purpose**: Reach accounts while the reason to reach them is fresh.
+- **Skills used**: `prospecting`, `cold-email`
+- **Loop body**:
+  1. Pull new signals since the last run: job posts, job changes of past champions, identified website visits, funding, product-usage triggers, social engagement.
+  2. Drop accounts outside the ICP, already in a sequence, customers, open deals, and anything on the suppression list.
+  3. Score and tier the rest; find and verify the contact who owns the problem.
+  4. Match each to its play (see the prospecting skill's signal plays reference) and stage the first touch.
+- **Self-check**: Is the signal inside its freshness window? Does the account still pass the ICP check? Is the email verified within the last 7 days?
+- **State / idempotency**: Key on account + signal type + signal date; never enroll the same account twice for the same signal, and respect a cooldown after any previous sequence.
+- **Stop / bail-out**: No fresh signals → log "no action." Halt if a signal source fails rather than acting on partial data. First touches for Tier 1 go to a human for approval.
+- **Output**: Enrolled or staged contacts, each with its signal, tier, and play.
+
+### The reply-triage loop
+- **Check cadence**: Every 15–30 minutes during business hours
+- **Acts when**: A new reply arrives on any outbound channel.
+- **Purpose**: Turn replies into meetings fast and stop every other channel the moment someone answers.
+- **Skills used**: `cold-email`, `revops`
+- **Loop body**:
+  1. Collect new replies from the sending tool, LinkedIn tool, and dialer notes.
+  2. Classify each (positive, information request, objection, not now, referral, out of office, wrong person, unsubscribe, bounce).
+  3. Stop all sequences for that contact on every channel.
+  4. Act on the safe types directly (suppress unsubscribes and bounces, pause for out-of-office, set reminders for not-now) and draft responses for the rest.
+  5. Alert a human immediately on positive replies.
+- **Self-check**: Is the classification confident? Anything ambiguous goes to a human. Does a draft make any claim not in the approved sources?
+- **State / idempotency**: Track processed message IDs; never answer the same reply twice.
+- **Stop / bail-out**: No new replies → exit quietly. Never send a drafted response to a positive, objection, or referral reply without approval until the agent's accuracy has been proven.
+- **Output**: Updated CRM stages, suppression updates, drafted responses, and positive-reply alerts. See the cold-email skill's reply handling reference.
+
+### The cold-domain health loop
+- **Check cadence**: Daily for bounces; weekly for placement and reputation
+- **Acts when**: A sending domain or mailbox crosses a stop-loss threshold.
+- **Purpose**: Protect cold sending infrastructure before a bad week burns domains.
+- **Skills used**: `cold-email`
+- **Loop body**:
+  1. Pull per-mailbox and per-campaign bounce rates, spam complaints, and reply rates.
+  2. Weekly: run seed placement tests, check Google Postmaster Tools and Microsoft SNDS, and check blocklists.
+  3. Pause campaigns over 2% bounces; pull mailboxes under ~70% inbox placement into warmup; flag domains on blocklists.
+  4. Swap in spare warmed domains to keep volume steady.
+- **Self-check**: Is the drop one bad list or the infrastructure? A single campaign's bounces point at the list; every campaign on a domain dropping points at the domain.
+- **State / idempotency**: Track each mailbox's status (active, warming, paused, retired) with dates.
+- **Stop / bail-out**: All healthy → log. Escalate immediately on spam complaints near 0.1% or a primary-domain problem.
+- **Output**: A health table and the actions taken. Thresholds are in the cold-email skill's deliverability reference. (For lifecycle and marketing email, use the email-deliverability loop.)
+
+### The sequence-retro loop
+- **Check cadence**: Weekly
+- **Acts when**: Sequences have enough new sends to compare (roughly 300+ per variant).
+- **Purpose**: Keep what works, kill what doesn't, and learn which signals, segments, and channels produce meetings.
+- **Skills used**: `cold-email`, `prospecting`, `analytics`
+- **Loop body**:
+  1. Pull, per sequence, step, segment, signal, and channel: sends, replies, positive replies, meetings.
+  2. Compare against the previous period and against each other.
+  3. Read the no-reasons and objections from the reply log.
+  4. Propose: retire losing sequences, test one new variant, and shift volume toward the best signal-and-segment pairs.
+- **Self-check**: Are the samples big enough? Did deliverability change in the period (check the cold-domain health log) before blaming copy?
+- **State / idempotency**: Keep each week's results; log which recommendations were adopted.
+- **Stop / bail-out**: Too few sends to judge → report volumes only. Never judge on open rates.
+- **Output**: A one-screen retro with 3 recommendations.
+
 ## Activation
 
 ### The onboarding drop-off loop
