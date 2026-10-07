@@ -8,7 +8,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ad-creative | 2.9.3 | 2026-10-02 |
 | ai-seo | 2.7.3 | 2026-10-06 |
 | analytics | 2.0.2 | 2026-10-02 |
-| aso | 2.0.1 | 2026-08-19 |
+| aso | 2.0.2 | 2026-10-06 |
 | attribution | 1.1.2 | 2026-10-02 |
 | churn-prevention | 2.0.1 | 2026-10-02 |
 | co-marketing | 2.0.2 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.19
+
+- **aso**: Correct conditional Google Play preview autoplay and remove unsupported ROI conclusions from tap-to-play rates.
 
 ### 2.11.18 (2026-10-06)
 
