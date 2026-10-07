@@ -44,7 +44,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | programmatic-seo | 2.0.0 | 2026-05-05 |
 | prospecting | 1.1.2 | 2026-10-02 |
 | public-relations | 1.2.0 | 2026-10-02 |
-| referrals | 2.0.2 | 2026-10-02 |
+| referrals | 2.0.3 | 2026-10-02 |
 | revops | 2.0.1 | 2026-10-02 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.18
+
+- Fix referral incentive sizing to respect total CAC, include both reward sides and other acquisition costs, and distinguish the acquisition budget from lifetime gross profit.
 
 ### 2.11.17 (2026-10-02)
 
