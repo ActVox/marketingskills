@@ -105,6 +105,7 @@ Anyone — including tool makers and partners — may contribute content that na
 | typeform | Forms | ✓ | - | [✓](clis/typeform.js) | ✓ | [typeform.md](integrations/typeform.md) |
 | intercom | Messaging | ✓ | - | [✓](clis/intercom.js) | ✓ | [intercom.md](integrations/intercom.md) |
 | outreach | Sales Engagement | ✓ | ✓ | [✓](clis/outreach.js) | - | [outreach.md](integrations/outreach.md) |
+| heyreach | LinkedIn Outreach | ✓ | ✓ | ✓ | - | [heyreach.md](integrations/heyreach.md) |
 | crossbeam | Partner Ecosystem | ✓ | ✓ | [✓](clis/crossbeam.js) | - | [crossbeam.md](integrations/crossbeam.md) |
 | introw | Partner Ecosystem | - | ✓ | - | - | [introw.md](integrations/introw.md) |
 | pendo | Product Analytics | ✓ | - | [✓](clis/pendo.js) | - | [pendo.md](integrations/pendo.md) |
@@ -416,6 +417,16 @@ Sales engagement and outreach automation platforms.
 | **outreach** | Enterprise sales engagement | Sequences, tasks, analytics |
 
 **Agent recommendation**: Outreach for enterprise sales teams managing multi-touch sequences at scale.
+
+### LinkedIn Outreach
+
+LinkedIn connection requests, messages, and inbox across sender accounts. All third-party LinkedIn automation breaks LinkedIn's User Agreement and risks account restrictions.
+
+| Tool | Best For | Notes |
+|------|----------|-------|
+| **heyreach** | Multi-sender LinkedIn campaigns, email + LinkedIn with Instantly/Smartlead | API + official per-workspace MCP; LinkedIn removed its company page in March 2026 |
+
+**Agent recommendation**: Use real, owned profiles only, keep each sender well under weekly connection limits, and stop LinkedIn steps when a prospect replies on any channel. Alternatives: lemlist and La Growth Machine (email + LinkedIn in one sequence), Expandi, Waalaxy, Unipile (API for builders).
 
 ### Product Analytics
 
