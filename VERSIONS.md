@@ -48,7 +48,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | revops | 2.0.1 | 2026-10-02 |
 | sales-enablement | 2.3.2 | 2026-10-02 |
 | schema | 2.0.0 | 2026-05-05 |
-| seo-audit | 2.0.1 | 2026-08-19 |
+| seo-audit | 2.0.2 | 2026-10-06 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.19 (2026-10-06)
+
+- Correct international canonical guidance for duplicate same-language regional pages, keeping translated-language and pagination boundaries explicit.
 
 ### 2.11.18 (2026-10-06)
 
