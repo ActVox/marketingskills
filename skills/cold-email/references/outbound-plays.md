@@ -37,7 +37,7 @@ Reach out to people already using the product, when their usage shows they're re
 - Returning repeatedly to pricing or upgrade pages
 
 **The sequence**
-1. **Within minutes of the trigger,** a short plain-text email from a founder or named account owner, not the marketing address. Reference what they're doing, not that you're watching:
+1. **Within minutes of the trigger,** a short plain-text email from a founder or named account owner, sent from their own address. Reference what they're doing:
    > Saw you're verifying larger lists this week. If you're running these before outbound campaigns, a couple of settings help with catch-all domains. Happy to share them, or set you up with a volume plan if you're doing this regularly.
 2. **LinkedIn connect** the same or next day, for company-domain users.
 3. **One follow-up** with a specific resource for their use case.
@@ -45,7 +45,7 @@ Reach out to people already using the product, when their usage shows they're re
 
 **Rules**
 - Speed matters more here than anywhere: the trigger loses most of its value within a day.
-- Never make the tracking feel like surveillance. Talk about the job they're doing, not the events you logged.
+- Never make the tracking feel like surveillance. Talk about the job they're doing and leave the logged events out of it.
 - Offer help first and an upgrade second. Product-qualified users convert far better than cold contacts (vendors report many times higher), so you don't need a hard sell.
 - Route accounts that exceed self-serve limits to a person. See the revops skill's routing rules.
 

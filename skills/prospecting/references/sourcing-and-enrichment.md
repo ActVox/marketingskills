@@ -28,7 +28,7 @@ Other sources that don't involve LinkedIn:
 
 No single provider finds everyone, and the ones that find the most also return more wrong data. The standard approach is a **waterfall**: query providers one at a time and stop at the first confident result.
 
-1. **Order providers by accuracy for your ICP, not by coverage.** Independent comparisons disagree wildly. Different 2025–26 benchmarks put the same tools anywhere from 25% to 87% find rates, and the highest finders sometimes had four times the false-positive rate. Run your own bake-off (below).
+1. **Order providers by accuracy for your ICP, then by coverage.** Independent comparisons disagree wildly. Different 2025–26 benchmarks put the same tools anywhere from 25% to 87% find rates, and the highest finders sometimes had four times the false-positive rate. Run your own bake-off (below).
 2. **Stop at the first result that passes verification.** Paying three providers for the same contact is the most common waste.
 3. **Set a cost cap per contact** and log which provider filled each field.
 4. **Mobile numbers are for Tier 1 only.** They're the most expensive field, and many are personal phones (see the phone rules in compliance.md). For EU and UK numbers, providers with human-verified European data tend to do better.

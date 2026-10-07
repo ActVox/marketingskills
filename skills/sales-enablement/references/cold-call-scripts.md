@@ -1,6 +1,6 @@
 # Cold Call Scripts
 
-Scripts for the first 30 seconds of a cold call, voicemails, and the pushback that comes right after the opener. A script is a structure to internalize, not words to read. Prospects can hear reading.
+Scripts for the first 30 seconds of a cold call, voicemails, and the pushback that comes right after the opener. Internalize the structure and say it in your own words. Prospects can hear reading.
 
 For where calls fit in a multichannel cadence (timing, attempts, which tiers get calls) and the rules on Do Not Call lists and AI voice, see the cold-email skill's multichannel cadence reference and the prospecting skill's compliance reference.
 
@@ -48,7 +48,7 @@ Never argue past a second no. Log the reason; it's useful for the weekly sequenc
 
 ## Voicemail
 
-20–30 seconds. The goal is to make the follow-up email recognizable, not to get a callback.
+20–30 seconds. The goal is to make the follow-up email recognizable. A callback is a bonus.
 
 > Hi Priya, Sam from Acme. I'm calling because you're scaling the SDR team, and I had one idea on keeping new reps' lists clean before they start sending. I'll send a short email with it. Again, Sam from Acme.
 

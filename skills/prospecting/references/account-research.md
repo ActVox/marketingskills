@@ -1,6 +1,6 @@
 # Account Research for Outreach
 
-Research before outreach has one job: find a true, specific reason this account should care right now, and the person who owns that problem. It isn't a competitive dossier. That's the competitor-profiling skill, built for companies you compete with, not companies you sell to.
+Research before outreach has one job: find a true, specific reason this account should care right now, and the person who owns that problem. Dossiers on companies you compete with belong to the competitor-profiling skill.
 
 ## How much research each tier gets
 

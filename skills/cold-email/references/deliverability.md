@@ -54,7 +54,7 @@ Warmup networks still help new mailboxes, but a mailbox whose only engagement is
 - **Turn off open tracking.** Apple Mail Privacy Protection makes opens meaningless, and the tracking pixel itself is a spam signal. One large sender dataset found reply rates roughly doubled when open tracking was off. Measure replies instead.
 - **Turn off click tracking** unless you need it, and then only with a custom tracking domain.
 - **Under about 80 words** for the first email.
-- **Vary the copy.** Identical bodies across thousands of sends look like bulk mail. Segment-specific copy and real personalization fix this naturally; spintax is a fallback, not a strategy.
+- **Vary the copy.** Identical bodies across thousands of sends look like bulk mail. Segment-specific copy and real personalization fix this naturally. Keep spintax as a last resort.
 - **Opt-out line.** A plain-text line ("If this isn't relevant, reply 'no' and I won't follow up") plus your postal address in the signature. CAN-SPAM requires both; see the prospecting skill's compliance reference.
 
 ## Verify before you send

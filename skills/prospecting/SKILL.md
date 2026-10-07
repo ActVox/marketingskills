@@ -71,7 +71,7 @@ Score every candidate against the ICP checklist. Add **evidence** (a source URL 
 - **Medium**: one credible source plus consistent search evidence
 - **Low**: incomplete or ambiguous evidence — flag what remains uncertain
 
-For email contacts (B2B / SaaS branches), **always verify deliverability before adding to the final list**, and again within 7 days of sending if the list sat. Catch-all domains need a policy, not a guess. See [references/sourcing-and-enrichment.md](references/sourcing-and-enrichment.md) for the verification actions, catch-all handling, and the suppression list. Don't ship leads with invalid or risky emails.
+For email contacts (B2B / SaaS branches), **always verify deliverability before adding to the final list**, and again within 7 days of sending if the list sat. Catch-all domains need a set policy. See [references/sourcing-and-enrichment.md](references/sourcing-and-enrichment.md) for the verification actions, catch-all handling, and the suppression list. Don't ship leads with invalid or risky emails.
 
 ### Phase 4 — Score and prioritize
 

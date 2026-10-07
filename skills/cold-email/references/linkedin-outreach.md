@@ -7,7 +7,7 @@ Figures below come mostly from LinkedIn automation vendors' and agencies' own da
 ## Fix the profile first
 
 Every prospect who gets a request or a message looks at the sender's profile. Before outreach:
-- **Headline** says who you help and how, not just a job title.
+- **Headline** says who you help and how.
 - **About** opens with the problem you solve, then proof.
 - **Featured** holds one case study, teardown, or resource a prospect would actually click.
 - **Recent activity** shows posts or thoughtful comments from the last few weeks. Accounts that post regularly see noticeably higher acceptance rates.

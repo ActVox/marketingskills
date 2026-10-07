@@ -20,7 +20,7 @@ Every reply of any type stops all other channels for that person. See [multichan
 
 ## Speed
 
-Answer positive replies within minutes during business hours, not hours. The research behind the famous speed-to-lead multipliers is old (2007–2011), but the direction holds. Interest fades fast, and a prospect who replied to you has often replied to others too. Route positive replies to a person instantly (a Slack or phone notification), and keep someone responsible for them every working hour.
+Answer positive replies within minutes during business hours. The research behind the famous speed-to-lead multipliers is old (2007–2011), but the direction holds. Interest fades fast, and a prospect who replied to you has often replied to others too. Route positive replies to a person instantly (a Slack or phone notification), and keep someone responsible for them every working hour.
 
 ## Booking
 
@@ -32,14 +32,14 @@ Answer positive replies within minutes during business hours, not hours. The res
 
 ## Objections in reply to cold outreach
 
-Early objections are usually reflexes, not decisions. Answer once, briefly, and make it easy to say no:
+Early objections are usually reflexes. Answer once, briefly, and make it easy to say no:
 
 | Objection | Response approach |
 |-----------|-------------------|
 | "We already use [competitor]" | Acknowledge it. Name the one situation where teams like theirs still look elsewhere. Ask if it applies |
 | "No budget" | Ask when they plan budgets, or offer something that doesn't need one (an audit, a benchmark) |
 | "Not a priority" | Ask what is a priority this quarter. If it isn't connected, step back and set a reminder |
-| "Send me more info" | Send one specific thing (a one-pager or a two-minute video), not a deck. Ask one question that makes a reply easy |
+| "Send me more info" | Send one specific thing (a one-pager or a two-minute video) and one question that makes a reply easy |
 | "How did you get my email?" | Answer honestly with the actual source, and offer to remove them |
 
 Deal-stage objections (pricing negotiation, security reviews, competitive bake-offs) live in the sales-enablement skill's objection library.
