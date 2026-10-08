@@ -4,13 +4,13 @@ Current versions of all skills. Agents can compare against local versions to che
 
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
-| ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.9.4 | 2026-10-08 |
-| ai-seo | 2.7.4 | 2026-10-07 |
-| analytics | 2.0.2 | 2026-10-02 |
-| aso | 2.0.1 | 2026-08-19 |
-| attribution | 1.1.2 | 2026-10-02 |
-| churn-prevention | 2.0.1 | 2026-10-02 |
+| ab-testing | 2.0.1 | 2026-10-08 |
+| ad-creative | 2.10.0 | 2026-10-08 |
+| ai-seo | 2.7.5 | 2026-10-08 |
+| analytics | 2.0.3 | 2026-10-08 |
+| aso | 2.0.2 | 2026-10-08 |
+| attribution | 1.1.3 | 2026-10-08 |
+| churn-prevention | 2.0.2 | 2026-10-08 |
 | co-marketing | 2.0.2 | 2026-10-02 |
 | cold-email | 2.2.0 | 2026-10-07 |
 | community-marketing | 2.0.1 | 2026-08-23 |
@@ -19,10 +19,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | content-strategy | 2.1.3 | 2026-10-07 |
 | copy-editing | 2.1.1 | 2026-10-07 |
 | copywriting | 2.1.0 | 2026-10-02 |
-| cro | 2.0.1 | 2026-10-07 |
+| cro | 2.0.2 | 2026-10-08 |
 | customer-research | 2.0.4 | 2026-10-02 |
-| directory-submissions | 2.1.0 | 2026-10-02 |
-| emails | 2.1.2 | 2026-10-07 |
+| directory-submissions | 2.1.1 | 2026-10-08 |
+| emails | 2.1.3 | 2026-10-08 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.1 | 2026-08-23 |
 | image | 2.0.2 | 2026-10-02 |
@@ -32,23 +32,23 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
 | marketing-loops | 1.4.0 | 2026-10-07 |
-| marketing-plan | 1.2.0 | 2026-10-02 |
+| marketing-plan | 1.2.1 | 2026-10-08 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.1 | 2026-08-23 |
 | onboarding | 2.0.1 | 2026-08-23 |
-| ads | 2.4.5 | 2026-10-07 |
+| ads | 2.4.6 | 2026-10-08 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
-| pricing | 2.1.2 | 2026-10-02 |
+| pricing | 2.1.3 | 2026-10-08 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.1.0 | 2026-10-06 |
 | prospecting | 1.2.0 | 2026-10-07 |
 | public-relations | 1.2.0 | 2026-10-02 |
-| referrals | 2.0.2 | 2026-10-02 |
+| referrals | 2.1.0 | 2026-10-08 |
 | revops | 2.1.0 | 2026-10-07 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
-| schema | 2.0.1 | 2026-10-08 |
-| seo-audit | 2.1.0 | 2026-10-07 |
+| schema | 2.0.2 | 2026-10-08 |
+| seo-audit | 2.1.1 | 2026-10-08 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
@@ -56,6 +56,30 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.23 (2026-10-08)
+
+Skill and tooling fixes from @rudycelekli: corrected platform facts, sounder math in the finance and testing guidance, and validator fixes.
+
+- **Platform facts:**
+  - **schema** (2.0.1 → 2.0.2): FAQ rich results ended in 2026, and HowTo and the sitelinks search box were retired earlier; Schema.org vocabulary is now kept separate from what Google displays (#767).
+  - **analytics** (2.0.2 → 2.0.3): GA4 enhanced-measurement event names in reports (#774), and localized price text kept out of monetary tracking (#779).
+  - **churn-prevention** (2.0.1 → 2.0.2): correct Paddle Billing dunning webhook events (#776).
+  - **aso** (2.0.1 → 2.0.2): Google Play preview videos can autoplay muted (#784).
+  - **seo-audit** (2.1.0 → 2.1.1): preferred canonicals for same-language regional duplicates, which must sit inside the hreflang cluster (#782).
+  - **directory-submissions** (2.1.0 → 2.1.1): verify the actual link and its rel qualifiers rather than HTTP headers (#768).
+- **Math and reasoning:**
+  - **ab-testing** (2.0.0 → 2.0.1): correct p-value and confidence-interval interpretation for fixed-horizon tests (#769).
+  - **ads** (2.4.5 → 2.4.6): CAC payback uses gross margin and cohort recovery, keeping firm verdicts (#773). The Meta Andromeda playbook moved into `references/meta-andromeda-playbook.md`, bringing SKILL.md under 500 lines.
+  - **marketing-plan** (1.2.0 → 1.2.1): ARR budgets account for churn in the starting base (#772).
+  - **pricing** (2.1.2 → 2.1.3): Van Westendorp measures price perception, not demand (#771).
+  - **referrals** (2.0.2 → 2.1.0): rewards are capped by total CAC (#780). A new `references/affiliate-operations.md` covers cohort economics, partner activation, payout policy, and incrementality; it builds on @Adi29102000-s's contribution in #417 (#724).
+  - **attribution** (1.1.2 → 1.1.3): stale booking-link identity is cleared (#770), and webhook analytics failures are non-fatal (#778).
+- **Routing and creative:**
+  - **cro** (2.0.1 → 2.0.2) and **emails** (2.1.2 → 2.1.3): a routing table that sends each question to the right reference (#699).
+  - **ai-seo** (2.7.4 → 2.7.5): question-level routing to its references (#702).
+  - **ad-creative** (2.9.4 → 2.10.0): headline treatments by buyer awareness stage (#727).
+- **Tooling:** the validator and sync script now handle Windows line endings (#709), ignore indented metadata keys (#763), keep literal `$` text (#764), and require frontmatter that opens and closes the file (#762).
 
 ### 2.11.22 (2026-10-08)
 

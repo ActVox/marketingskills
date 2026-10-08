@@ -98,6 +98,32 @@
         "References viral-mechanisms.md"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Our referral plan has $1,200 lifetime revenue and 70% gross margin. Target total CAC is $200; other acquisition costs are $40 per new paying customer. The template says we can give a $640 referral reward. Is that within budget, including a two-sided offer?",
+      "expected_output": "Reject the $640 reward: it yields $680 total CAC, not the $200 target. The combined reward budget is at most $160 after $40 other costs, for example $80 cash per side. Separate $840 lifetime gross profit from the acquisition budget; consider cohort/period, retention/refunds/cash payback, and actual economic costs of credits. If other costs already exceed target, pause/redesign rather than treating zero reward as a feasible plan.",
+      "assertions": [
+        "Identifies $680 total CAC from the old reward",
+        "Caps combined reward cost at $160",
+        "Counts both reward sides and other acquisition costs once",
+        "Distinguishes lifetime gross profit from target CAC budget",
+        "Pauses or redesigns when other costs exhaust the budget"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "We want an affiliate program for B2B SaaS. Last month partner-attributed customers paid $12,000, refunds $2,000, variable costs $3,000, partner support $800, operations $1,200, payout fees $100. A 20% commission applies to net collected eligible revenue. An agency introduced new buyers; a coupon site touched existing customers at checkout. Draft the program and explain how to tell if it grows the business.",
+      "expected_output": "Uses the existing affiliate branch, computes eligible revenue $10,000, commission $2,000, and contribution $2,900, specifies actual attribution and payout policies, and separates attribution from incrementality. Proposes useful partner recruitment/activation/reconciliation rather than reflexively creating an overlapping skill or calling every coupon partner fraud.",
+      "assertions": [
+        "Computes cohort economics without double-counting refunds",
+        "Separates incremental acquisition from credited coupon touches",
+        "Defines eligibility, attribution priority, hold and payout decisions",
+        "Distinguishes link creation from real partner activation",
+        "Does not equate marked-paid status with a verified money transfer"
+      ],
+      "files": []
     }
   ]
 }
