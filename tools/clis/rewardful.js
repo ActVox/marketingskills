@@ -55,6 +55,19 @@ function parseArgs(args) {
 const args = parseArgs(rawArgs)
 const [cmd, sub, ...rest] = args._
 
+function collectionParams() {
+  const params = new URLSearchParams()
+  for (const [key, max] of [['page', Number.MAX_SAFE_INTEGER], ['limit', 100]]) {
+    if (args[key] === undefined) continue
+    const value = args[key]
+    if (typeof value !== 'string' || !/^[0-9]+$/.test(value) || !Number.isSafeInteger(Number(value)) || Number(value) < 1 || Number(value) > max) {
+      throw new Error(`--${key} must be an integer between 1 and ${max}`)
+    }
+    params.set(key, value)
+  }
+  return params
+}
+
 async function main() {
   let result
 
@@ -62,8 +75,7 @@ async function main() {
     case 'affiliates':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.page) params.set('page', args.page)
+          const params = collectionParams()
           result = await api('GET', `/affiliates?${params}`)
           break
         }
@@ -72,7 +84,7 @@ async function main() {
           result = await api('GET', `/affiliates/${rest[0]}`)
           break
         case 'search': {
-          const params = new URLSearchParams()
+          const params = collectionParams()
           if (args.email) params.set('email', args.email)
           result = await api('GET', `/affiliates?${params}`)
           break
@@ -98,13 +110,13 @@ async function main() {
     case 'referrals':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
+          const params = collectionParams()
           if (args['affiliate-id']) params.set('affiliate_id', args['affiliate-id'])
           result = await api('GET', `/referrals?${params}`)
           break
         }
         case 'get': {
-          const params = new URLSearchParams()
+          const params = collectionParams()
           if (args['stripe-customer-id']) params.set('stripe_customer_id', args['stripe-customer-id'])
           result = await api('GET', `/referrals?${params}`)
           break
@@ -117,7 +129,7 @@ async function main() {
     case 'commissions':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
+          const params = collectionParams()
           if (args['affiliate-id']) params.set('affiliate_id', args['affiliate-id'])
           result = await api('GET', `/commissions?${params}`)
           break
@@ -153,6 +165,7 @@ async function main() {
           affiliates: 'affiliates [list|get|search|update] [id] [--email <email>] [--id <id>] [--first-name <name>] [--last-name <name>] [--paypal-email <email>]',
           referrals: 'referrals [list|get] [--affiliate-id <id>] [--stripe-customer-id <id>]',
           commissions: 'commissions [list|get] [id] [--affiliate-id <id>]',
+          options: '--page <n> --limit <n> (collection requests)',
           links: 'links [create] [--affiliate-id <id>] [--token <token>]',
         }
       }
