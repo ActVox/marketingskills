@@ -123,7 +123,7 @@ async function main() {
         case 'find': {
           const email = args.email
           if (!email) { result = { error: '--email required' }; break }
-          result = await api('POST', '/get-prospect-by-email', { email })
+          result = await api('POST', '/get-prospects-by-email', { email })
           break
         }
         case 'add': {
