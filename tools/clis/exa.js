@@ -70,6 +70,38 @@ function buildContents(args) {
   return Object.keys(contents).length ? contents : null
 }
 
+function buildResearch(args) {
+  const research = {}
+  if (args['output-schema'] !== undefined) {
+    let schema
+    try { schema = JSON.parse(args['output-schema']) } catch { throw new Error('--output-schema requires valid JSON') }
+    if (!schema || typeof schema !== 'object' || Array.isArray(schema) || !['text', 'object'].includes(schema.type)) {
+      throw new Error('--output-schema requires an object with root type text or object')
+    }
+    research.outputSchema = schema
+  }
+  for (const [flag, field] of [['objective', 'objective'], ['system-prompt', 'systemPrompt']]) {
+    if (args[flag] !== undefined) {
+      if (typeof args[flag] !== 'string' || !args[flag].trim() || (flag === 'objective' && args[flag].length > 4096)) {
+        throw new Error(`--${flag} requires nonempty text${flag === 'objective' ? ' of at most 4096 characters' : ''}`)
+      }
+      research[field] = args[flag]
+    }
+  }
+  if (args['additional-queries'] !== undefined) {
+    let queries
+    try { queries = JSON.parse(args['additional-queries']) } catch { throw new Error('--additional-queries requires a JSON array') }
+    if (!Array.isArray(queries) || queries.length < 1 || queries.length > 10 || queries.some(query => typeof query !== 'string' || !query.trim())) {
+      throw new Error('--additional-queries requires one to ten nonempty strings')
+    }
+    if (!['deep-lite', 'deep', 'deep-reasoning'].includes(args.type)) {
+      throw new Error('--additional-queries requires --type deep-lite, deep, or deep-reasoning')
+    }
+    research.additionalQueries = queries
+  }
+  return research
+}
+
 const args = parseArgs(rawArgs)
 const [cmd, ...rest] = args._
 
@@ -104,7 +136,7 @@ async function main() {
     case 'search': {
       const query = args.query || rest.join(' ')
       if (!query) { result = { error: '--query required' }; break }
-      const body = { query }
+      const body = { query, ...buildResearch(args) }
       if (args.type) body.type = args.type
       if (args.num) body.numResults = Number(args.num)
       if (args.category) body.category = args.category
@@ -156,7 +188,7 @@ async function main() {
         error: 'Unknown command',
         usage: {
           answer: 'answer [question | --query <q>] [--model <model>] [--system-prompt <instructions>] [--text true|false] [--output-schema <JSON object>]',
-          search: 'search --query <q> [--type neural|fast|auto|deep-lite|deep|deep-reasoning|instant] [--num <n>] [--category company|research paper|news|personal site|financial report|people] [--include-domains <d1,d2>] [--exclude-domains <d1,d2>] [--include-text <phrases>] [--exclude-text <phrases>] [--start-published <ISO>] [--end-published <ISO>] [--user-location <CC>] [--text] [--highlights] [--summary] [--max-chars <n>] [--highlight-query <q>] [--summary-query <q>]',
+          search: 'search --query <q> [--type neural|fast|auto|deep-lite|deep|deep-reasoning|instant] [--num <n>] [--category company|research paper|news|personal site|financial report|people] [--include-domains <d1,d2>] [--exclude-domains <d1,d2>] [--include-text <phrases>] [--exclude-text <phrases>] [--start-published <ISO>] [--end-published <ISO>] [--user-location <CC>] [--text] [--highlights] [--summary] [--max-chars <n>] [--highlight-query <q>] [--summary-query <q>] [--output-schema <JSON>] [--objective <text>] [--system-prompt <text>] [--additional-queries <JSON-array>]',
           'find-similar': 'find-similar --url <url> [--num <n>] [--include-domains <d1,d2>] [--exclude-domains <d1,d2>] [--start-published <ISO>] [--end-published <ISO>] [--text] [--highlights] [--summary]',
           contents: 'contents --urls <url1,url2> [--text] [--highlights] [--summary] [--max-chars <n>] [--highlight-query <q>] [--summary-query <q>]',
           options: '--dry-run (preview request without sending)',

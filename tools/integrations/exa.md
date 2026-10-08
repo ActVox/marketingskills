@@ -44,6 +44,18 @@ POST https://api.exa.ai/search
 }
 ```
 
+### Structured research output
+
+[Exa Search](https://exa.ai/docs/reference/search) can synthesize a structured answer alongside search results and field-level grounding. Pass a JSON schema with root type `object` or `text`; the response's `output.content`, `output.grounding`, request ID and cost estimate are returned unchanged.
+
+```bash
+node tools/clis/exa.js search --query "newsletter platforms for small publishers" --type deep --output-schema '{"type":"object","properties":{"vendors":{"type":"array","items":{"type":"string"}}},"required":["vendors"]}' --objective "Compare vendors for a small publisher" --system-prompt "Use primary sources and identify missing evidence" --additional-queries '["newsletter pricing","newsletter deliverability"]' --highlights
+```
+
+`--additional-queries` takes a JSON array of one to ten nonempty query strings and requires `deep-lite`, `deep` or `deep-reasoning`. `--objective` describes the research goal (at most 4096 characters); `--system-prompt` supplies synthesis instructions. Ordinary search filters and content options still apply. Omit these flags to retain the existing request.
+
+The CLI validates JSON shape and supported root types; Exa validates the full schema, including its object property, nesting and array-item limits. This request is non-streaming, performs one search, and does not retry or invent citations. Inspect grounding and original sources before relying on generated content. Structured synthesis adds provider latency and can affect costs; the response estimate is not a billing guarantee. Preview with `--dry-run` before a paid request.
+
 ### Competitor Content Discovery
 
 ```bash
