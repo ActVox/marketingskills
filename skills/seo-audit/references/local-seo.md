@@ -1,11 +1,6 @@
----
-name: local-seo
-description: When the user wants more customers from Google Maps or local search. Use for "local SEO," "Google Business Profile," "map pack," "plumber near me," "local citations," "NAP consistency," "location pages," or local business reviews. Covers storefronts, service-area businesses, and multiple real locations. For a general technical site audit, use seo-audit; for implementing structured data, use schema.
-metadata:
-  version: 1.0.0
----
-
 # Local SEO
+
+Use this reference when the audit or request is about a local business: Google Business Profile, the map pack, citations, reviews, or location pages.
 
 Help local customers find the right business and turn searches into qualified calls, bookings, and visits. Diagnose the specific location and search context before prescribing changes.
 
@@ -20,7 +15,7 @@ Read existing product context at `.agents/product-marketing.md` (or `.claude/pro
 
 Use the requested scope. A profile description request needs a description, not a compulsory full audit. Without access, provide a provisional plan and identify the evidence needed; never report invented profile findings.
 
-For profile eligibility, address visibility, duplicates, categories, and current feature availability, read [profile-and-citations.md](references/profile-and-citations.md). An online-only business needs a different SEO plan. A service area is not a collection of extra storefronts.
+For profile eligibility, address visibility, duplicates, categories, and current feature availability, read [profile-and-citations.md](local-seo-profile-and-citations.md). An online-only business needs a different SEO plan. A service area is not a collection of extra storefronts.
 
 ## Diagnose the Local Search Problem
 
@@ -44,7 +39,7 @@ Prioritize the constraint supported by evidence:
 
 ## Improve the Profile and Citation Record
 
-Use [profile-and-citations.md](references/profile-and-citations.md) for the requested profile or listing work. Produce field-level edits grounded in real business facts, with the existing value, proposed value, reason, and missing verification.
+Use [profile-and-citations.md](local-seo-profile-and-citations.md) for the requested profile or listing work. Produce field-level edits grounded in real business facts, with the existing value, proposed value, reason, and missing verification.
 
 Build a canonical location record for the real-world name, public contact details, customer-facing hours, profile ID, and matching location URL. Keep a private operating address separate when customers do not visit it. Never publish a hidden home address merely to satisfy a citation checklist.
 
@@ -52,7 +47,7 @@ Citation cleanup should resolve conflicting identities and customer-facing infor
 
 ## Earn and Respond to Reviews
 
-Ask customers with genuine experiences for honest feedback through a neutral request and the correct location's review link. Do not select only happy customers, buy reviews, offer incentives, require particular wording, or promise removal of criticism. Google's rules differ from other review platforms; read the current [Maps review policy](https://support.google.com/contributionpolicy/answer/7400114?hl=en-GB).
+Ask customers with genuine experiences for honest feedback through a neutral request and the correct location's review link. Do not select only happy customers, buy reviews, offer incentives, require particular wording, or promise removal of criticism. Google's rules differ from other review platforms (see the referrals skill's review programs reference); read the current [Maps review policy](https://support.google.com/contributionpolicy/answer/7400114?hl=en-GB).
 
 Example request: "Thanks for choosing [business]. If you'd like to share your experience, you can leave a review here: [location review link]. We welcome your honest feedback."
 
@@ -62,13 +57,13 @@ Track recurring feedback and service improvements alongside review volume and re
 
 ## Build Useful Location and Service Pages
 
-Read [location-pages-and-measurement.md](references/location-pages-and-measurement.md) when building pages, preparing local schema, or measuring results.
+Read [location-pages-and-measurement.md](local-seo-pages-and-measurement.md) when building pages, preparing local schema, or measuring results.
 
 Give each real location a useful destination. A service-area page describes verified service coverage; it must not imply an office that does not exist. Publish a city page only when it adds meaningful local information, evidence, or customer utility. Swapping city names in duplicated text does not create that value.
 
 Route implementation details to the relevant existing skill:
 
-- **seo-audit:** crawling, indexing, redirects, speed, and technical diagnosis.
+- **The rest of this skill (seo-audit):** crawling, indexing, redirects, speed, and technical diagnosis.
 - **site-architecture:** location hierarchy, navigation, and internal links.
 - **programmatic-seo:** scaling a justified page pattern backed by real data.
 - **schema:** markup implementation after choosing accurate, public business facts.

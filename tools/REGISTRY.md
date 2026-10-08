@@ -385,7 +385,7 @@ Programmatic page extraction for **individual public business sites** — not fo
 
 ### Reviews
 
-Review management and social proof platforms. For honest invitation programs, response triage, and permissioned testimonial reuse, use [review-management](../skills/review-management/SKILL.md). Platform incentive and collection rules differ; consult its conditional policy reference before a campaign.
+Review management and social proof platforms. For honest invitation programs, response triage, and permissioned testimonial reuse, use the referrals skill's [review programs reference](https://github.com/coreyhaines31/marketingskills/blob/main/skills/referrals/references/review-programs.md). Platform incentive and collection rules differ; consult its conditional policy reference before a campaign.
 
 | Tool | Best For | Notes |
 |------|----------|-------|
