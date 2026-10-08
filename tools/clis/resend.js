@@ -9,15 +9,16 @@ if ((!API_KEY) && rawArgs.length > 0) {
   process.exit(1)
 }
 
-async function api(method, path, body) {
+async function api(method, path, body, extraHeaders = {}) {
   if (args['dry-run']) {
-    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json' }, body: body || undefined }
+    return { _dry_run: true, method, url: `${BASE_URL}${path}`, headers: { Authorization: '***', 'Content-Type': 'application/json', ...extraHeaders }, body: body || undefined }
   }
   const res = await fetch(`${BASE_URL}${path}`, {
     method,
     headers: {
       'Authorization': `Bearer ${API_KEY}`,
       'Content-Type': 'application/json',
+      ...extraHeaders,
     },
     body: body ? JSON.stringify(body) : undefined,
   })
@@ -59,7 +60,19 @@ function booleanArg(name) {
   throw new Error(`--${name} must be true or false (or a bare flag for true)`)
 }
 
+function idempotencyHeaders() {
+  const key = args['idempotency-key']
+  if (key === undefined) return {}
+  if (typeof key !== 'string' || key.length < 1 || key.length > 256 || key !== key.trim() || /[\u0000-\u001f\u007f-\uffff]/.test(key)) {
+    throw new Error('--idempotency-key must be 1–256 printable ASCII characters without surrounding whitespace')
+  }
+  return { 'Idempotency-Key': key }
+}
+
 async function main() {
+  if (args['idempotency-key'] !== undefined && cmd !== 'send' && cmd !== 'batch') {
+    throw new Error('--idempotency-key is supported only for send and batch')
+  }
   let result
 
   switch (cmd) {
@@ -76,7 +89,7 @@ async function main() {
         const [name, value] = t.split(':')
         return { name, value }
       })
-      result = await api('POST', '/emails', body)
+      result = await api('POST', '/emails', body, idempotencyHeaders())
       break
     }
 
@@ -236,7 +249,7 @@ async function main() {
       } catch (e) {
         result = { error: 'Invalid JSON for --emails: ' + e.message }; break
       }
-      result = await api('POST', '/emails/batch', emails)
+      result = await api('POST', '/emails/batch', emails, idempotencyHeaders())
       break
     }
 
@@ -355,14 +368,14 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
-          send: 'send --from <email> --to <email> --subject <subject> --html <html>',
+          send: 'send --from <email> --to <email> --subject <subject> --html <html> [--idempotency-key <stable_key>]',
           emails: 'emails [list|get|cancel] [id]',
           domains: 'domains [list|get|create|verify|delete] [id] [--name <name>]',
           'api-keys': 'api-keys [list|create|delete] [id] [--name <name>]',
           audiences: 'audiences [list|get|create|delete] [id] [--name <name>]',
           contacts: 'contacts <audience_id> [list|get|create|update|delete] [contact_id] [--email <email>] [--unsubscribed [true|false]]',
           webhooks: 'webhooks [list|get|create|delete] [id] [--endpoint <url>]',
-          batch: 'batch --emails <json_array>',
+          batch: 'batch --emails <json_array> [--idempotency-key <stable_key>]',
           templates: 'templates [list|get|create|update|delete|publish|duplicate] [id] [--name <name>] [--html <html>] [--variables <json>]',
           broadcasts: 'broadcasts [list|get|create|send|delete] [id] [--segment-id <id>] [--from <email>] [--subject <subject>]',
           segments: 'segments [list|get|create|delete] [id] [--name <name>]',
