@@ -148,6 +148,8 @@ Response time is the single biggest factor in lead conversion:
 
 Build routing rules that prioritize speed. Alert reps immediately. Escalate if SLA is missed.
 
+For form-submit enrichment, booking branches, missing-data fallbacks, and late results, load [the inbound-routing playbook](references/inbound-routing.md). Use it alongside the ownership and territory rules below.
+
 **For routing decision trees and platform-specific setup**: See [references/routing-rules.md](references/routing-rules.md)
 
 ---

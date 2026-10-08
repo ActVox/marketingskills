@@ -132,6 +132,12 @@ If missing, ask once, then infer reasonable defaults and continue:
 
 ---
 
+## Enrichment Workflows
+
+For multi-provider lookups, cache reuse, and per-credit budgets, load [the enrichment playbook](references/enrichment-playbook.md). Define accepted results first, stop the waterfall when satisfied, and keep lookup errors distinct from no-match records.
+
+---
+
 ## Tool Selection Quick Picks
 
 Full breakdown in [references/data-sources.md](references/data-sources.md). Quick picks:

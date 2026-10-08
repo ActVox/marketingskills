@@ -193,4 +193,6 @@ When recommending experiments, consider tests for:
 
 ## Form Optimization
 
+When enrichment controls the next step after a lead form, use the [revops inbound-routing playbook](https://github.com/coreyhaines31/marketingskills/blob/main/skills/revops/references/inbound-routing.md): preserve valid submissions, bound the lookup wait, and provide a useful fallback when qualification is unknown.
+
 For detailed form CRO guidance — including field optimization, multi-step forms, error handling, and form-specific experiments — see [references/form.md](references/form.md).
