@@ -57,6 +57,26 @@ Current versions of all skills. Agents can compare against local versions to che
 
 ## Recent Changes
 
+### 2.11.22 (2026-10-08)
+
+75 CLI fixes from @rudycelekli, each checked against the vendor's current API docs. Endpoints, auth, pagination, encoding, and error handling now match what the APIs actually accept.
+
+- **Correct endpoints and payloads:** Dub (#661, #729), Beehiiv (#662, #663), SendGrid Single Sends (#664), Apollo org enrichment (#668), Amplitude retention (#670), SavvyCal (#671, #742), Livestorm (#672), Close (#673), Keywords Everywhere (#675), Pendo (#676), Intercom (#680, #686), Optimizely archive (#681), Hotjar (#682), Trustpilot invitations (#683), Similarweb v4 (#684), AirOps (#685), Tolt (#687), lemlist webhook filters (#689), Demio (#692), Ahrefs backlinks (#693), Crossbeam (#696), Rewardful (#698), Mailchimp tags (#701), Snov (#707, #752), Semrush backlinks (#711), PartnerStack (#723), Adobe (#741).
+- **Auth:** ZoomInfo signed-key login (#690), Supermetrics (#691), Zapier catch hooks without management keys (#694), OneSignal `Key` auth (#695), Wistia Bearer (#706), Google Ads without a developer token, now that Google has sunset them (#718), Apollo key in a header (#668).
+- **Failing loudly instead of silently:** GSC (#674), TikTok (#710), DataForSEO task errors (#714), Postmark partial batches (#715), Mixpanel ingestion (#716), GA4 event params (#700), Intercom metadata (#766).
+- **Pagination and identifiers:** Klaviyo cursors (#666), Customer.io ID encoding and EU region (#665, #738), Plausible (#733), GA4 (#735), GSC (#736), Hunter (#746), Resend (#749), Close page size (#750), Rewardful (#754), Outreach cursors (#755), Pendo IDs (#728), Apollo employee ranges (#765), github-prospects truncation (#708), Buffer `--now false` (#704).
+- **New capabilities:** Amplitude external-ID lookup and device-only events (#726, #758), Paddle plan and billing-date changes (#731), Firecrawl crawl errors (#734), ActiveCampaign custom fields (#737), Segment anonymous IDs and delivery metadata (#739, #760), Google Ads read-only GAQL (#743), Brevo channel suppression (#745), Exa answers and structured search output (#747, #753), Resend idempotency keys (#748), Postmark template models (#756), Klaviyo structured properties (#757), Customer.io suppression (#759).
+- **Interface changes to know about:**
+  - `amplitude users activity --user-id` now takes your external user ID; use `--amplitude-id` for Amplitude's internal ID (#726).
+  - `airops --id` is now the app UUID, and `AIROPS_WORKSPACE_ID` is no longer used (#685).
+  - Tolt drops `--name`, `--commission-rate`, `payouts`, and customer lookup by `--customer-id` (#687).
+  - ZoomInfo passwords move from `ZOOMINFO_PRIVATE_KEY` to `ZOOMINFO_PASSWORD` (#690).
+  - OneSignal switches to `Key` auth, so check older-format keys (#695).
+  - PartnerStack `transactions create` and `webhooks create` require `--currency` and `--events` (#723).
+  - `mailchimp` rejects `--tags` combined with other update flags (#701).
+  - DataForSEO exits 1 on "no results" and "partial results" task codes as well as errors (#714).
+
+
 ### 2.11.21 (2026-10-08)
 
 Community fixes from @rudycelekli: credential handling in three CLIs, Mixpanel service accounts, and two hardening fixes in skills.
