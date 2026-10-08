@@ -8,7 +8,7 @@ For each missing field, specify the required input, acceptable output, freshness
 
 Example: find a published business contact for an ICP-fit account, then verify deliverability separately. A provider returning a name alone has not completed that task. Do not expand to personal emails simply because work-email providers found nothing.
 
-Order providers by fit for this field, observed coverage, cost, and latency. There is no universal Hunter/Apollo/Clearbit order. Use the user's existing connected tools; a manual public-source lookup is also a valid step.
+Order providers by fit for this field, observed coverage, cost, and latency. There is no universal Hunter/Apollo/FullEnrich order. Use the user's existing connected tools; a manual public-source lookup is also a valid step.
 
 ## Run a Waterfall, Not Every Provider
 
@@ -58,4 +58,4 @@ Return a table with row identity, missing field, provider order, acceptance rule
 
 Pilot on representative rows before a broad run: fresh hit, expired hit, true no-match, ambiguous company, provider failure, and duplicate input. Compare with a single-provider control under the same acceptance rule and budget. Pass qualified rows to cold-email only after contact verification; use the revops inbound-routing playbook for live form submissions.
 
-Technique scope requested in [#498](https://github.com/coreyhaines31/marketingskills/issues/498), drawing on eliasstravik's MIT GTM toolkit patterns. The Rowbound integration is separate; this playbook works with existing providers or manual research.
+Patterns adapted from eliasstravik's MIT-licensed GTM engineering toolkit. This playbook works with existing providers or manual research.
