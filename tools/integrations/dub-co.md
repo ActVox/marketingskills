@@ -28,7 +28,7 @@ POST https://api.dub.co/links
   "url": "https://example.com/landing-page",
   "domain": "link.example.com",
   "key": "summer-sale",
-  "tags": ["campaign:summer", "channel:email"]
+  "tagNames": ["campaign:summer", "channel:email"]
 }
 ```
 
@@ -69,9 +69,14 @@ PATCH https://api.dub.co/links/{link_id}
 
 {
   "url": "https://example.com/new-landing-page",
-  "tags": ["campaign:summer", "channel:social"]
+  "tagNames": ["campaign:summer", "channel:social"]
 }
 ```
+
+For [link creation](https://dub.co/docs/api-reference/links/create) and
+[updates](https://dub.co/docs/api-reference/links/update), use `tagNames` for names
+or `tagIds` for existing tag IDs. The CLI's `--tags` flag takes comma-separated
+names and sends `tagNames`. The response's `tags` field contains tag objects.
 
 ### Delete link
 
