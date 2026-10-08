@@ -69,6 +69,23 @@ function idempotencyHeaders() {
   return { 'Idempotency-Key': key }
 }
 
+function listQuery() {
+  const params = new URLSearchParams()
+  if (args.after !== undefined && args.before !== undefined) throw new Error('--after and --before are mutually exclusive')
+  for (const name of ['after', 'before']) {
+    if (args[name] === undefined) continue
+    if (typeof args[name] !== 'string' || !args[name].trim()) throw new Error(`--${name} requires a nonempty cursor`)
+    params.set(name, args[name])
+  }
+  if (args.limit !== undefined) {
+    if (typeof args.limit !== 'string' || !/^\d+$/.test(args.limit) || Number(args.limit) < 1 || Number(args.limit) > 100) {
+      throw new Error('--limit must be an integer from 1 to 100')
+    }
+    params.set('limit', args.limit)
+  }
+  return params.toString()
+}
+
 async function main() {
   if (args['idempotency-key'] !== undefined && cmd !== 'send' && cmd !== 'batch') {
     throw new Error('--idempotency-key is supported only for send and batch')
@@ -96,9 +113,8 @@ async function main() {
     case 'emails':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/emails?${params}`)
+          const qs = listQuery()
+          result = await api('GET', `/emails${qs ? '?' + qs : ''}`)
           break
         }
         case 'get':
@@ -115,9 +131,8 @@ async function main() {
     case 'domains':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/domains?${params}`)
+          const qs = listQuery()
+          result = await api('GET', `/domains${qs ? '?' + qs : ''}`)
           break
         }
         case 'get':
@@ -139,9 +154,11 @@ async function main() {
 
     case 'api-keys':
       switch (sub) {
-        case 'list':
-          result = await api('GET', '/api-keys')
+        case 'list': {
+          const qs = listQuery()
+          result = await api('GET', `/api-keys${qs ? '?' + qs : ''}`)
           break
+        }
         case 'create': {
           const body = { name: args.name }
           if (args.permission) body.permission = args.permission
@@ -256,11 +273,8 @@ async function main() {
     case 'templates':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.limit) params.set('limit', args.limit)
-          if (args.after) params.set('after', args.after)
-          if (args.before) params.set('before', args.before)
-          result = await api('GET', `/templates?${params}`)
+          const qs = listQuery()
+          result = await api('GET', `/templates${qs ? '?' + qs : ''}`)
           break
         }
         case 'get':
@@ -311,9 +325,8 @@ async function main() {
     case 'broadcasts':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/broadcasts?${params}`)
+          const qs = listQuery()
+          result = await api('GET', `/broadcasts${qs ? '?' + qs : ''}`)
           break
         }
         case 'get':
@@ -345,9 +358,8 @@ async function main() {
     case 'segments':
       switch (sub) {
         case 'list': {
-          const params = new URLSearchParams()
-          if (args.limit) params.set('limit', args.limit)
-          result = await api('GET', `/segments?${params}`)
+          const qs = listQuery()
+          result = await api('GET', `/segments${qs ? '?' + qs : ''}`)
           break
         }
         case 'get':
@@ -369,7 +381,7 @@ async function main() {
         error: 'Unknown command',
         usage: {
           send: 'send --from <email> --to <email> --subject <subject> --html <html> [--idempotency-key <stable_key>]',
-          emails: 'emails [list|get|cancel] [id]',
+          emails: 'emails [list|get|cancel] [id] [--limit <1-100>] [--after <cursor> | --before <cursor>]',
           domains: 'domains [list|get|create|verify|delete] [id] [--name <name>]',
           'api-keys': 'api-keys [list|create|delete] [id] [--name <name>]',
           audiences: 'audiences [list|get|create|delete] [id] [--name <name>]',
