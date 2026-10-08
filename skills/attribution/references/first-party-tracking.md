@@ -131,12 +131,22 @@ events.push({
   properties: { booking_id, journey_linked: Boolean(anonId) },  // track the fallback rate
 });
 
-await fetch(`${POSTHOG_HOST}/batch/`, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ api_key: POSTHOG_API_KEY, batch: events }),
-  signal: AbortSignal.timeout(3000),   // bound it; never hang the webhook
-});
+// Run after the booking's business-critical work; analytics must not fail it.
+try {
+  const response = await fetch(`${POSTHOG_HOST}/batch/`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ api_key: POSTHOG_API_KEY, batch: events }),
+    signal: AbortSignal.timeout(3000),
+  });
+  // fetch resolves for HTTP errors too; a resolved promise isn't acceptance.
+  if (!response.ok) {
+    console.warn("Analytics ingestion rejected", { booking_id, status: response.status });
+  }
+} catch {
+  // Timeouts and network errors stay non-fatal. Never log the payload or email.
+  console.warn("Analytics ingestion unavailable", { booking_id });
+}
 ```
 
 When no id survives (link bypassed the decorator, e.g. a booking link inside a generated email/PDF), fall back to **email-only capture** with `journey_linked: false`. You still get the conversion; you just don't get the journey for that one.
@@ -198,7 +208,7 @@ Mark these fallback-attributed conversions with a lower-confidence `basis` (see 
 
 - Verify the provider's **signature** (`SAVVYCAL_WEBHOOK_SECRET` etc.).
 - **Validate** the smuggled id (string, ≤100 chars, no `@`) before merging.
-- Run the analytics call **after** any business-critical work, bounded by a timeout, **non-fatal** on failure.
+- Run the analytics call **after** any business-critical work, bounded by a timeout, **non-fatal** on failure. Check HTTP status and catch timeout/network rejections, as in Step 2c. If delivery needs retry guarantees, enqueue analytics separately with idempotency rather than failing or replaying the booking.
 - **Log the booking id, never the email.**
 
 ## Step 4 — Report

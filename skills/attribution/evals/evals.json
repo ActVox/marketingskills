@@ -110,6 +110,19 @@
         "Does not substitute an identified user ID"
       ],
       "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Our booking webhook sends PostHog identity and conversion events with fetch and a three-second timeout. When analytics times out it fails the webhook; HTTP 503 resolves without any diagnostic. How should the attribution recipe preserve a successful booking and show ingestion failures without exposing identities?",
+      "expected_output": "Should run analytics after business-critical work, catch network and timeout rejections, inspect response.ok for rejected HTTP ingestion, and emit only a booking identifier plus safe status diagnostics. Keep analytics non-fatal for the booking. Do not log the email, payload or raw exception, or claim a fulfilled fetch means events were accepted. If reliable delivery is required, recommend a separate idempotent queue rather than replaying the booking.",
+      "assertions": [
+        "Catches timeout and network rejection without failing the booking",
+        "Checks HTTP response acceptance separately from promise fulfillment",
+        "Logs only booking identifier and safe status",
+        "Keeps payload, email and raw exception out of diagnostics",
+        "Separates reliable analytics delivery from booking execution"
+      ],
+      "files": []
     }
   ]
 }
