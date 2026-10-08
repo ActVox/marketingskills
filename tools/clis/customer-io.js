@@ -5,8 +5,13 @@ const APP_KEY = process.env.CUSTOMERIO_APP_KEY
 const SITE_ID = process.env.CUSTOMERIO_SITE_ID
 const API_KEY = process.env.CUSTOMERIO_API_KEY
 
-const TRACK_URL = 'https://track.customer.io/api/v1'
-const APP_URL = 'https://api.customer.io/v1'
+const REGION = process.env.CUSTOMERIO_REGION || 'us'
+if (rawArgs.length > 0 && !['us', 'eu'].includes(REGION)) {
+  console.error(JSON.stringify({ error: 'CUSTOMERIO_REGION must be us or eu' }))
+  process.exit(1)
+}
+const TRACK_URL = REGION === 'eu' ? 'https://track-eu.customer.io/api/v1' : 'https://track.customer.io/api/v1'
+const APP_URL = REGION === 'eu' ? 'https://api-eu.customer.io/v1' : 'https://api.customer.io/v1'
 
 const hasTrackAuth = SITE_ID && API_KEY
 const hasAppAuth = APP_KEY
