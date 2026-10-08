@@ -126,9 +126,23 @@ async function main() {
     case 'users':
       switch (sub) {
         case 'activity': {
-          if (!args['user-id']) { result = { error: '--user-id required' }; break }
+          const userId = args['user-id']
+          let amplitudeId = args['amplitude-id']
+          if (!userId && !amplitudeId) { result = { error: '--user-id or --amplitude-id required' }; break }
+          if (userId && amplitudeId) { result = { error: 'Use only one of --user-id or --amplitude-id' }; break }
+          if (userId) {
+            const searchParams = new URLSearchParams({ user: userId })
+            const search = await queryApi('GET', '/usersearch', searchParams)
+            if (search._dry_run || !Array.isArray(search.matches)) { result = search; break }
+            const matches = search.matches.filter(match => match.user_id === userId)
+            if (matches.length !== 1) {
+              result = { error: matches.length ? 'Multiple exact user ID matches; use --amplitude-id' : 'No exact user ID match found' }
+              break
+            }
+            amplitudeId = matches[0].amplitude_id
+          }
           const params = new URLSearchParams()
-          params.set('user', args['user-id'])
+          params.set('user', amplitudeId)
           result = await queryApi('GET', '/useractivity', params)
           break
         }
@@ -181,7 +195,7 @@ async function main() {
         error: 'Unknown command',
         usage: {
           track: 'track [event --user-id <id> --event-type <type> [--properties <json>] | batch --events <json>]',
-          users: 'users activity --user-id <id>',
+          users: 'users activity [--user-id <external-user-id> | --amplitude-id <internal-id>] (--user-id dry-run previews the initial lookup)',
           export: "export events --start <YYYYMMDDThh> --end <YYYYMMDDThh> (ZIP in base64 body; decode with Buffer.from(result.body, 'base64'))",
           retention: 'retention get --start <YYYYMMDD> --end <YYYYMMDD> [--start-event <type>] [--return-event <type>] [--event <return-type>]',
         }
