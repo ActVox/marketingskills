@@ -143,14 +143,13 @@
     {
       "id": 11,
       "prompt": "Our blended LTV:CAC is 3.4:1 so we're good to pour more into Meta, right? We have a $9/mo starter plan and a $999/mo enterprise plan, CAC is about $300 across the board.",
-      "expected_output": "Should load references/payback-period.md and push back on using blended LTV:CAC as the go/no-go. Should explain LTV:CAC is a useless/destructive metric here \u2014 it hides per-plan variance under blended ARPU, so 3.4:1 describes neither the $9 nor the $999 buyer. Should compute Payback Period = CAC / ARPU per plan: $300/$9 = ~33 months (unaffordable \u2014 do not run Meta for the starter plan) vs $300/$999 = ~0.3 months (excellent \u2014 scale hard). Should recommend routing cheap-plan buyers to organic/product-led and only turning paid on where discounted payback lands in the 3-12 month target band. Should mention Discounted Payback = CAC / (ARPU x annual retention) to adjust for early churn. Should NOT bless scaling on the blended ratio alone.",
+      "expected_output": "Should load payback-period.md and reject scaling from a blended ratio alone. The revenue-only ratios are $300/$9=33.3 months and $300/$999=0.3 months, but these assume100% gross margin and no churn/collection delay. Ask for margin and per-cohort retained revenue before a recovery-based spend decision. Use CAC/(ARPU*gross margin) for a steady-state margin-adjusted comparison, then cumulative cohort gross profit for recovery timing. Annual retention alone is not discounted payback. Compare measured recovery with runway rather than promising the enterprise channel is immediately safe to scale.",
       "assertions": [
         "Loads or applies payback-period.md rather than accepting blended LTV:CAC",
-        "Explains blended ARPU hides the $9-vs-$999 per-plan variance",
-        "Computes Payback Period = CAC / ARPU per plan (~33 months for $9, ~0.3 months for $999)",
-        "Cites the 3-12 month payback target band as the affordability gate",
-        "Recommends not running paid for the unaffordable starter plan / routing it elsewhere",
-        "Mentions Discounted Payback Period (retention-adjusted)"
+        "Preserves per-plan comparison while labels revenue-only ratios honestly",
+        "Requires gross margin and retained cohort revenue before scaling",
+        "Does not call an annual retention multiplier discounted payback",
+        "Checks collection timing and runway instead of automatic scale approval"
       ]
     },
     {
@@ -176,6 +175,18 @@
         "Gives a dated or volume-based decision point rather than an open-ended 'let it run'",
         "Checks at least one of: runtime/lifetime window, mid-window config changes, learning status, conversion action definitions"
       ]
+    },
+    {
+      "id": 14,
+      "prompt": "CAC is $300 and monthly ARPU $99. A colleague says 3.0-month payback means we should scale. Gross margin is20%. Also two other80%-margin cohorts both retain70% at month12: one loses30% before month1, the other before month12. Can annual retention alone give their payback dates?",
+      "expected_output": "Should compute 300/(99*.2)=15.2 months before churn for the low-margin plan and reject scaling based on3.0months revenue-only. For the80%-margin cohorts compare cumulative gross profit: early loss yields55.44/month and crosses300 inmonth6; late loss79.2/month initially crosses inmonth4. Equal annual retention does not establish equal recovery dates. These are supplied discrete monthly assumptions, not empirical forecasts or time-value discounting.",
+      "assertions": [
+        "Includes gross margin in the recovery denominator",
+        "Shows the low-margin plan has15.2-month simplified payback",
+        "Distinguishes early-vs-late churn despite equal month12 retention",
+        "Uses cumulative cohort gross profit with explicit monthly assumptions"
+      ],
+      "files": []
     }
   ]
 }

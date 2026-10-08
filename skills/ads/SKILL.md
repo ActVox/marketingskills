@@ -2,7 +2,7 @@
 name: ads
 description: "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' 'should I run ads,' 'ABM,' 'account-based marketing,' 'B2B ads,' 'lead quality,' 'negative keywords,' 'Performance Max,' 'thought leader ads,' 'when should I kill an ad,' 'search terms report,' 'wasted spend,' or 'is this campaign working.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see cro. For outbound to target accounts, see cold-email."
 metadata:
-  version: 2.4.5
+  version: 2.4.6
 ---
 
 # Paid Ads
@@ -46,7 +46,7 @@ This skill's depth lives in references — load by intent. For **any operational
 
 | User intent | Load | Covers |
 |---|---|---|
-| "Can I afford this channel?", payback math, budgeting per plan, whether LTV:CAC lies | [payback-period.md](references/payback-period.md) | Why LTV:CAC is useless (4 flaws), Payback = CAC/ARPU (3–12mo), Discounted Payback, $9-vs-$999 worked examples, OOH+social, narrative momentum |
+| "Can I afford this channel?", payback math, budgeting per plan, whether LTV:CAC lies | [payback-period.md](references/payback-period.md) | Why LTV:CAC is useless (4 flaws), Gross-margin payback and cohort recovery (3–12mo planning target), $9-vs-$999 worked examples, OOH+social, narrative momentum |
 | B2B strategy, funnel stages, budget splits, kill rules, lead quality, breakeven math | [b2b-paid-playbook.md](references/b2b-paid-playbook.md) | Demand lifecycle, leading/lagging signals, kill rules, offline conversion loop, U/B/F lead scoring, scaling quadrant |
 | Meta operations: when to kill/graduate/scale an ad, fatigue, testing structure, partnership/creator ads, declining reach | [meta-decision-system.md](references/meta-decision-system.md) | TCPL-anchored decision tree, ad-count ceiling, 80/20 CBO structure, fatigue bands, lead forms, Advantage+ transition, partnership-ads playbook, rolling-reach signal |
 | LinkedIn operations: bidding, audience sizing, scaling, benchmarks, TLAs, formats | [linkedin-b2b-playbook.md](references/linkedin-b2b-playbook.md) | Bidding progression, penetration scaling, sizing rules, funnel benchmarks, document/conversation ads, audit shortlist |
