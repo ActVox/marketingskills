@@ -210,3 +210,24 @@ Customer.io notes that sending EU Track requests to its US host can redirect
 but still pass through US servers. Use the regional host directly.
 See the official [Track server regions](https://docs.customer.io/integrations/api/track/#server-addresses-us-and-eu)
 and [App server regions](https://docs.customer.io/integrations/api/app/#server-addresses-us-and-eu).
+
+## Suppression lifecycle
+
+For an explicit erasure/suppression request, `customers suppress` invokes the
+Track API operation that permanently deletes the profile and blocks its
+identifier from being re-added. This is different from the existing
+`customers delete` operation. Preview the request first:
+
+```bash
+node tools/clis/customer-io.js customers suppress --id customer-123 --dry-run
+node tools/clis/customer-io.js customers unsuppress --id customer-123 --dry-run
+```
+
+Both commands require the Track API Site ID and API key. Unsuppressing only
+releases the identifier; it does not recreate the deleted profile or restore
+history. For ordinary message preferences while keeping a profile, update its
+`unsubscribed` attribute instead. Use the operation appropriate to the person's
+request and your workspace identifier configuration. See the official
+[suppress](https://docs.customer.io/integrations/api/track/tag/track-customers/suppress/)
+and [unsuppress](https://docs.customer.io/integrations/api/track/tag/track-customers/unsuppress/)
+contracts. Neither operation is a substitute for handling data in other systems.

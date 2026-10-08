@@ -123,6 +123,13 @@ async function main() {
           result = await trackApi('DELETE', `/customers/${encodeURIComponent(customerId)}`)
           break
         }
+        case 'suppress':
+        case 'unsuppress': {
+          const customerId = rest[0] || args.id
+          if (typeof customerId !== 'string' || customerId.trim().length === 0) throw new Error('Customer ID must be a non-empty string (positional arg or --id)')
+          result = await trackApi('POST', `/customers/${encodeURIComponent(customerId)}/${sub}`)
+          break
+        }
         case 'track-event': {
           const customerId = rest[0] || args.id
           if (!customerId) { result = { error: 'Customer ID required (positional arg or --id)' }; break }
@@ -133,7 +140,7 @@ async function main() {
           break
         }
         default:
-          result = { error: 'Unknown customers subcommand. Use: identify, get, delete, track-event' }
+          result = { error: 'Unknown customers subcommand. Use: identify, get, delete, suppress, unsuppress, track-event' }
       }
       break
 
@@ -195,7 +202,7 @@ async function main() {
       result = {
         error: 'Unknown command',
         usage: {
-          customers: 'customers [identify|get|delete|track-event] <customer_id> [--email <email>] [--first-name <name>] [--plan <plan>] [--data <json>] [--name <event>]',
+          customers: 'customers [identify|get|delete|suppress|unsuppress|track-event] <customer_id> [--email <email>] [--first-name <name>] [--plan <plan>] [--data <json>] [--name <event>]',
           campaigns: 'campaigns [list|get|metrics|trigger] [campaign_id] [--emails <e1,e2>] [--ids <id1,id2>] [--data <json>]',
           send: 'send email --message-id <id> --to <email> [--identifier-id <id>] [--identifier-email <email>] [--data <json>]',
         }
