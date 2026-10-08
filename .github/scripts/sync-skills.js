@@ -26,6 +26,8 @@ function parseFrontmatter(content) {
   const lines = match[1].split("\n");
 
   for (const line of lines) {
+    // Nested metadata keys are not skill name/description fields.
+    if (/^\s/.test(line)) continue;
     const colonIndex = line.indexOf(":");
     if (colonIndex === -1) continue;
 
