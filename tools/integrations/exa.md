@@ -143,3 +143,16 @@ All three can be requested in the same call:
 - cold-email
 - lead-magnets
 - marketing-ideas
+
+### Answers with source citations
+
+Use `answer` when you need a provider-generated answer alongside the web sources it used. The CLI returns the complete JSON response, preserving `citations`, `requestId` and provider cost metadata instead of flattening the answer into unsourced text. The output remains model-generated; check cited pages before using its claims.
+
+```bash
+node tools/clis/exa.js answer --query "What changed in our market this quarter?" --model exa-pro
+node tools/clis/exa.js answer "Research the category" --output-schema '{"type":"object","properties":{"summary":{"type":"string"}}}' --dry-run
+```
+
+`--system-prompt` supplies additional generation instructions. `--text` (or `--text true`) requests full source text; `--text false` explicitly disables it. `--output-schema` accepts a JSON object, forwarded as `outputSchema`; schema validity beyond this shape is provider-validated. Answers use one non-streaming POST to `/answer`, may consume credits and are never automatically retried. Omitted options retain provider defaults. Model availability depends on the account/API.
+
+See [Exa’s answer contract](https://exa.ai/docs/reference/answer). Contract tests use fake credentials and local response fixtures; they do not establish authenticated provider acceptance or live answer quality.
