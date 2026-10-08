@@ -25,11 +25,11 @@ Because it's per-cohort and per-plan (not blended), it exposes exactly what LTV:
 
 Say a channel costs **$300 to acquire a customer** (CAC = $300). The table below is revenue-only, before serving costs and churn; it is a comparison, not permission to scale:
 
-| Plan | ARPU (monthly) | Revenue-only ratio = CAC / ARPU | Interpretation |
+| Plan | ARPU (monthly) | Revenue-only ratio = CAC / ARPU | Verdict |
 |------|---------------|----------------------|---------|
-| Starter | $9 | 300 / 9 = **33.3 months** | 33.3 months even before costs and churn; compare with available runway. |
-| Pro | $99 | 300 / 99 = **3.0 months** | 3.0 months before costs and churn; check gross-margin and cohort recovery. |
-| Enterprise | $999 | 300 / 999 = **0.3 months** | 0.3 months of revenue; actual cash timing and serving costs still matter. |
+| Starter | $9 | 300 / 9 = **33.3 months** | Don't fund paid acquisition for this plan. 33.3 months before costs and churn, and longer once margin is included. |
+| Pro | $99 | 300 / 99 = **3.0 months** | Check margin first. At 80% gross margin it's 3.8 months; at 20% it's 15.2 months, which is too slow to scale. |
+| Enterprise | $999 | 300 / 999 = **0.3 months** | Scale, after confirming when cash is actually collected (annual invoices, net-60 terms). |
 
 Same CAC does not imply the same affordability. At 20% gross margin the $99 plan takes 300 / (99 × 0.20) = **15.2 months** even before churn, despite its 3.0-month revenue-only ratio. Compare plans separately and verify serving costs before approving spend.
 

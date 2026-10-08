@@ -77,6 +77,8 @@ For similar or duplicate regional pages in the **same language**, Google recomme
 
 Keep canonical targets and `hreflang` clusters consistent with the chosen content/language strategy. `hreflang` identifies localized alternatives; it does not force Google to index each URL independently. Canonicals are signals to Google's selection process, not an indexing guarantee.
 
+The preferred canonical must be a URL inside the `hreflang` cluster. Google ignores `hreflang` on a URL that is canonicalized to another one.
+
 - [Google: Consolidate Duplicate URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
 
 ### Near-Duplicate Regional Variants

@@ -49,7 +49,7 @@
     {
       "id": 4,
       "prompt": "Help me set up a multivariate test on our landing page. I want to test the headline, hero image, and CTA button simultaneously.",
-      "expected_output": "Should identify this as a Multivariate Test (MVT). Should explain that MVT tests combinations of elements and requires much more traffic than A/B tests. Should calculate or reference traffic needs (combinations multiply: e.g., 2 headlines \u00d7 2 images \u00d7 2 CTAs = 8 combinations). Should recommend MVT only if traffic supports it, otherwise suggest sequential A/B tests. Should build hypotheses for each element being tested. Should define interaction effects to watch for. Should provide structured test plan.",
+      "expected_output": "Should identify this as a Multivariate Test (MVT). Should explain that MVT tests combinations of elements and requires much more traffic than A/B tests. Should calculate or reference traffic needs (combinations multiply: e.g., 2 headlines × 2 images × 2 CTAs = 8 combinations). Should recommend MVT only if traffic supports it, otherwise suggest sequential A/B tests. Should build hypotheses for each element being tested. Should define interaction effects to watch for. Should provide structured test plan.",
       "assertions": [
         "Identifies as multivariate test (MVT)",
         "Explains MVT tests combinations of elements",
@@ -93,7 +93,7 @@
       "expected_output": "Should calculate the result under a declared analysis: 252/12,000 vs 288/12,000 gives approximately p = 0.117 for an uncorrected two-sided pooled-proportion z-test, so it does not meet alpha = 0.05. Should distinguish the 0.3 percentage-point / ~14% relative estimate from evidence for a reliably positive effect. Report uncertainty and practical business impact. Respect the pre-specified duration and stopping rule; do not recommend continuing the completed fixed-horizon test until significant. Unplanned segments are exploratory; a follow-up test needs its own plan.",
       "assertions": [
         "Uses actual conversion counts and states the analysis assumptions",
-        "Does not call p ~0.117 significant at alpha0.05",
+        "Does not call p ~0.117 significant at alpha = 0.05",
         "Distinguishes statistical uncertainty from business value",
         "Does not extend a completed fixed-horizon test until significant",
         "Labels unplanned segment findings exploratory"

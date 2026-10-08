@@ -62,5 +62,3 @@ Where feasible, compare a bounded partner rollout or holdout with an equivalent 
 ### Deliverable
 
 Return a cohort economics worksheet with explicit assumptions, partner shortlist and activation funnel, reviewed terms decisions, enablement checklist, reconciliation sample, and a small launch plan. Define success/stop criteria from the business's measured margins and coverage. Keep recruitment, policy edits, and payouts within the user's authorized scope.
-
-Scope decision for [#476](https://github.com/coreyhaines31/marketingskills/issues/476): expand referrals rather than add a competing affiliate skill. The original program contribution was offered by @Adi29102000-s in #417; this operating playbook is newly authored, with credit for that foundation and the maintainer's split-scope request.

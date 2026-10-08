@@ -114,8 +114,8 @@
     },
     {
       "id": 9,
-      "prompt": "We want an affiliate program for B2B SaaS. Last month partner-attributed customers paid12000, refunds2000, variable costs3000, partner support800, operations1200, payout fees100. A20% commission applies to net collected eligible revenue. An agency introduced new buyers; a coupon site touched existing customers at checkout. Draft the program and explain how to tell if it grows the business.",
-      "expected_output": "Uses the existing affiliate branch, computes eligible10000/commission2000/contribution2900, specifies actual attribution and payout policies, and separates attribution from incrementality. Proposes useful partner recruitment/activation/reconciliation rather than reflexively creating an overlapping skill or calling every coupon partner fraud.",
+      "prompt": "We want an affiliate program for B2B SaaS. Last month partner-attributed customers paid $12,000, refunds $2,000, variable costs $3,000, partner support $800, operations $1,200, payout fees $100. A 20% commission applies to net collected eligible revenue. An agency introduced new buyers; a coupon site touched existing customers at checkout. Draft the program and explain how to tell if it grows the business.",
+      "expected_output": "Uses the existing affiliate branch, computes eligible revenue $10,000, commission $2,000, and contribution $2,900, specifies actual attribution and payout policies, and separates attribution from incrementality. Proposes useful partner recruitment/activation/reconciliation rather than reflexively creating an overlapping skill or calling every coupon partner fraud.",
       "assertions": [
         "Computes cohort economics without double-counting refunds",
         "Separates incremental acquisition from credited coupon touches",
