@@ -161,3 +161,19 @@ amplitude.track('Feature Used', {
 - analytics
 - ab-testing
 - onboarding
+
+## Tracking before signup
+
+`track event` accepts `--device-id` without `--user-id` for events before an
+account exists. At least one identity is required; when both are known, include
+both to send them together. Device IDs are identifiers, not a privacy guarantee.
+
+```bash
+node tools/clis/amplitude.js track event --device-id visitor-device-123 \
+  --event-type "Viewed Pricing" --properties '{"experiment":"pricing-b"}' --dry-run
+```
+
+The CLI leaves existing user-only payloads intact and masks the API key in
+previews. Amplitude's default minimum identifier length is five characters;
+provider-side identity and project ingestion rules still apply. See the
+[HTTP V2 API](https://amplitude.com/docs/apis/analytics/http-v2).
