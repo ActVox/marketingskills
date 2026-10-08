@@ -98,6 +98,19 @@
         "References viral-mechanisms.md"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Our referral plan has $1,200 lifetime revenue and 70% gross margin. Target total CAC is $200; other acquisition costs are $40 per new paying customer. The template says we can give a $640 referral reward. Is that within budget, including a two-sided offer?",
+      "expected_output": "Reject the $640 reward: it yields $680 total CAC, not the $200 target. The combined reward budget is at most $160 after $40 other costs, for example $80 cash per side. Separate $840 lifetime gross profit from the acquisition budget; consider cohort/period, retention/refunds/cash payback, and actual economic costs of credits. If other costs already exceed target, pause/redesign rather than treating zero reward as a feasible plan.",
+      "assertions": [
+        "Identifies $680 total CAC from the old reward",
+        "Caps combined reward cost at $160",
+        "Counts both reward sides and other acquisition costs once",
+        "Distinguishes lifetime gross profit from target CAC budget",
+        "Pauses or redesigns when other costs exhaust the budget"
+      ],
+      "files": []
     }
   ]
 }
