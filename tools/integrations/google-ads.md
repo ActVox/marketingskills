@@ -8,7 +8,7 @@ Pay-per-click advertising platform for search, display, and video campaigns.
 |-------------|-----------|-------|
 | API | ✓ | Google Ads API for campaign management |
 | MCP | ✓ | Available via Google Ads MCP server |
-| CLI | - | Use gcloud or API scripts |
+| CLI | ✓ | Repository zero-dependency Node.js CLI |
 | SDK | ✓ | Client libraries for multiple languages |
 
 ## Authentication
@@ -16,7 +16,20 @@ Pay-per-click advertising platform for search, display, and video campaigns.
 - **Type**: OAuth 2.0
 - **Scopes**: `https://www.googleapis.com/auth/adwords`
 - **Setup**: Create credentials in Google Cloud Console, link to Google Ads account
-- **Headers**: `developer-token`, `login-customer-id` (for MCC)
+- **Headers**: `Authorization: Bearer <access_token>`; `login-customer-id` when acting through a manager account
+- **API access**: Google Ads API access is assigned to the Google Cloud project that owns your OAuth credentials. Developer tokens were sunset on September 9, 2026; the `developer-token` header is now optional and ignored. Apply for the appropriate project access level in Google Cloud Console, not the retired manager-account API Center process. [Official migration guide](https://developers.google.com/google-ads/api/docs/api-policy/developer-token).
+
+### Repository CLI credentials
+
+The repository's [Google Ads CLI](../clis/google-ads.js) uses `GOOGLE_ADS_TOKEN` (OAuth access token) and `GOOGLE_ADS_CUSTOMER_ID` (target customer ID without hyphens). Set `GOOGLE_ADS_LOGIN_CUSTOMER_ID` when access goes through a manager; it is normalized to digits. Existing setups can still supply `GOOGLE_ADS_DEVELOPER_TOKEN`, but new setups do not need it. The CLI consumes an access token; it does not exchange or refresh OAuth tokens for you. OAuth scopes, user access to the target account, and the Cloud project's API access level remain required.
+
+Use a read-only first call after selecting the intended account:
+
+```bash
+node tools/clis/google-ads.js account info
+```
+
+A successful response verifies this read's access; it does not establish permission for campaign edits or budget changes.
 
 ## Common Agent Operations
 
