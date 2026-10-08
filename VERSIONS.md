@@ -44,11 +44,11 @@ Current versions of all skills. Agents can compare against local versions to che
 | programmatic-seo | 2.1.0 | 2026-10-06 |
 | prospecting | 1.2.0 | 2026-10-07 |
 | public-relations | 1.2.0 | 2026-10-02 |
-| referrals | 2.1.0 | 2026-10-08 |
+| referrals | 2.2.0 | 2026-10-08 |
 | revops | 2.1.0 | 2026-10-07 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
 | schema | 2.0.2 | 2026-10-08 |
-| seo-audit | 2.1.1 | 2026-10-08 |
+| seo-audit | 2.2.0 | 2026-10-08 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
@@ -56,6 +56,13 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.24 (2026-10-08)
+
+Two contributions from @rudycelekli, folded into existing skills instead of becoming new skills.
+
+- **seo-audit** (2.1.1 → 2.2.0): local SEO from #717 (closes #486). New `references/local-seo.md` covers diagnosing the map pack separately from organic results, Business Profile and citation cleanup built on real business facts, honest review requests, and useful location pages, with two companion references for profile details and page measurement. Triggers added: 'local SEO,' 'Google Business Profile,' 'map pack.'
+- **referrals** (2.1.0 → 2.2.0): review programs from #722 (closes #475), building on @Adi29102000-s's contribution in #417. New `references/review-programs.md` covers review requests, responses, reputation triage, and permissioned testimonial reuse, with platform rules and program operations in two companion references. Triggers added: 'get more reviews,' 'G2 reviews,' 'review campaign,' 'respond to a bad review.'
 
 ### 2.11.23 (2026-10-08)
 
