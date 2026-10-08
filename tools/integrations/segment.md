@@ -194,3 +194,21 @@ change their resource path. Previews mask the write key and make no request.
 
 Official [common identity fields](https://www.twilio.com/docs/segment/connections/spec/common)
 and [Identify semantics](https://www.twilio.com/docs/segment/connections/spec/identify).
+
+## Importing and retrying individual events
+
+Single `track event`, `identify user`, and `page view` calls accept
+`--timestamp` and `--message-id`. Use an ISO datetime with a timezone to retain
+when a historical event occurred, and reuse the source event's ID when retrying:
+
+```bash
+node tools/clis/segment.js track event --user-id customer-1 --event "Order Completed" \
+  --timestamp 2024-04-12T10:15:30Z --message-id order-123 --dry-run
+```
+
+Both fields are omitted when flags are absent, leaving Segment's defaults
+intact. Message IDs must contain 1–100 characters. For `batch send`, place the
+metadata on each event in `--events`; these individual-call flags do not rewrite
+batches. See [common fields](https://www.twilio.com/docs/segment/connections/spec/common)
+and [duplicate handling](https://www.twilio.com/docs/segment/guides/duplicate-data).
+Downstream destinations can handle these fields differently.
