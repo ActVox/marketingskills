@@ -198,3 +198,13 @@ POST https://api.close.com/api/v1/task/
 - revops
 - sales-enablement
 - cold-email
+
+## Paging bundled CLI CRM collections
+
+All five list commands (`leads`, `contacts`, `opportunities`, `activities`, `tasks`) accept `--page <positive_integer>` or `--skip <nonnegative_offset>` and optional `--limit <1-100>`. Page offsets use the selected limit, so page 2 at limit 25 starts at offset 25, not 100. Omitted flags preserve provider defaults; legacy `--page` without a limit uses 100 records per page.
+
+```bash
+node tools/clis/close.js contacts list --lead-id lead_example --page 2 --limit 25 --dry-run
+```
+
+Read `has_more` and request subsequent pages manually; the CLI preserves raw responses and never fetches extra pages silently. The CLI conservatively supports limits up to 100; provider resource-specific limits still apply. [Close pagination](https://developer.close.com/api/overview/pagination) documents `_skip` and `_limit`. Contract tests use fixtures, not real CRM records.
