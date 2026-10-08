@@ -12,17 +12,17 @@ Current versions of all skills. Agents can compare against local versions to che
 | attribution | 1.1.2 | 2026-10-02 |
 | churn-prevention | 2.0.1 | 2026-10-02 |
 | co-marketing | 2.0.2 | 2026-10-02 |
-| cold-email | 2.1.0 | 2026-10-02 |
+| cold-email | 2.2.0 | 2026-10-07 |
 | community-marketing | 2.0.1 | 2026-08-23 |
-| competitor-profiling | 2.1.2 | 2026-10-02 |
+| competitor-profiling | 2.1.3 | 2026-10-07 |
 | competitors | 2.3.0 | 2026-10-01 |
 | content-strategy | 2.1.3 | 2026-10-07 |
 | copy-editing | 2.1.1 | 2026-10-07 |
 | copywriting | 2.1.0 | 2026-10-02 |
-| cro | 2.0.0 | 2026-05-05 |
+| cro | 2.0.1 | 2026-10-07 |
 | customer-research | 2.0.4 | 2026-10-02 |
 | directory-submissions | 2.1.0 | 2026-10-02 |
-| emails | 2.1.1 | 2026-10-02 |
+| emails | 2.1.2 | 2026-10-07 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.1 | 2026-08-23 |
 | image | 2.0.2 | 2026-10-02 |
@@ -31,31 +31,63 @@ Current versions of all skills. Agents can compare against local versions to che
 | lead-magnets | 2.0.0 | 2026-05-05 |
 | marketing-council | 1.0.0 | 2026-07-06 |
 | marketing-ideas | 2.0.1 | 2026-08-23 |
-| marketing-loops | 1.3.0 | 2026-10-07 |
+| marketing-loops | 1.4.0 | 2026-10-07 |
 | marketing-plan | 1.2.0 | 2026-10-02 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | offers | 1.0.1 | 2026-08-23 |
 | onboarding | 2.0.1 | 2026-08-23 |
-| ads | 2.4.4 | 2026-10-06 |
+| ads | 2.4.5 | 2026-10-07 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.2 | 2026-10-02 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.1.0 | 2026-10-06 |
-| prospecting | 1.1.3 | 2026-10-06 |
+| prospecting | 1.2.0 | 2026-10-07 |
 | public-relations | 1.2.0 | 2026-10-02 |
 | referrals | 2.0.2 | 2026-10-02 |
-| revops | 2.0.1 | 2026-10-02 |
-| sales-enablement | 2.3.2 | 2026-10-02 |
+| revops | 2.1.0 | 2026-10-07 |
+| sales-enablement | 2.4.0 | 2026-10-07 |
 | schema | 2.0.0 | 2026-05-05 |
 | seo-audit | 2.1.0 | 2026-10-07 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
-| social | 2.3.2 | 2026-10-02 |
+| social | 2.3.3 | 2026-10-07 |
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.20 (2026-10-07)
+
+Modern outbound, from a full audit of the sales and GTM skills against 2025–26 practice. Everything extends existing skills. Tools ship alongside in #791.
+
+- **cold-email** (2.1.0 → 2.2.0): scope widened from writing cold emails to running outbound. Five new references:
+  - `deliverability.md`: secondary domains, mailbox math, SPF/DKIM/DMARC, Gmail's hard rejections from November 2025 and Microsoft's enforcement from May 2025, warmup, tracking off, monitoring, and stop-loss rules.
+  - `linkedin-outreach.md`: limits, the engage-then-connect sequence, copy, and the automation decision after LinkedIn's 2025–26 actions against vendors.
+  - `multichannel-cadence.md`: cadences by tier, the rule that a reply on any channel stops all of them, calls, video, direct mail, and ads.
+  - `outbound-plays.md`: value-first teardown, product-led, problem-led, and founder-led plays.
+  - `reply-handling.md`: reply types, response speed, booking, early objections, and what an agent may send alone.
+
+  Benchmarks drop open rate and use 2025–26 data. A tool section was added, and the description now carries the core rules (secondary domains, verify first, tracking off, stop every channel on a reply).
+- **prospecting** (1.1.3 → 1.2.0): three new references.
+  - `signal-plays.md`: signal ranking and freshness windows, mapping each signal to a play, and account tiers.
+  - `account-research.md`: account briefs and rules for agent research (facts before angles, "no hook found").
+  - `sourcing-and-enrichment.md`: alternatives to scraping LinkedIn, the enrichment waterfall and provider bake-off, catch-all and re-verification policy, and a suppression list shared across channels.
+
+  `compliance.md` fixes two errors: GDPR does apply to LinkedIn messages, and Google Place IDs may be stored. It adds UK PECR (fines up to £17.5M), the consent requirement for B2B email in Germany, Australia, and US phone rules (DNC, AI voice under the TCPA). Legacy Clearbit references are replaced, and the tool table is updated with verified MCP status.
+- **sales-enablement** (2.3.2 → 2.4.0): new `references/cold-call-scripts.md` covering openers, first-minute pushback, voicemail, and gatekeepers.
+- **revops** (2.0.1 → 2.1.0): an outbound stage model with attribution fields and handoff rules.
+- **marketing-loops** (1.3.0 → 1.4.0): four outbound loops (signal sweep, reply triage, cold-domain health, sequence retro) and `references/outbound-operator.md`, with approval rules by tier. The catalog now has 52 loops.
+- **emails** (2.1.1 → 2.1.2), **competitor-profiling** (2.1.2 → 2.1.3), **ads** (2.4.4 → 2.4.5), **social** (2.3.2 → 2.3.3): route outbound requests to cold-email and account research to prospecting.
+- **cro** (2.0.0 → 2.0.1): replaces a legacy Clearbit reference.
+- **Tools** (#791):
+  - Instantly CLI moved to API v2, plus its official MCP.
+  - A new Truelist CLI.
+  - New guides for Attio, HeyReach, FullEnrich, LeadMagic, TheirStack, and Apify.
+  - MCP status checked across outbound tools; 30 are now listed.
+  - Clearbit marked legacy.
+  - LinkedIn Ads CLI moved to the versioned REST API.
+  - A sales outbound quick start in the registry.
 
 ### 2.11.19 (2026-10-07)
 
