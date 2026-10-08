@@ -77,7 +77,7 @@ DELETE https://api.beehiiv.com/v2/publications/{publicationId}/subscriptions/{su
 GET https://api.beehiiv.com/v2/publications/{publicationId}/posts?limit=10&status=confirmed
 ```
 
-### Create post (Max and Enterprise plans)
+### Create post (Pro and Enterprise plans)
 
 ```bash
 POST https://api.beehiiv.com/v2/publications/{publicationId}/posts
