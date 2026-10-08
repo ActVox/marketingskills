@@ -5,7 +5,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | Skill | Version | Last Updated |
 |-------|---------|--------------|
 | ab-testing | 2.0.0 | 2026-05-05 |
-| ad-creative | 2.9.3 | 2026-10-02 |
+| ad-creative | 2.9.4 | 2026-10-08 |
 | ai-seo | 2.7.4 | 2026-10-07 |
 | analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
@@ -47,7 +47,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | referrals | 2.0.2 | 2026-10-02 |
 | revops | 2.1.0 | 2026-10-07 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
-| schema | 2.0.0 | 2026-05-05 |
+| schema | 2.0.1 | 2026-10-08 |
 | seo-audit | 2.1.0 | 2026-10-07 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
@@ -56,6 +56,16 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.21 (2026-10-08)
+
+Community fixes from @rudycelekli: credential handling in three CLIs, Mixpanel service accounts, and two hardening fixes in skills.
+
+- **Tools:**
+  - **mixpanel** (#669): the CLI prefers service-account auth, with project-secret auth as a fallback, and requires a project ID for service accounts.
+  - **kit** (#679) and **hunter** (#688): dry-run previews now redact credentials by query parameter, and Hunter URL-encodes its key.
+- **ad-creative** (2.9.3 → 2.9.4): classify review images using browser URL semantics, block normalized remote/authority forms, retain portable local/data assets, and align the image instructions with the preview restriction. (#775)
+- **schema** (2.0.0 → 2.0.1): escape serialized JSON-LD at the HTML script boundary in the Next.js example, preserving the original product text. Add a matching diagnostic eval and link official framework guidance. (#777)
 
 ### 2.11.20 (2026-10-07)
 
