@@ -82,6 +82,19 @@
         "Does not attempt full SEO audit using schema markup patterns"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Our Next.js product page embeds JSON-LD with dangerouslySetInnerHTML and JSON.stringify(schema). Product names come from a CMS and can contain HTML, quotes, ampersands and Unicode. How do we keep product text intact without allowing it to terminate the JSON-LD script element?",
+      "expected_output": "Should use the schema implementation example and escape the serialized JSON for its HTML script context by replacing every less-than character with a literal JSON Unicode escape before assigning __html. Should explain that JSON.stringify alone does not protect the HTML parser boundary, preserve the original product text when JSON is parsed, and avoid deleting content, HTML-entity escaping JSON or directly interpolating raw names. Should refer to the current official Next.js guidance.",
+      "assertions": [
+        "Identifies the script element HTML parsing boundary",
+        "Escapes every less-than character after JSON serialization",
+        "Preserves original product text after JSON.parse",
+        "Does not treat JSON.stringify alone as safe HTML embedding",
+        "Uses the linked Next.js guidance"
+      ],
+      "files": []
     }
   ]
 }

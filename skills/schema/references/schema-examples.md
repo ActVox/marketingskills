@@ -388,7 +388,7 @@ export default function ProductPage({ product }) {
       <Head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}
         />
       </Head>
       {/* Page content */}
@@ -396,3 +396,5 @@ export default function ProductPage({ product }) {
   );
 }
 ```
+
+When JSON-LD is inserted as raw HTML, JSON escaping alone does not stop a product string containing a script-closing tag from terminating the element. Escape every `<` in the serialized JSON as `\u003c`, as in the example above; parsing the JSON recovers the original product text. Do this at the HTML embedding boundary, without deleting legitimate characters from the source data. See the [Next.js JSON-LD guide](https://nextjs.org/docs/app/guides/json-ld).

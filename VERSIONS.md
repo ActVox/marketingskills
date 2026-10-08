@@ -47,7 +47,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | referrals | 2.0.2 | 2026-10-02 |
 | revops | 2.1.0 | 2026-10-07 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
-| schema | 2.0.0 | 2026-05-05 |
+| schema | 2.0.1 | 2026-10-08 |
 | seo-audit | 2.1.0 | 2026-10-07 |
 | signup | 2.0.0 | 2026-05-05 |
 | site-architecture | 2.1.0 | 2026-10-06 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.21 (2026-10-08)
+
+- **schema** (2.0.0 → 2.0.1): escape serialized JSON-LD at the HTML script boundary in the Next.js example, preserving the original product text. Add a matching diagnostic eval and link official framework guidance.
 
 ### 2.11.20 (2026-10-07)
 
