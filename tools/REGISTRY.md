@@ -7,6 +7,7 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 1. **Find tools by category** - Browse sections below for tools in each domain
 2. **Check integration methods** - See what APIs, MCPs, CLIs, or SDKs are available
 3. **Read integration guides** - Detailed setup and common operations in `integrations/`
+4. **Connect selected accounts** - Use [guided setup](SETUP.md) for local credentials, approval gates, and a first read-only check
 
 ---
 

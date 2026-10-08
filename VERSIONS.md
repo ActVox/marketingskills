@@ -19,7 +19,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | content-strategy | 2.1.3 | 2026-10-07 |
 | copy-editing | 2.1.1 | 2026-10-07 |
 | copywriting | 2.1.0 | 2026-10-02 |
-| cro | 2.0.2 | 2026-10-08 |
+| cro | 2.0.3 | 2026-10-08 |
 | customer-research | 2.0.4 | 2026-10-02 |
 | directory-submissions | 2.1.1 | 2026-10-08 |
 | emails | 2.1.3 | 2026-10-08 |
@@ -42,20 +42,31 @@ Current versions of all skills. Agents can compare against local versions to che
 | pricing | 2.1.3 | 2026-10-08 |
 | product-marketing | 2.1.0 | 2026-07-16 |
 | programmatic-seo | 2.1.0 | 2026-10-06 |
-| prospecting | 1.2.0 | 2026-10-07 |
+| prospecting | 1.3.0 | 2026-10-08 |
 | public-relations | 1.2.0 | 2026-10-02 |
 | referrals | 2.2.0 | 2026-10-08 |
-| revops | 2.1.0 | 2026-10-07 |
+| revops | 2.2.0 | 2026-10-08 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
 | schema | 2.0.2 | 2026-10-08 |
 | seo-audit | 2.2.0 | 2026-10-08 |
-| signup | 2.0.0 | 2026-05-05 |
+| signup | 2.0.1 | 2026-10-08 |
 | site-architecture | 2.1.0 | 2026-10-06 |
 | sms | 1.1.0 | 2026-10-02 |
 | social | 2.3.3 | 2026-10-07 |
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.25 (2026-10-08)
+
+Three contributions from @rudycelekli that answer maintainer issues.
+
+- **Per-skill ZIPs for claude.ai** (#730, closes #431): each release now attaches one ZIP per skill for people uploading skills in Claude's web or desktop app, plus full-source ZIPs and manifests. Claude's web upload limits descriptions to 200 characters, so a reviewed short description per skill lives in `scripts/claude-web-descriptions.json`. When a skill's description changes, the release leaves it out of the web ZIPs and lists it in the manifest until its short description is reviewed. All 50 are current. Built by `scripts/package_skills.py`; see `docs/skill-release-packaging.md`.
+- **prospecting** (1.2.0 → 1.3.0), **revops** (2.1.0 → 2.2.0), **cro** (2.0.2 → 2.0.3), **signup** (2.0.0 → 2.0.1) (#721, part of #498):
+  - New `prospecting/references/enrichment-playbook.md`: acceptance rules per field, exact cache keys, and keeping errors separate from genuine no-matches.
+  - New `revops/references/inbound-routing.md`: form routing that survives enrichment failures and duplicate events.
+  - Pointers from cro and signup.
+- **Guided tool connections** (#720, closes #405): `tools/SETUP.md` walks an agent through connecting Google Ads, Meta Ads, LinkedIn Ads, GA4, or Stripe. It keeps credentials in a private local file, never in chat, and verifies each connection with a read-only test.
 
 ### 2.11.24 (2026-10-08)
 
