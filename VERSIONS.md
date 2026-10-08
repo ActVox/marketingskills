@@ -9,7 +9,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ai-seo | 2.7.4 | 2026-10-07 |
 | analytics | 2.0.2 | 2026-10-02 |
 | aso | 2.0.1 | 2026-08-19 |
-| attribution | 1.1.2 | 2026-10-02 |
+| attribution | 1.1.3 | 2026-10-08 |
 | churn-prevention | 2.0.1 | 2026-10-02 |
 | co-marketing | 2.0.2 | 2026-10-02 |
 | cold-email | 2.2.0 | 2026-10-07 |
@@ -56,6 +56,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.21 (2026-10-08)
+
+- Attribution 1.1.3: distinguish reconciled conversion outcomes from overlapping platform credit, and require evidence before interpreting direct or branded traffic as top-of-funnel effectiveness.
 
 ### 2.11.20 (2026-10-07)
 
