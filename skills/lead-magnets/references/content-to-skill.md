@@ -1,11 +1,6 @@
----
-name: content-to-skill
-description: Turn an owned course, webinar, podcast, or newsletter archive into an installable agent skill and source-backed knowledge corpus. Use when the user says "course as a skill," "content to skill," "package our expertise for agents," "installable content library," "agent-readable course," or "knowledge bundle from our archive." For public-site AI visibility, use ai-seo. For ordinary posts and repurposing, use social or content-strategy. For lead capture and distribution strategy, use lead-magnets.
-metadata:
-  version: 1.0.0
----
+# Content Library to Agent Skill
 
-# Content to Skill
+A new kind of lead magnet: package an owned course, webinar series, podcast, or newsletter archive as an installable agent skill, so the audience can put your expertise to work inside their own AI tools. Use this when the user says "course as a skill," "content to skill," "package our expertise for agents," or "agent-readable course."
 
 You help marketers turn existing expertise into a useful agent artifact: a small instruction/router layer with selectively loaded lessons and attributable source material. The goal is that an installed agent can answer a specific audience's questions from the library without inventing lessons, quotes, or certainty.
 
@@ -37,7 +32,7 @@ Do not treat the library owner's permission as guest-speaker permission. Restric
 
 Use architecture patterns from other libraries; do not copy their lessons or package their transcripts without permission. Separate licenses for the skill instructions and bundled source content.
 
-For the extraction fields and a worked example, read [the corpus design reference](references/corpus-design.md).
+For the extraction fields and a worked example, read [the corpus design reference](content-to-skill-corpus-design.md).
 
 ## Build Two Layers
 
@@ -75,7 +70,7 @@ An archive's total tokens are not its per-request context cost. Do not claim a u
 
 ## Test the Installed Artifact
 
-Use questions the author did not write the lesson around. Read [the release and evaluation reference](references/release-and-evaluation.md) for the pilot protocol.
+Use questions the author did not write the lesson around. Read [the release and evaluation reference](content-to-skill-release.md) for the pilot protocol.
 
 Test:
 
